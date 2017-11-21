@@ -48,6 +48,10 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_CdftMM6eEee_RaSB9J5JlA" name="StrategyManager">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cRf58c6iEee_RaSB9J5JlA" name="strategy" type="_LSklkM6gEee_RaSB9J5JlA" association="_cRer0M6iEee_RaSB9J5JlA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cRhIEM6iEee_RaSB9J5JlA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cRhvIM6iEee_RaSB9J5JlA" value="*"/>
+      </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Na-cgM6gEee_RaSB9J5JlA" client="_CdftMM6eEee_RaSB9J5JlA" supplier="_V-_bEM6XEee_RaSB9J5JlA" contract="_V-_bEM6XEee_RaSB9J5JlA"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_murAQM6eEee_RaSB9J5JlA" name="initialiseStrategy" visibility="private">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_murAQc6eEee_RaSB9J5JlA" name="mission" visibility="public" type="_enMYQM6dEee_RaSB9J5JlA"/>
@@ -83,28 +87,34 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
         </ownedParameter>
       </ownedOperation>
-      <nestedClassifier xmi:type="uml:Class" xmi:id="_LSklkM6gEee_RaSB9J5JlA" name="Strategy">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_W51joM6gEee_RaSB9J5JlA" name="mission" visibility="private" type="_enMYQM6dEee_RaSB9J5JlA"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_cXZYgM6gEee_RaSB9J5JlA" name="pointHistory" visibility="private" type="_ocFBcM6XEee_RaSB9J5JlA"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_lJEpgM6gEee_RaSB9J5JlA" name="setMission">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_lJEpgc6gEee_RaSB9J5JlA" name="mission" type="_enMYQM6dEee_RaSB9J5JlA"/>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_lJEpgs6gEee_RaSB9J5JlA" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_xDemAM6gEee_RaSB9J5JlA" name="addPointHistory">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_xDemAc6gEee_RaSB9J5JlA" name="point" type="_ocFBcM6XEee_RaSB9J5JlA"/>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_xDemAs6gEee_RaSB9J5JlA" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_5wI0IM6gEee_RaSB9J5JlA" name="getLastPoint">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wI0Ic6gEee_RaSB9J5JlA">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wI0Is6gEee_RaSB9J5JlA" type="_ocFBcM6XEee_RaSB9J5JlA" direction="return"/>
-        </ownedOperation>
-      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LSklkM6gEee_RaSB9J5JlA" name="Strategy">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_W51joM6gEee_RaSB9J5JlA" name="mission" visibility="private" type="_enMYQM6dEee_RaSB9J5JlA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cXZYgM6gEee_RaSB9J5JlA" name="pointHistory" visibility="private" type="_ocFBcM6XEee_RaSB9J5JlA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_lJEpgM6gEee_RaSB9J5JlA" name="setMission">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_lJEpgc6gEee_RaSB9J5JlA" name="mission" type="_enMYQM6dEee_RaSB9J5JlA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_lJEpgs6gEee_RaSB9J5JlA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xDemAM6gEee_RaSB9J5JlA" name="addPointHistory">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xDemAc6gEee_RaSB9J5JlA" name="point" type="_ocFBcM6XEee_RaSB9J5JlA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xDemAs6gEee_RaSB9J5JlA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5wI0IM6gEee_RaSB9J5JlA" name="getLastPoint">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wI0Ic6gEee_RaSB9J5JlA">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wI0Is6gEee_RaSB9J5JlA" type="_ocFBcM6XEee_RaSB9J5JlA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cRer0M6iEee_RaSB9J5JlA" memberEnd="_cRf58c6iEee_RaSB9J5JlA _cRhvIc6iEee_RaSB9J5JlA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cRfS4M6iEee_RaSB9J5JlA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cRf58M6iEee_RaSB9J5JlA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cRhvIc6iEee_RaSB9J5JlA" name="strategymanager" type="_CdftMM6eEee_RaSB9J5JlA" association="_cRer0M6iEee_RaSB9J5JlA"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b8wPcM6WEee_RaSB9J5JlA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8zSwM6WEee_RaSB9J5JlA" source="http://www.eclipse.org/uml2/2.0.0/UML">
