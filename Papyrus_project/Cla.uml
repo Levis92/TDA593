@@ -204,7 +204,30 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CvoXYNBREeeybtOC6kw8lg" name="pauseMission">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CvoXYdBREeeybtOC6kw8lg" name="mission" type="_enMYQM6dEee_RaSB9J5JlA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CvoXYtBREeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_x1GTcNBREeeybtOC6kw8lg" name="continueMission">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_x1GTcdBREeeybtOC6kw8lg" name="mission" type="_enMYQM6dEee_RaSB9J5JlA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_x1GTctBREeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2EdP0NBREeeybtOC6kw8lg" name="pauseAllMissions">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2EdP0dBREeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9biyINBREeeybtOC6kw8lg" name="continueAllMissions">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9biyIdBREeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Eu0LcNBSEeeybtOC6kw8lg" client="_xe5zQNBMEeeybtOC6kw8lg" supplier="_enMYQM6dEee_RaSB9J5JlA"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b8wPcM6WEee_RaSB9J5JlA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8zSwM6WEee_RaSB9J5JlA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
