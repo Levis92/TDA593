@@ -383,7 +383,7 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
     </profileApplication>
   </uml:Model>
-  <Codegen:Project xmi:id="_k8GwEM6WEee_RaSB9J5JlA" base_Model="_DjJcwM6VEee_RaSB9J5JlA" projectName="se.chalmers.cse.mdse.group12" sourceFolder=""/>
+  <Codegen:Project xmi:id="_k8GwEM6WEee_RaSB9J5JlA" base_Model="_DjJcwM6VEee_RaSB9J5JlA" generationMode="Incremental" projectName="se.chalmers.cse.mdse.group12" sourceFolder=""/>
   <PapyrusJava:External xmi:id="_KA14ANBNEeeybtOC6kw8lg" name="java.util.List&#xD;&#xA;" base_Classifier="_9Y7VQNBMEeeybtOC6kw8lg"/>
   <PapyrusJava:External xmi:id="_C5ZdwNBZEeeybtOC6kw8lg" name="java.util.Map" base_Classifier="_42q0kNBYEeeybtOC6kw8lg"/>
 </xmi:XMI>
