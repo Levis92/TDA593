@@ -6,16 +6,22 @@
 /**
  * 
  */
-public interface IOperatorFaultView {
+public interface IOperatorEnvironmentView {
 	/**
 	 * 
 	 * @return 
 	 */
-	public void notifyFault();
-}
+	public void updateLocation();
 
-/**
- * 
- */
-public class IOperatorFaultView {
+	/**
+	 * 
+	 * @return 
+	 */
+	public void updateEnvironmentStatus();
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public void updateMissionProgress();
 };

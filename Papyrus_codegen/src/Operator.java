@@ -5,6 +5,8 @@
 import IOperatorCreateMissionView;
 import IOperatorFaultView;
 import Point;
+import IOperatorEnvironmentView;
+import IOperatorRewardPointsView;
 
 /************************************************************/
 /**
@@ -14,7 +16,15 @@ public class Operator implements IOperatorFaultView {
 	/**
 	 * 
 	 */
-	public IOperatorCreateMissionView ioperatorrewardpointsview;
+	public IOperatorFaultView ioperatorfaultview;
+	/**
+	 * 
+	 */
+	public IOperatorEnvironmentView ioperatorenvironmentview;
+	/**
+	 * 
+	 */
+	public IOperatorRewardPointsView ioperatorrewardpointsview;
 
 	/**
 	 * 
