@@ -11,6 +11,9 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_dliOUM6aEee_RaSB9J5JlA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3Cj5ANBgEeeybtOC6kw8lg" name="roverName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:DataType" xmi:id="_ocFBcM6XEee_RaSB9J5JlA" name="Point">
@@ -233,7 +236,7 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_eLrYoNBYEeeybtOC6kw8lg" name="procedureB" visibility="private" type="_DHVBgNBYEeeybtOC6kw8lg"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_2pOFkNBYEeeybtOC6kw8lg" name="currentProcedure" visibility="private" type="_l5-ocNBVEeeybtOC6kw8lg"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_QhOlYdBZEeeybtOC6kw8lg" name="map&lt;string, int>" type="_42q0kNBYEeeybtOC6kw8lg" association="_QhNXQNBZEeeybtOC6kw8lg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QhOlYtBZEeeybtOC6kw8lg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QhOlYtBZEeeybtOC6kw8lg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QhPMcNBZEeeybtOC6kw8lg" value="1"/>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_e0dacNBZEeeybtOC6kw8lg" client="_ZK3G8NBUEeeybtOC6kw8lg" supplier="_W5RFgNBZEeeybtOC6kw8lg" contract="_W5RFgNBZEeeybtOC6kw8lg"/>
@@ -310,8 +313,20 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_sVYMUNBaEeeybtOC6kw8lg" name="Operator" visibility="public">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_VkxQY9BcEeeybtOC6kw8lg" name="ioperatorrewardpointsview" type="_7Bov8NBbEeeybtOC6kw8lg" association="_VkxQYNBcEeeybtOC6kw8lg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VkxQZNBcEeeybtOC6kw8lg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VkxQZNBcEeeybtOC6kw8lg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VkxQZdBcEeeybtOC6kw8lg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OO-co9BeEeeybtOC6kw8lg" name="ioperatorrewardpointsview" type="_tNJP4NBcEeeybtOC6kw8lg" association="_OO-coNBeEeeybtOC6kw8lg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OO-cpNBeEeeybtOC6kw8lg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OO-cpdBeEeeybtOC6kw8lg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CGGUY9BgEeeybtOC6kw8lg" name="ioperatorenvironmentview" type="_ZUYOUNBfEeeybtOC6kw8lg" association="_CGGUYNBgEeeybtOC6kw8lg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CGGUZNBgEeeybtOC6kw8lg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CGGUZdBgEeeybtOC6kw8lg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gMjxo9BgEeeybtOC6kw8lg" name="ioperatorfaultview" type="_c1mc4NBgEeeybtOC6kw8lg" association="_gMjxoNBgEeeybtOC6kw8lg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gMjxpNBgEeeybtOC6kw8lg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gMjxpdBgEeeybtOC6kw8lg" value="1"/>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rA2M4NBbEeeybtOC6kw8lg" client="_sVYMUNBaEeeybtOC6kw8lg" supplier="_mm5mkNBaEeeybtOC6kw8lg" contract="_mm5mkNBaEeeybtOC6kw8lg"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_6GkrUNBaEeeybtOC6kw8lg" name="updateLocation">
@@ -369,7 +384,159 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_X86zgNBcEeeybtOC6kw8lg" name="TOperatorCreateMissionView">
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b9masNBcEeeybtOC6kw8lg" client="_X86zgNBcEeeybtOC6kw8lg" supplier="_7Bov8NBbEeeybtOC6kw8lg" contract="_7Bov8NBbEeeybtOC6kw8lg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_tNJP4NBcEeeybtOC6kw8lg" name="IOperatorRewardPointsView"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_tNJP4NBcEeeybtOC6kw8lg" name="IOperatorRewardPointsView">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_72qBgNBdEeeybtOC6kw8lg" name="notifyRewardPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_72qBgdBdEeeybtOC6kw8lg" name="rewardPoints">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_72qBgtBdEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_BfiVkNBeEeeybtOC6kw8lg" name="getRewardPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BfiVkdBeEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KXIoYNBeEeeybtOC6kw8lg" name="resetRewardPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KXIoYdBeEeeybtOC6kw8lg" name="rewardPoints">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KXIoYtBeEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_OO-coNBeEeeybtOC6kw8lg" memberEnd="_OO-co9BeEeeybtOC6kw8lg _OO-cptBeEeeybtOC6kw8lg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OO-codBeEeeybtOC6kw8lg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OO-cotBeEeeybtOC6kw8lg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_OO-cptBeEeeybtOC6kw8lg" name="operator" type="_sVYMUNBaEeeybtOC6kw8lg" association="_OO-coNBeEeeybtOC6kw8lg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QDtJoNBeEeeybtOC6kw8lg" name="TOperatorRewardPointsView">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_VKsRkNBeEeeybtOC6kw8lg" client="_QDtJoNBeEeeybtOC6kw8lg" supplier="_tNJP4NBcEeeybtOC6kw8lg" contract="_tNJP4NBcEeeybtOC6kw8lg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sDqigNBgEeeybtOC6kw8lg" name="notifyRewardPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sDrJkNBgEeeybtOC6kw8lg" name="rewardPoints">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sDrJkdBgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sDrJktBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sDrJk9BgEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sDrJlNBgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sDrJldBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sDwCENBgEeeybtOC6kw8lg" name="getRewardPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sDwpINBgEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sDwpIdBgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sDxQMNBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sD2IsNBgEeeybtOC6kw8lg" name="resetRewardPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sD2vwNBgEeeybtOC6kw8lg" name="rewardPoints">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sD2vwdBgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sD2vwtBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sD2vw9BgEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sD2vxNBgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sD2vxdBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Vv4pUNBeEeeybtOC6kw8lg" name="NTOperatorRewardPointsView">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_YsMpcNBeEeeybtOC6kw8lg" client="_Vv4pUNBeEeeybtOC6kw8lg" supplier="_tNJP4NBcEeeybtOC6kw8lg" contract="_tNJP4NBcEeeybtOC6kw8lg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sD8PUNBgEeeybtOC6kw8lg" name="notifyRewardPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sD8PUdBgEeeybtOC6kw8lg" name="rewardPoints">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sD82YNBgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sD82YdBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sD82YtBgEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sD82Y9BgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sD82ZNBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sECV8NBgEeeybtOC6kw8lg" name="getRewardPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sEC9ANBgEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sEC9AdBgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sEC9AtBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sEH1gNBgEeeybtOC6kw8lg" name="resetRewardPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sEIckNBgEeeybtOC6kw8lg" name="rewardPoints">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sEIckdBgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sEIcktBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sEIck9BgEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sEIclNBgEeeybtOC6kw8lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sEJDoNBgEeeybtOC6kw8lg" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_auAwMNBeEeeybtOC6kw8lg" name="OperatorFactory">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qUjnQNBeEeeybtOC6kw8lg" name="nonTechnicalOperator" visibility="private" type="_sVYMUNBaEeeybtOC6kw8lg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_yr660NBeEeeybtOC6kw8lg" name="technicalOperator" visibility="private" type="_sVYMUNBaEeeybtOC6kw8lg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_I2dqY9BfEeeybtOC6kw8lg" name="operator" type="_sVYMUNBaEeeybtOC6kw8lg" association="_I2dqYNBfEeeybtOC6kw8lg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I2dqZNBfEeeybtOC6kw8lg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I2dqZdBfEeeybtOC6kw8lg" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8q2CENBeEeeybtOC6kw8lg" name="getNonTechnicalOperatorInstance">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8q2CEdBeEeeybtOC6kw8lg" type="_sVYMUNBaEeeybtOC6kw8lg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Bxd9oNBfEeeybtOC6kw8lg" name="getTechnicalOperatorInstance">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Bxd9odBfEeeybtOC6kw8lg" type="_sVYMUNBaEeeybtOC6kw8lg" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_I2dqYNBfEeeybtOC6kw8lg" memberEnd="_I2dqY9BfEeeybtOC6kw8lg _I2dqZtBfEeeybtOC6kw8lg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_I2dqYdBfEeeybtOC6kw8lg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_I2dqYtBfEeeybtOC6kw8lg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_I2dqZtBfEeeybtOC6kw8lg" name="operatorfactory" type="_auAwMNBeEeeybtOC6kw8lg" association="_I2dqYNBfEeeybtOC6kw8lg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_ZUYOUNBfEeeybtOC6kw8lg" name="IOperatorEnvironmentView">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_pAFSMNBfEeeybtOC6kw8lg" name="updateLocation">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pAFSMdBfEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_tbJIQNBfEeeybtOC6kw8lg" name="updateEnvironmentStatus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_tbJIQdBfEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2p2TgNBfEeeybtOC6kw8lg" name="updateMissionProgress">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__kbo4NBfEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_CGGUYNBgEeeybtOC6kw8lg" memberEnd="_CGGUY9BgEeeybtOC6kw8lg _CGGUZtBgEeeybtOC6kw8lg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CGGUYdBgEeeybtOC6kw8lg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CGGUYtBgEeeybtOC6kw8lg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_CGGUZtBgEeeybtOC6kw8lg" name="operator" type="_sVYMUNBaEeeybtOC6kw8lg" association="_CGGUYNBgEeeybtOC6kw8lg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_O3aqwNBgEeeybtOC6kw8lg" name="TOperatorEnvironmentView">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_WZmCwNBgEeeybtOC6kw8lg" client="_O3aqwNBgEeeybtOC6kw8lg" supplier="_ZUYOUNBfEeeybtOC6kw8lg" contract="_ZUYOUNBfEeeybtOC6kw8lg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XK3HoNBgEeeybtOC6kw8lg" name="NTOperatorEnvironmentView">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_bnm_wNBgEeeybtOC6kw8lg" client="_XK3HoNBgEeeybtOC6kw8lg" supplier="_ZUYOUNBfEeeybtOC6kw8lg" contract="_ZUYOUNBfEeeybtOC6kw8lg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_c1mc4NBgEeeybtOC6kw8lg" name="IOperatorFaultView"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_gMjxoNBgEeeybtOC6kw8lg" memberEnd="_gMjxo9BgEeeybtOC6kw8lg _gMjxptBgEeeybtOC6kw8lg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gMjxodBgEeeybtOC6kw8lg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gMjxotBgEeeybtOC6kw8lg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gMjxptBgEeeybtOC6kw8lg" name="operator" type="_sVYMUNBaEeeybtOC6kw8lg" association="_gMjxoNBgEeeybtOC6kw8lg"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b8wPcM6WEee_RaSB9J5JlA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8zSwM6WEee_RaSB9J5JlA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
