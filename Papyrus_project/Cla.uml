@@ -116,6 +116,20 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_cRhvIc6iEee_RaSB9J5JlA" name="strategymanager" type="_CdftMM6eEee_RaSB9J5JlA" association="_cRer0M6iEee_RaSB9J5JlA"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_dOi1QNBIEeeybtOC6kw8lg" name="IMissionAchieved">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nbzTcNBIEeeybtOC6kw8lg" name="achievedMission">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nbzTcdBIEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8QXHgNBIEeeybtOC6kw8lg" name="achievedPoint">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8QXHgdBIEeeybtOC6kw8lg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_JJGUgNBJEeeybtOC6kw8lg" name="use" client="_CdftMM6eEee_RaSB9J5JlA" supplier="_dOi1QNBIEeeybtOC6kw8lg"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_S1hWgNBJEeeybtOC6kw8lg" name="IStrategyManager"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b8wPcM6WEee_RaSB9J5JlA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8zSwM6WEee_RaSB9J5JlA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
