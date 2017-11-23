@@ -3,16 +3,32 @@
 // --------------------------------------------------------
 
 import IMissionAchieved;
+import IMissionManager;
 import IStrategyManager;
+import Mission;
 import java.util.List;
 
 /************************************************************/
 /**
  * 
  */
-public class MissionManager implements IMissionAchieved {
+public class MissionManager implements IMissionAchieved, IMissionManager {
 	/**
 				 * 
 				 */
 				public List<Mission> list<mission>;
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public void achievedMission() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public void achievedPoint() {
+	}
 };

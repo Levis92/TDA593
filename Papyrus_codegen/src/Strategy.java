@@ -37,9 +37,8 @@ public class Strategy {
 
 	/**
 	 * 
-	 * @param  
 	 * @return 
 	 */
-	public Point getLastPoint(void null) {
+	public Point getLastPoint() {
 	}
 };
