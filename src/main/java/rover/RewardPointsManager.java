@@ -4,6 +4,7 @@
 
 package rover;
 
+import java.util.HashMap;
 import java.util.Map;
 import rover.IRewardPoints;
 import rover.IRewardPointsManagar;
@@ -32,12 +33,13 @@ public class RewardPointsManager implements IRewardPointsManagar {
 	/**
 	 * 
 	 */
-	public map<String, int> map<string, int>;
+	public Map<String, Integer> map = new HashMap <String, Integer>();
 	/**
 	 * 
 	 * @return 
 	 */
-	private void updateProcedure() {
+	public void updateProcedure() {
+		
 	}
 
 	/**
