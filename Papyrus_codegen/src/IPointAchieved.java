@@ -3,6 +3,7 @@
 // --------------------------------------------------------
 
 import Point;
+import project.Point;
 
 /************************************************************/
 /**
@@ -15,4 +16,12 @@ public interface IPointAchieved {
 	 * @return 
 	 */
 	public void achievedPoint(Point savePoint);
+
+	/**
+	 * 
+	 * @param savePoint 
+	 * @return 
+	 * @param roverName 
+	 */
+	public void achievedPoint(Point savePoint, String roverName);
 };

@@ -6,10 +6,11 @@ import IOperatorFaultView;
 import IPointAchieved;
 import IRoverLocation;
 import IRoverStrategy;
+import project.AbstractRobot;
 
 /************************************************************/
 /**
  * 
  */
-public class Rover implements IRoverStrategy, IRoverLocation {
+public class Rover extends AbstractRobot implements IRoverStrategy, IRoverLocation {
 };

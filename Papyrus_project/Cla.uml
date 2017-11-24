@@ -2,6 +2,7 @@
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <uml:Model xmi:id="_DjJcwM6VEee_RaSB9J5JlA" name="se.chalmers.cse.mdse.group12" URI="">
     <packagedElement xmi:type="uml:Class" xmi:id="_nHzoEM6VEee_RaSB9J5JlA" name="Rover">
+      <generalization xmi:type="uml:Generalization" xmi:id="_PqP-ANDxEee4GYKcLz6eUA" general="_EIyF8NDxEee4GYKcLz6eUA"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UpICEM6cEee_RaSB9J5JlA" client="_nHzoEM6VEee_RaSB9J5JlA" supplier="_14zvgM6bEee_RaSB9J5JlA" contract="_14zvgM6bEee_RaSB9J5JlA"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_AzRnEM6eEee_RaSB9J5JlA" client="_nHzoEM6VEee_RaSB9J5JlA" supplier="_g_5xgM6cEee_RaSB9J5JlA" contract="_g_5xgM6cEee_RaSB9J5JlA"/>
     </packagedElement>
@@ -16,14 +17,7 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_ocFBcM6XEee_RaSB9J5JlA" name="Point">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_1gAKwM6XEee_RaSB9J5JlA" name="x" visibility="public">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_QmkvcM6YEee_RaSB9J5JlA" name="y" visibility="public">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
-      </ownedAttribute>
-    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_ocFBcM6XEee_RaSB9J5JlA" name="Point"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_mI7LsM6aEee_RaSB9J5JlA" name="use" client="_nHzoEM6VEee_RaSB9J5JlA" supplier="_V-_bEM6XEee_RaSB9J5JlA"/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_14zvgM6bEee_RaSB9J5JlA" name="IRoverStrategy">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Hn_HAM6cEee_RaSB9J5JlA" name="goTo">
@@ -537,6 +531,7 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_gMjxptBgEeeybtOC6kw8lg" name="operator" type="_sVYMUNBaEeeybtOC6kw8lg" association="_gMjxoNBgEeeybtOC6kw8lg"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EIyF8NDxEee4GYKcLz6eUA" name="AbstractRobot"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b8wPcM6WEee_RaSB9J5JlA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8zSwM6WEee_RaSB9J5JlA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
@@ -553,4 +548,6 @@
   <Codegen:Project xmi:id="_k8GwEM6WEee_RaSB9J5JlA" base_Model="_DjJcwM6VEee_RaSB9J5JlA" generationMode="Incremental" projectName="se.chalmers.cse.mdse.group12" sourceFolder=""/>
   <PapyrusJava:External xmi:id="_KA14ANBNEeeybtOC6kw8lg" name="java.util.List&#xD;&#xA;" base_Classifier="_9Y7VQNBMEeeybtOC6kw8lg"/>
   <PapyrusJava:External xmi:id="_C5ZdwNBZEeeybtOC6kw8lg" name="java.util.Map" base_Classifier="_42q0kNBYEeeybtOC6kw8lg"/>
+  <PapyrusJava:External xmi:id="_3PCMUNDwEee4GYKcLz6eUA" name="project.Point" base_Classifier="_ocFBcM6XEee_RaSB9J5JlA"/>
+  <PapyrusJava:External xmi:id="_G3xbwNDxEee4GYKcLz6eUA" name="project.AbstractRobot&#xD;&#xA;" base_Classifier="_EIyF8NDxEee4GYKcLz6eUA"/>
 </xmi:XMI>

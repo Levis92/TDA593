@@ -8,6 +8,7 @@ import IStrategyManager;
 import Mission;
 import Point;
 import Strategy;
+import project.Point;
 
 /************************************************************/
 /**

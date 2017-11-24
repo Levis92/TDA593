@@ -7,6 +7,7 @@ import IOperatorFaultView;
 import Point;
 import IOperatorEnvironmentView;
 import IOperatorRewardPointsView;
+import project.Point;
 
 /************************************************************/
 /**
