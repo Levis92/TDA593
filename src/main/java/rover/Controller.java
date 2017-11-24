@@ -1,6 +1,6 @@
 package rover;
 
-import project.AbstractRobot;
+import project.AbstractRobotSimulator;
 import project.SimulatorController;
 import simbad.sim.EnvironmentDescription;
 
