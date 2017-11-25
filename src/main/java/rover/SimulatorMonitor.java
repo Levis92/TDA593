@@ -2,7 +2,6 @@ package rover;
 
 import java.util.Set;
 
-import project.AbstractRobotSimulator;
 import project.AbstractSimulatorMonitor;
 import simbad.sim.EnvironmentDescription;
 
@@ -12,11 +11,8 @@ public class SimulatorMonitor extends AbstractSimulatorMonitor<RobotAvatar> {
 		super(robots, e);
 	}
 
-
 	@Override
-	public void update(RobotAvatar arg0) {
-		// TODO Auto-generated method stub
-		
+	public void update ( RobotAvatar robot ) {
+		System.out.println(robot.getPosition());
 	}
-
 }
