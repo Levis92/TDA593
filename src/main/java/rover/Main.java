@@ -33,22 +33,22 @@ public class Main {
 		
 		robot1.setDestination(new Point(-3.5, 3.5));
 		
-		StrategyManager sm = new StrategyManager();
-		AbstractSimulatorMonitor<RobotAvatar> controller = new SimulatorMonitor(robots, e, sm);
+		StrategyManager strategyManager = new StrategyManager();
+		AbstractSimulatorMonitor<RobotAvatar> controller = new SimulatorMonitor(robots, e, strategyManager);
 		
 		
 		
-		List<Point> p = new ArrayList<Point>();
-		p.add(new Point(3.5,3.5));
-		p.add(new Point(-3.5,3.5));
-		p.add(new Point(-8, 3.5));
-		Mission m = new Mission(p, robot1);
-		System.out.println(m.getRover().getName());
-		Strategy s = new Strategy(m);
-		System.out.println(s.getMission().getPoints());
-		s.addPointHistory(new Point(1,1));
-		System.out.println(s.getAllPoints());
-		sm.provideMission(m);
+		List<Point> point = new ArrayList<Point>();
+		point.add(new Point(3.5,3.5));
+		point.add(new Point(-3.5,3.5));
+		point.add(new Point(-8, 3.5));
+		Mission mission = new Mission(point, robot1);
+		System.out.println(mission.getRover().getName());
+		Strategy strategy = new Strategy(mission);
+		System.out.println(strategy.getMission().getPoints());
+		strategy.addPointHistory(new Point(1,1));
+		System.out.println(strategy.getAllPoints());
+		strategyManager.provideMission(mission);
 		
 	}
 }
