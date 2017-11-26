@@ -4,6 +4,9 @@
 
 package rover;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import project.Point;
 import rover.IMissionAchieved;
 import rover.IPointAchieved;
@@ -16,6 +19,10 @@ import rover.Strategy;
  * 
  */
 public class StrategyManager implements IPointAchieved, IStrategyManager {
+	
+	boolean roverBusy = false;
+	RoverList roverList = new RoverList();
+	Set<Rover> rovers = roverList.getRovers();
 	/**
 	 * 
 	 */
@@ -54,6 +61,12 @@ public class StrategyManager implements IPointAchieved, IStrategyManager {
 	 * @return 
 	 */
 	private void providePointToRover(Point point, String roverName) {
+	      /*
+		for (Rover rover : rovers) {
+	          if (rover.equals(roverName)) 
+	            rover.goTo(point);
+	            }
+	            */
 	}
 
 	/**
@@ -61,11 +74,20 @@ public class StrategyManager implements IPointAchieved, IStrategyManager {
 	 * @return 
 	 */
 	private void mainProcedure() {
+		
 	}
 
 	public boolean provideMission(Mission mission) {
-		// TODO Auto-generated method stub
-		return false;
+		/*
+		for (int i = 0; i < mission.points.length; i++) {
+			while (roverBusy) {
+				
+			}
+				providePointToRover(mission.points[i], "Rover 1");
+				roverBusy = true;
+			} 
+			*/
+		return true;
 	}
 
 	public boolean pauseStrategy(Mission mission) {
@@ -89,7 +111,7 @@ public class StrategyManager implements IPointAchieved, IStrategyManager {
 	}
 
 	public void achievedPoint(Point savePoint, String roverName) {
-		// TODO Auto-generated method stub
+		roverBusy = false;
 		
 	}
 };

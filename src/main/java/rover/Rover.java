@@ -6,20 +6,17 @@ package rover;
 
 import project.AbstractRobotSimulator;
 import project.Point;
-import rover.IOperatorFaultView;
-import rover.IPointAchieved;
-import rover.IRoverLocation;
-import rover.IRoverStrategy;
 
 /************************************************************/
 /**
  * 
  */
 public class Rover extends AbstractRobotSimulator implements IRoverStrategy, IRoverLocation {
+	IPointAchieved pointAchieved = new StrategyManager();
+
 
 	public Rover(Point position, String name) {
 		super(position, name);
-		// TODO Auto-generated constructor stub
 	}
 
 	public Point getLocation(String name) {
@@ -28,7 +25,12 @@ public class Rover extends AbstractRobotSimulator implements IRoverStrategy, IRo
 	}
 
 	public void goTo(Point savePoint) {
-		// TODO Auto-generated method stub
+		this.setDestination(savePoint);
+		while (this.getLocation(this.getName()) != savePoint) {
+			
+		} 
+		pointAchieved.achievedPoint(savePoint, this.getName());
 		
 	}
+	
 };

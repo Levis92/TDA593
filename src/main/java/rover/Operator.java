@@ -11,10 +11,12 @@ import rover.IOperatorFaultView;
 import rover.IOperatorRewardPointsView;
 
 /************************************************************/
+
 /**
  * 
  */
 public class Operator implements IOperatorFaultView {
+	IMissionManager missionManager = new MissionManager();
 	/**
 	 * 
 	 */
@@ -62,7 +64,10 @@ public class Operator implements IOperatorFaultView {
 	 * @param points 
 	 * @param roverName 
 	 */
-	public void createMission(Point points, String roverName) {
+	public void createMission(Point points[], String roverName) {
+		Mission mission = new Mission(points, roverName);
+		
+		missionManager.createMission(mission);
 	}
 
 	public void notifyFault() {

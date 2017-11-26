@@ -16,6 +16,8 @@ import rover.Mission;
  * 
  */
 public class MissionManager implements IMissionAchieved, IMissionManager {
+	
+	IStrategyManager strategyManager = new StrategyManager();
 	/**
 	 * 
 	 */
@@ -36,8 +38,9 @@ public class MissionManager implements IMissionAchieved, IMissionManager {
 	}
 
 	public boolean createMission(Mission mission) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		strategyManager.provideMission(mission);
+		return true;
 	}
 
 	public boolean removeMission(Mission mission) {

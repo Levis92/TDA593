@@ -26,6 +26,10 @@ public interface IRewardPoints {
 	 */
 	public void updateRewardPoints(int[] null) ;
 
+	
+
+	
+
 	/**
 	 * 
 	 * @param points 

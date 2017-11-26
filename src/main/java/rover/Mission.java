@@ -19,4 +19,9 @@ public class Mission {
 	 * 
 	 */
 	public String roverName;
+	
+	public Mission(Point[] points, String roverName) {
+		this.points = points;
+		this.roverName = roverName;
+	}
 };

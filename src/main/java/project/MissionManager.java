@@ -18,6 +18,10 @@ public class MissionManager implements IMissionAchieved, IMissionManager {
 	/**
 				 * 
 				 */
+				public List<Mission> list
+	/**
+				 * 
+				 */
 				public List<Mission> list<mission>;
 
 	/**
