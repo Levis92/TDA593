@@ -35,9 +35,9 @@ public class StrategyManager implements IPointAchieved, IStrategyManager {
 	 * @return 
 	 */
 	private Strategy initialiseStrategy(Mission mission){
-		Strategy s = new Strategy(mission);
-		this.strategies.add(s);
-		return s;
+		Strategy strategy = new Strategy(mission);
+		this.strategies.add(strategy);
+		return strategy;
 	}
 
 
@@ -58,9 +58,9 @@ public class StrategyManager implements IPointAchieved, IStrategyManager {
 	
 	private Strategy findRoverStrategy(RobotAvatar rover){
 		for (Iterator<Strategy> iter = this.strategies.iterator(); iter.hasNext(); ) {
-			Strategy strat = iter.next();
-			if(strat.getMission().getRover() == rover) {
-				return strat;
+			Strategy strategy = iter.next();
+			if(strategy.getMission().getRover() == rover) {
+				return strategy;
 			}
 		}
 		return null;
