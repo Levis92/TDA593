@@ -17,5 +17,5 @@ public interface IPointAchieved {
 	 * @return 
 	 * @param roverName 
 	 */
-	public void achievedPoint(Point savePoint, String roverName);
+	public void achievedPoint(Point savePoint, RobotAvatar rover);
 };

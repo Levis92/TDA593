@@ -4,6 +4,9 @@
 
 package project;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import project.Mission;
 import project.Point;
 
@@ -19,14 +22,24 @@ public class Strategy {
 	/**
 	 * 
 	 */
-	private Point pointHistory;
+	private List<Point> pointHistory;
 
+	public Strategy(Mission mission){
+		this.mission = mission;
+		this.pointHistory = new ArrayList<Point>();
+	}
+	
 	/**
 	 * 
 	 * @param mission 
 	 * @return 
 	 */
-	public void setMission(Mission mission) {
+	public void setMission(Mission mission){
+		this.mission = mission;
+	}
+	
+	public Mission getMission(){
+		return this.mission;
 	}
 
 	/**
@@ -34,7 +47,8 @@ public class Strategy {
 	 * @param point 
 	 * @return 
 	 */
-	public void addPointHistory(Point point) {
+	public void addPointHistory(Point point){
+		this.pointHistory.add(point); 
 	}
 
 	/**
@@ -42,5 +56,10 @@ public class Strategy {
 	 * @return 
 	 */
 	public Point getLastPoint() {
+		return this.pointHistory.get(this.pointHistory.size() - 1);
+	}
+	
+	public List<Point> getAllPoints() {
+		return this.pointHistory;
 	}
 };

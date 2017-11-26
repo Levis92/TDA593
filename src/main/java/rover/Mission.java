@@ -4,6 +4,8 @@
 
 package rover;
 
+import java.util.List;
+
 import project.Point;
 
 /************************************************************/
@@ -14,9 +16,22 @@ public class Mission {
 	/**
 	 * 
 	 */
-	public Point[] points;
+	private List<Point> points;
 	/**
 	 * 
 	 */
-	public String roverName;
+	private RobotAvatar rover;
+	
+	public Mission(List<Point> points, RobotAvatar rover){
+		this.points = points;
+		this.rover = rover;
+	}
+	
+	public List<Point> getPoints(){
+		return this.points;
+	}
+	
+	public RobotAvatar getRover(){
+		return this.rover;
+	}
 };

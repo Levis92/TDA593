@@ -4,6 +4,10 @@
 
 package rover;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import project.Point;
 import rover.IMissionAchieved;
 import rover.IPointAchieved;
@@ -19,33 +23,49 @@ public class StrategyManager implements IPointAchieved, IStrategyManager {
 	/**
 	 * 
 	 */
-	public Strategy[] strategy;
+	public List<Strategy> strategies;
 
+	public StrategyManager() {
+		this.strategies = new ArrayList<Strategy>();
+	}
+	
 	/**
 	 * 
 	 * @param mission 
 	 * @return 
 	 */
-	private void initialiseStrategy(Mission mission) {
+	private Strategy initialiseStrategy(Mission mission){
+		Strategy s = new Strategy(mission);
+		this.strategies.add(s);
+		return s;
 	}
+
 
 	/**
 	 * 
 	 * @param roverName 
 	 * @return 
 	 */
-	private boolean checkRoverAvailability(String roverName) {
-		return false;
+	private Point defineNextPoint(Strategy strategy) {
+		for (Iterator<Point> iter = strategy.getMission().getPoints().iterator(); iter.hasNext(); ) {
+			Point point = iter.next();
+			if(!strategy.getAllPoints().contains(point)) {
+				return point;	//Next point to reach
+			}
+		}
+		return null; //No more points to reach
 	}
-
-	/**
-	 * 
-	 * @param roverName 
-	 * @return 
-	 */
-	private Point defineNextPoint(String roverName) {
+	
+	private Strategy findRoverStrategy(RobotAvatar rover){
+		for (Iterator<Strategy> iter = this.strategies.iterator(); iter.hasNext(); ) {
+			Strategy strat = iter.next();
+			if(strat.getMission().getRover() == rover) {
+				return strat;
+			}
+		}
 		return null;
 	}
+	
 
 	/**
 	 * 
@@ -53,19 +73,17 @@ public class StrategyManager implements IPointAchieved, IStrategyManager {
 	 * @param roverName 
 	 * @return 
 	 */
-	private void providePointToRover(Point point, String roverName) {
+	private void providePointToRover(Point point, RobotAvatar rover){	
+		rover.setDestination(point);
 	}
 
-	/**
-	 * 
-	 * @return 
-	 */
-	private void mainProcedure() {
-	}
 
 	public boolean provideMission(Mission mission) {
-		// TODO Auto-generated method stub
-		return false;
+			Strategy strategy = initialiseStrategy(mission);
+			Point point = defineNextPoint(strategy);
+			strategy.addPointHistory(point);
+			providePointToRover(point, mission.getRover());
+			return true;
 	}
 
 	public boolean pauseStrategy(Mission mission) {
@@ -88,8 +106,15 @@ public class StrategyManager implements IPointAchieved, IStrategyManager {
 		return null;
 	}
 
-	public void achievedPoint(Point savePoint, String roverName) {
-		// TODO Auto-generated method stub
-		
+	public void achievedPoint(Point savepoint, RobotAvatar rover) {
+		Strategy strategy = findRoverStrategy(rover);
+		Point point = defineNextPoint(strategy);
+		if(point == null) {
+			System.out.println("mission succeded");
+		}
+		else {
+			strategy.addPointHistory(point);
+			providePointToRover(point, rover);
+		}
 	}
 };

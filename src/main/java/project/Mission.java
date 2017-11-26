@@ -4,6 +4,8 @@
 
 package project;
 
+import java.util.List;
+
 import project.Point;
 
 /************************************************************/
@@ -14,9 +16,22 @@ public class Mission {
 	/**
 	 * 
 	 */
-	public Point[] points;
+	private List<Point> points;
 	/**
 	 * 
 	 */
-	public String roverName;
+	private String roverName;
+	
+	public Mission(List<Point> points, String roverName){
+		this.points = points;
+		this.roverName = roverName;
+	}
+	
+	public List<Point> getPoints(){
+		return this.points;
+	}
+	
+	public String getRoverName(){
+		return this.roverName;
+	}
 };
