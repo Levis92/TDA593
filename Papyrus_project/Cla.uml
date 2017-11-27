@@ -803,7 +803,7 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_CdftMM6eEee_RaSB9J5JlA" name="StrategyManager">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_cRf58c6iEee_RaSB9J5JlA" name="strategy" type="_LSklkM6gEee_RaSB9J5JlA" association="_cRer0M6iEee_RaSB9J5JlA">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cRf58c6iEee_RaSB9J5JlA" name="strategies" type="_LSklkM6gEee_RaSB9J5JlA" association="_cRer0M6iEee_RaSB9J5JlA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cRhIEM6iEee_RaSB9J5JlA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cRhvIM6iEee_RaSB9J5JlA" value="*"/>
         </ownedAttribute>
