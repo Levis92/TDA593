@@ -37,6 +37,7 @@ public class StrategyManager implements IPointAchieved, IStrategyManager {
 	private Strategy initialiseStrategy(Mission mission){
 		Strategy strategy = new Strategy(mission);
 		this.strategies.add(strategy);
+		
 		return strategy;
 	}
 
