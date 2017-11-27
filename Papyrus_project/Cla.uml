@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <uml:Model xmi:id="_DjJcwM6VEee_RaSB9J5JlA" name="se.chalmers.cse.mdse.group12" URI="">
-    <packagedElement xmi:type="uml:Package" xmi:id="_YYWDoND-Eee_wohS1ZZyaA" name="project">
+    <packagedElement xmi:type="uml:Package" xmi:id="_YYWDoND-Eee_wohS1ZZyaA" name="rover">
       <packagedElement xmi:type="uml:Class" xmi:id="_EIyF8NDxEee4GYKcLz6eUA" name="AbstractRobotSimulator"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_gMjxoNBgEeeybtOC6kw8lg" memberEnd="_gMjxo9BgEeeybtOC6kw8lg _gMjxptBgEeeybtOC6kw8lg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gMjxodBgEeeybtOC6kw8lg" source="org.eclipse.papyrus">
