@@ -26,10 +26,10 @@ public class Main {
 //		robots.add(robot3);
 //		robots.add(robot4);
 		
-		LocationController cP1 = new LocationController ( new Point(-3.5,3.5), 3.5 ,e);
-		LocationController cP2 = new LocationController ( new Point(3.5,3.5), 3.5 ,e);
-		LocationController cP3 = new LocationController ( new Point(-3.5,-3.5), 3.5 ,e);
-		LocationController cP4 = new LocationController ( new Point(3.5,-3.5), 3.5 ,e);
+		AreaController aC1 = new AreaController ( new Point(-3.5,3.5), 3.5 ,e);
+		AreaController aC2 = new AreaController ( new Point(3.5,3.5), 3.5 ,e);
+		AreaController aC3 = new AreaController ( new Point(-3.5,-3.5), 3.5 ,e);
+		AreaController aC4 = new AreaController ( new Point(3.5,-3.5), 3.5 ,e);
 		
 		robot1.setDestination(new Point(-3.5, 3.5));
 		
