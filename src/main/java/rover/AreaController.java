@@ -86,6 +86,10 @@ public class AreaController {
     	}
     }
     
+    public AbstractRobotSimulator getOwner() {
+    	return owner;
+    }
+    
     public Boolean isTheOwner(AbstractRobotSimulator a) {
     	if(a == owner) {
     		return true;
@@ -106,12 +110,12 @@ public class AreaController {
     		//System.out.println("Warning: " + a + " tries to acquire location permission without owning it");
     		return;
     	}
-    	if(a.getPosition().dist(pos) > radius * 1.2) {
+    	if(a.getPosition().dist(pos) > radius * 1.1) { //release if rover is out of the area
     		//System.out.println("Warning: " + a + " tries to release location permission out of range");
-    		return;
+    		occupied = false;
+        	owner = null;
     	}
-    	occupied = false;
-    	owner = null;
+    	
     	//b.setColor(new Color3f(Color.WHITE));
     }
 
