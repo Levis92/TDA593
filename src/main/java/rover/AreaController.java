@@ -85,6 +85,15 @@ public class AreaController {
     		return false;
     	}
     }
+    
+    public Boolean isTheOwner(AbstractRobotSimulator a) {
+    	if(a == owner) {
+    		return true;
+    	}
+    	else {
+    		return false;
+    	}
+    }
 
     /**
      * Release the permission after having left the area. The method should only
@@ -93,12 +102,12 @@ public class AreaController {
      * 			the robot
      */
     public void release (AbstractRobotSimulator a) {
-    	if(a != owner) {
-    		System.out.println("Warning: " + a + " tries to acquire location permission without owning it");
+    	if(!isTheOwner(a)) {
+    		//System.out.println("Warning: " + a + " tries to acquire location permission without owning it");
     		return;
     	}
     	if(a.getPosition().dist(pos) > radius * 1.2) {
-    		System.out.println("Warning: " + a + " tries to release location permission out of range");
+    		//System.out.println("Warning: " + a + " tries to release location permission out of range");
     		return;
     	}
     	occupied = false;
