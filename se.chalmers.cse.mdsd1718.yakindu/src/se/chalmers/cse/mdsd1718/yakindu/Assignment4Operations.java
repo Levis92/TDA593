@@ -9,7 +9,7 @@ public class Assignment4Operations {
 		if (toggled) {
 			return;
 		}
-		counter = (counter % 5) + 1;	
+		counter = (counter + 1) % 5;	
 	}
 	
 	public long getCounter() {
