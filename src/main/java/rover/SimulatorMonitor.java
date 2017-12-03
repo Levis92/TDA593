@@ -5,20 +5,20 @@ import java.util.Set;
 import project.AbstractSimulatorMonitor;
 import simbad.sim.EnvironmentDescription;
 
-public class SimulatorMonitor extends AbstractSimulatorMonitor<RobotAvatar> {
+public class SimulatorMonitor extends AbstractSimulatorMonitor<Rover> {
 	
-	private StrategyManager strategyManager;
 	
-	public SimulatorMonitor( Set<RobotAvatar> robots, EnvironmentDescription e, StrategyManager strategyManager) {
+	public SimulatorMonitor( Set<Rover> robots, EnvironmentDescription e) {
 		super(robots, e);
-		this.strategyManager = strategyManager;
 	}
 
 	@Override
-	public void update ( RobotAvatar robot ) {
+	public void update (Rover robot) {
 		System.out.println(robot.getPosition());
-		if(robot.isAtPosition(robot.getDestination())) {
-			strategyManager.achievedPoint(robot.getDestination(), robot);
+		if(robot.isWorking()) {
+			if(robot.isAtPosition(robot.getDestination()) && !robot.isPaused()) {
+				robot.goToNextPoint();
+			}
 		}
 	}
 }

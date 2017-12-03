@@ -4,10 +4,9 @@
 
 package rover;
 
+
 import project.AbstractRobotSimulator;
 import project.Point;
-import rover.IOperatorFaultView;
-import rover.IPointAchieved;
 import rover.IRoverLocation;
 import rover.IRoverStrategy;
 
@@ -17,18 +16,112 @@ import rover.IRoverStrategy;
  */
 public class Rover extends AbstractRobotSimulator implements IRoverStrategy, IRoverLocation {
 
+	private Point destination;
+	private Mission mission;
+	private Strategy strategy;
+	private Boolean paused;
+	private Boolean working;
+
+	
 	public Rover(Point position, String name) {
 		super(position, name);
-		// TODO Auto-generated constructor stub
+		paused = false;
+		working = false;
+	}
+	
+	public void setDestination(Point destination) {
+		if (destination == null) {
+			throw new NullPointerException("The destination cannot be null");
+		}
+		getAgent().setDestination(destination);
+		this.destination = destination;
+	}
+	
+	public Point getDestination() {
+		return destination;
+	}
+	
+	public Mission getMission() {
+		return mission;
+	}
+	
+	public Boolean isPaused() {
+		return paused;
+	}
+	
+	public Boolean isWorking() {
+		return working;
+	}
+	
+	public Strategy getStrategy() {
+		return strategy;
+	}
+	
+	public void setStrategy(Strategy strategy) {
+		this.strategy = strategy;
+	}
+	
+	public Boolean provideMission(Mission mission, Strategy strategy) {
+		setStrategy(strategy);
+		//TODO use methode strategy.sort()... to sort the mission
+		this.mission = mission;
+		Point nextPoint = this.mission.getNextPoint();
+		if(nextPoint != null) {
+			setDestination(nextPoint);
+		}
+		working = true;
+		return true;
+	}
+	
+	public Boolean pauseRover() {
+		if(working){
+			Point p = this.getPosition();
+			paused = true;
+			setDestination(p); //see what happen with NULL
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	public Boolean continueRover() {
+		if(working){
+			Point nextPoint = this.mission.getNextPoint();
+			setDestination(nextPoint);
+			paused = false;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public Boolean changeStrategy(Strategy strategy) {
+		setStrategy(strategy);
+//		TODO use methode strategy.sort()... to sort the mission
+//		this.mission = mission;
+		return true;
+	}
+	
+	public void goToNextPoint() {
+		mission.pointReached();
+		Point nextPoint = this.mission.getNextPoint();
+		if(nextPoint != null) {
+			setDestination(nextPoint);
+		}
+		else {
+			working = false;
+		}
 	}
 
 	public Point getLocation(String name) {
-		// TODO Auto-generated method stub
+		// TODO to delete
 		return null;
 	}
 
 	public void goTo(Point savePoint) {
-		// TODO Auto-generated method stub
+		// TODO to delete
 		
 	}
 };

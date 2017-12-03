@@ -4,8 +4,7 @@
 
 package rover;
 
-import java.util.List;
-
+import java.util.LinkedList;
 import project.Point;
 
 /************************************************************/
@@ -13,25 +12,35 @@ import project.Point;
  * 
  */
 public class Mission {
-	/**
-	 * 
-	 */
-	private List<Point> points;
-	/**
-	 * 
-	 */
-	private RobotAvatar rover;
+	private LinkedList<Point> pointsToReach;
+	private LinkedList<Point> pointsReached;
+
 	
-	public Mission(List<Point> points, RobotAvatar rover){
-		this.points = points;
-		this.rover = rover;
+	public Mission(LinkedList<Point> pointsToReach){
+		this.pointsToReach = pointsToReach;
+		this.pointsReached = new LinkedList<Point>();
 	}
 	
-	public List<Point> getPoints(){
-		return this.points;
+	public LinkedList<Point> getPointsToReach(){
+		return this.pointsToReach;
 	}
 	
-	public RobotAvatar getRover(){
-		return this.rover;
+	public LinkedList<Point> getPointsReached(){
+		return this.pointsReached;
+	}
+	
+	public void pointReached(){
+		if(!pointsToReach.isEmpty()) {
+			pointsReached.add(pointsToReach.removeFirst());
+		}
+	}
+	
+	public Point getNextPoint() {
+		if(!pointsToReach.isEmpty()) {
+			return pointsToReach.getFirst();
+		}
+		else {
+			return null;
+		}
 	}
 };
