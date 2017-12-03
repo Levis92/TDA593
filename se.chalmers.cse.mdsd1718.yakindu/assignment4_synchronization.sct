@@ -35,7 +35,7 @@
         <outgoingTransitions xmi:id="_KELPsNW6Eee0iNykew8zEQ" specification="room.checkIn [roomNumber == 0]" target="_zbvqQNW5Eee0iNykew8zEQ"/>
         <outgoingTransitions xmi:id="_LqGEoNW6Eee0iNykew8zEQ" specification="room.block [roomNumber == 0]" target="_zxURoNW5Eee0iNykew8zEQ"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_zbvqQNW5Eee0iNykew8zEQ" name="&lt;Booked>" incomingTransitions="_KELPsNW6Eee0iNykew8zEQ">
+      <vertices xsi:type="sgraph:State" xmi:id="_zbvqQNW5Eee0iNykew8zEQ" name="&lt;Occupied>" incomingTransitions="_KELPsNW6Eee0iNykew8zEQ">
         <outgoingTransitions xmi:id="_BLY_MNW8Eee0iNykew8zEQ" specification="room.checkOut [roomNumber ==0]" target="_v_Q8UNW5Eee0iNykew8zEQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_zxURoNW5Eee0iNykew8zEQ" name="&lt;Blocked>" incomingTransitions="_LqGEoNW6Eee0iNykew8zEQ">
@@ -50,7 +50,7 @@
         <outgoingTransitions xmi:id="_r8wBwdW8Eee0iNykew8zEQ" specification="room.checkIn [roomNumber == 1]" target="_r8x2-dW8Eee0iNykew8zEQ"/>
         <outgoingTransitions xmi:id="_r8xP6dW8Eee0iNykew8zEQ" specification="room.block [roomNumber == 1]" target="_r8zFGdW8Eee0iNykew8zEQ"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_r8x2-dW8Eee0iNykew8zEQ" name="&lt;Booked>" incomingTransitions="_r8wBwdW8Eee0iNykew8zEQ">
+      <vertices xsi:type="sgraph:State" xmi:id="_r8x2-dW8Eee0iNykew8zEQ" name="&lt;Occupied>" incomingTransitions="_r8wBwdW8Eee0iNykew8zEQ">
         <outgoingTransitions xmi:id="_r8yeAdW8Eee0iNykew8zEQ" specification="room.checkOut [roomNumber == 1]" target="_r8vasNW8Eee0iNykew8zEQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_r8zFGdW8Eee0iNykew8zEQ" name="&lt;Blocked>" incomingTransitions="_r8xP6dW8Eee0iNykew8zEQ">
@@ -259,7 +259,7 @@
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_HZUQIdWzEee0iNykew8zEQ"/>
       </children>
       <styles xsi:type="notation:ShapeStyle" xmi:id="_HZFmodWzEee0iNykew8zEQ" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_HZFmotWzEee0iNykew8zEQ" x="945" y="10" width="415" height="351"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_HZFmotWzEee0iNykew8zEQ" x="909" y="10" width="415" height="351"/>
     </children>
     <children xmi:id="_r8qiMNW8Eee0iNykew8zEQ" type="Region" element="_r8uzoNW8Eee0iNykew8zEQ">
       <children xsi:type="notation:DecorationNode" xmi:id="_r8qiMdW8Eee0iNykew8zEQ" type="RegionName">
@@ -331,7 +331,7 @@
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_r8rJT9W8Eee0iNykew8zEQ"/>
       </children>
       <styles xsi:type="notation:ShapeStyle" xmi:id="_r8rJUNW8Eee0iNykew8zEQ" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_r8rJUdW8Eee0iNykew8zEQ" x="1368" y="10" width="415" height="351"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_r8rJUdW8Eee0iNykew8zEQ" x="1350" y="10" width="415" height="351"/>
     </children>
     <styles xsi:type="notation:DiagramStyle" xmi:id="_nVEjwaf3Eeai1MQIRTN9hA"/>
     <edges xmi:id="_nVKDUKf3Eeai1MQIRTN9hA" type="Transition" element="_nVJcQ6f3Eeai1MQIRTN9hA" source="_nVHnEqf3Eeai1MQIRTN9hA" target="_nVI1MKf3Eeai1MQIRTN9hA">
