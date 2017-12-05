@@ -225,6 +225,10 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gMjxpNBgEeeybtOC6kw8lg" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gMjxpdBgEeeybtOC6kw8lg" value="1"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yDRvQtmaEeeWuJKrAou04A" name="strategyfactory" type="_X7qioNmZEeeWuJKrAou04A" association="_yDRIMNmaEeeWuJKrAou04A">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yDSWUNmaEeeWuJKrAou04A"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yDSWUdmaEeeWuJKrAou04A" value="1"/>
+        </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rA2M4NBbEeeybtOC6kw8lg" client="_sVYMUNBaEeeybtOC6kw8lg" supplier="_mm5mkNBaEeeybtOC6kw8lg" contract="_mm5mkNBaEeeybtOC6kw8lg"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_6GkrUNBaEeeybtOC6kw8lg" name="updateLocation">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_6GkrUdBaEeeybtOC6kw8lg" direction="return">
@@ -969,6 +973,27 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_J5R-ldNaEee5lrHP_PkN2Q" name="missionmanager" type="_xe5zQNBMEeeybtOC6kw8lg" association="_J5I0oNNaEee5lrHP_PkN2Q"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_X7qioNmZEeeWuJKrAou04A" name="StrategyFactory" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bQBPUNmZEeeWuJKrAou04A" name="createStrategy"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_ebaNQNmZEeeWuJKrAou04A" name="IStrategy">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6ZSNYNmZEeeWuJKrAou04A" name="computeStrategy">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6ZSNYdmZEeeWuJKrAou04A" name="Mission"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_omPCgNmZEeeWuJKrAou04A" name="Strategy1">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_tGly0NmaEeeWuJKrAou04A" client="_omPCgNmZEeeWuJKrAou04A" supplier="_ebaNQNmZEeeWuJKrAou04A" contract="_ebaNQNmZEeeWuJKrAou04A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pLwKYNmZEeeWuJKrAou04A" name="Strategy2">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uojU0NmaEeeWuJKrAou04A" client="_pLwKYNmZEeeWuJKrAou04A" supplier="_ebaNQNmZEeeWuJKrAou04A" contract="_ebaNQNmZEeeWuJKrAou04A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_yDRIMNmaEeeWuJKrAou04A" memberEnd="_yDRvQtmaEeeWuJKrAou04A _yDSWUtmaEeeWuJKrAou04A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yDRvQNmaEeeWuJKrAou04A" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yDRvQdmaEeeWuJKrAou04A" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_yDSWUtmaEeeWuJKrAou04A" name="operator" type="_sVYMUNBaEeeybtOC6kw8lg" association="_yDRIMNmaEeeWuJKrAou04A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_EmjdMNmbEeeWuJKrAou04A" client="_X7qioNmZEeeWuJKrAou04A" supplier="_ebaNQNmZEeeWuJKrAou04A"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b8wPcM6WEee_RaSB9J5JlA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8zSwM6WEee_RaSB9J5JlA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
