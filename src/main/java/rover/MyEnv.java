@@ -7,13 +7,13 @@ public class MyEnv extends EnvironmentDescription {
 	public MyEnv(){
 		Color c1 = Color . GRAY ;
 		Color c2 = Color . RED ;
-		Boundary w1 = new HorizontalBoundary(-10.0f, -10.0f, 10.0f, this, c1);
+		Boundary w1 = new HorizontalBoundary(-12.0f, -12.0f, 12.0f, this, c1);
 		
-		Boundary w2 = new HorizontalBoundary(10.0f, -10.0f, 10.0f, this, c1);
+		Boundary w2 = new HorizontalBoundary(12.0f, -12.0f, 12.0f, this, c1);
 		
-		Boundary w3 = new VerticalBoundary(10.0f, -10.0f, 10.0f, this, c1);
+		Boundary w3 = new VerticalBoundary(12.0f, -12.0f, 12.0f, this, c1);
 		
-		Boundary w4 = new VerticalBoundary(-10.0f, -10.0f, 10.0f, this, c1);
+		Boundary w4 = new VerticalBoundary(-12.0f, -12.0f, 12.0f, this, c1);
 		
 		AbstractWall roomWall1 = new VerticalWall(7.0f, -7.0f, 7.0f, this, c2);
 		

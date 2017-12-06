@@ -18,10 +18,10 @@ public class Main {
 		//Rovers Initialization
 		Set<Rover> robots = new HashSet<>();
 		
-		Rover robot1 = new Rover(new Point(-8, -3.5), "Robot 1");
-		Rover robot2 = new Rover(new Point(-8, 3.5), "Robot 2");
-		Rover robot3 = new Rover(new Point(8, 3.5), "Robot 3");
-		Rover robot4 = new Rover(new Point(8, -3.5), "Robot 4");
+		Rover robot1 = new Rover(new Point(-9, -3.5), "Robot 1"); //top right
+		Rover robot2 = new Rover(new Point(-8, 3.5), "Robot 2"); // top left
+		Rover robot3 = new Rover(new Point(8, 3.5), "Robot 3"); // down left
+		Rover robot4 = new Rover(new Point(10, -3.5), "Robot 4"); // down right
 		
 		robots.add(robot1);
 		robots.add(robot2);
@@ -30,37 +30,33 @@ public class Main {
 		
 		//AreaController Initialization
 		List<AreaController> listAreaController = new ArrayList<AreaController>();
-		
-		AreaController aC1 = new AreaController ( new Point(-3.5,3.5), 3.5 ,e);
-		AreaController aC2 = new AreaController ( new Point(3.5,3.5), 3.5 ,e);
-		AreaController aC3 = new AreaController ( new Point(-3.5,-3.5), 3.5 ,e);
-		AreaController aC4 = new AreaController ( new Point(3.5,-3.5), 3.5 ,e);
+	
+		AreaController aC1 = new AreaController ( new Point(4, 0), 5.5, e);
+		AreaController aC2 = new AreaController ( new Point(-4, 0), 5.5, e);
 		
 		listAreaController.add(aC1);
 		listAreaController.add(aC2);
-		listAreaController.add(aC3);
-		listAreaController.add(aC4);
 		
 		//Missions Initialization
 		LinkedList<Point> point1 = new LinkedList<Point>();
 		point1.add(new Point(-3.5,-3.5));
 		point1.add(new Point(3.5, -3.5));
-		point1.add(new Point(8, -3.5));
+		point1.add(new Point(11, -3.5));
 		
 		LinkedList<Point> point2 = new LinkedList<Point>();
 		point2.add(new Point(-3.5, 3.5));
-		point2.add(new Point(-3.5, -3.5));
-		point2.add(new Point(-8, -3.5));
+		point2.add(new Point(-3.3, -3.5));
+		point2.add(new Point(-11, -3.5));
 		
 		LinkedList<Point> point3 = new LinkedList<Point>();
 		point3.add(new Point(3.5,3.5));
 		point3.add(new Point(-3.5,3.5));
-		point3.add(new Point(-8, 3.5));
+		point3.add(new Point(-11, 3.5));
 		
 		LinkedList<Point> point4 = new LinkedList<Point>();
 		point4.add(new Point(3.5, -3.5));
 		point4.add(new Point(3.5, 3.5));
-		point4.add(new Point(8, 3.5));
+		point4.add(new Point(11, 3.5));
 		
 		Mission mission1 = new Mission(point1);
 		Mission mission2 = new Mission(point2);
