@@ -6,25 +6,32 @@ package rover;
 
 import project.Point;
 import rover.IRewardPoints;
+import rover.Rover;
 
 /************************************************************/
 /**
  * 
  */
-public class ProcedureB implements IRewardPoints
- {
-				/**
-				 * 
-				 */
-				public int rewardPoint;
+public class ProcedureB implements IRewardPoints {
+	/**
+	 * 
+	 */
+	public int rewardPoint;
 
-				public void calculateRewardPoints(String name, Point point) {
-					// TODO Auto-generated method stub
-					
-				}
+	/**
+	 * 
+	 * @param points 
+	 * @return 
+	 */
+	public void updateRewardPoints(int[] points) {
+	}
 
-				public void updateRewardPoints(int[] points) {
-					// TODO Auto-generated method stub
-					
-				}
+	/**
+	 * 
+	 * @param rover 
+	 * @param point 
+	 * @return 
+	 */
+	public void calculateRewardPoints(Rover rover, Point point) {
+	}
 };

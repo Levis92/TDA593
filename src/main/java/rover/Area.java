@@ -8,16 +8,5 @@ package rover;
 /**
  * 
  */
-public interface IMissionAchieved {
-	/**
-	 * 
-	 * @return 
-	 */
-	public void achievedMission();
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public void achievedPoint();
+public interface Area {
 };

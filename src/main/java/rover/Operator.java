@@ -5,10 +5,12 @@
 package rover;
 
 import project.Point;
+import rover.IMissionManager;
 import rover.IOperatorCreateMissionView;
 import rover.IOperatorEnvironmentView;
 import rover.IOperatorFaultView;
 import rover.IOperatorRewardPointsView;
+import rover.StrategyFactory;
 
 /************************************************************/
 /**
@@ -22,24 +24,25 @@ public class Operator implements IOperatorFaultView {
 	/**
 	 * 
 	 */
+	public IOperatorRewardPointsView ioperatorrewardpointsview;
+	/**
+	 * 
+	 */
 	public IOperatorEnvironmentView ioperatorenvironmentview;
 	/**
 	 * 
 	 */
 	public IOperatorFaultView ioperatorfaultview;
+	/**
+	 * 
+	 */
+	public StrategyFactory strategyfactory;
 
 	/**
 	 * 
 	 * @return 
 	 */
 	public void updateLocation() {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public void updateEnvironmentStatus() {
 	}
 
 	/**
@@ -63,10 +66,5 @@ public class Operator implements IOperatorFaultView {
 	 * @param roverName 
 	 */
 	public void createMission(Point points, String roverName) {
-	}
-
-	public void notifyFault() {
-		// TODO Auto-generated method stub
-		
 	}
 };

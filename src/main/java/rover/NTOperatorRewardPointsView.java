@@ -24,7 +24,6 @@ public class NTOperatorRewardPointsView implements IOperatorRewardPointsView {
 	 * @return 
 	 */
 	public int getRewardPoints() {
-		return 0;
 	}
 
 	/**

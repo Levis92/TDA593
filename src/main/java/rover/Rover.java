@@ -4,124 +4,159 @@
 
 package rover;
 
-
-import project.AbstractRobotSimulator;
+import project.AbstractRobot;
 import project.Point;
+import rover.Area;
+import rover.IAccessManager;
+import rover.IOperatorFaultView;
 import rover.IRoverLocation;
-import rover.IRoverStrategy;
+import rover.IRoverManager;
+import rover.IStrategy;
+import rover.Mission;
 
 /************************************************************/
 /**
  * 
  */
-public class Rover extends AbstractRobotSimulator implements IRoverStrategy, IRoverLocation {
-
+public class Rover extends AbstractRobotSimulator implements IRoverManager, IRoverLocation {
+	/**
+	 * 
+	 */
 	private Point destination;
-	private Mission mission;
-	private Strategy strategy;
-	private Boolean paused;
-	private Boolean working;
+	/**
+	 * 
+	 */
+	public Mission mission;
+	/**
+	 * 
+	 */
+	public boolean paused;
+	/**
+	 * 
+	 */
+	public boolean sleeping;
+	/**
+	 * 
+	 */
+	public IStrategy strategy;
+	/**
+	 * 
+	 */
+	public IAccessManager accessManager;
+	/**
+	 * 
+	 */
+	public Area[] listAreas;
 
-	
-	public Rover(Point position, String name) {
-		super(position, name);
-		paused = false;
-		working = false;
+	/**
+	 * 
+	 * @param position 
+	 * @param name 
+	 */
+	public void Rover(Point position, String name) {
 	}
-	
-	public void setDestination(Point destination) {
-		if (destination == null) {
-			throw new NullPointerException("The destination cannot be null");
-		}
-		getAgent().setDestination(destination);
-		this.destination = destination;
-	}
-	
+
+	/**
+	 * 
+	 * @return 
+	 */
 	public Point getDestination() {
-		return destination;
 	}
-	
+
+	/**
+	 * 
+	 * @return 
+	 */
 	public Mission getMission() {
-		return mission;
-	}
-	
-	public Boolean isPaused() {
-		return paused;
-	}
-	
-	public Boolean isWorking() {
-		return working;
-	}
-	
-	public Strategy getStrategy() {
-		return strategy;
-	}
-	
-	public void setStrategy(Strategy strategy) {
-		this.strategy = strategy;
-	}
-	
-	public Boolean provideMission(Mission mission, Strategy strategy) {
-		setStrategy(strategy);
-		//TODO use methode strategy.sort()... to sort the mission
-		this.mission = mission;
-		Point nextPoint = this.mission.getNextPoint();
-		if(nextPoint != null) {
-			setDestination(nextPoint);
-		}
-		working = true;
-		return true;
-	}
-	
-	public Boolean pauseRover() {
-		if(working){
-			Point p = this.getPosition();
-			paused = true;
-			setDestination(p); //see what happen with NULL
-			return true;
-		}
-		else {
-			return false;
-		}
 	}
 
-	public Boolean continueRover() {
-		if(working){
-			Point nextPoint = this.mission.getNextPoint();
-			setDestination(nextPoint);
-			paused = false;
-			return true;
-		}
-		else {
-			return false;
-		}
+	/**
+	 * 
+	 * @return 
+	 */
+	public boolean isPaused() {
 	}
-	
-	public Boolean changeStrategy(Strategy strategy) {
-		setStrategy(strategy);
-//		TODO use methode strategy.sort()... to sort the mission
-//		this.mission = mission;
-		return true;
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public boolean isSleeping() {
 	}
-	
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public IStrategy getStrategy() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Area[] getListArea() {
+	}
+
+	/**
+	 * 
+	 * @param point 
+	 * @return 
+	 */
+	public void setDestination(Point point) {
+	}
+
+	/**
+	 * 
+	 * @param strategy 
+	 * @return 
+	 */
+	public void setStrategy(IStrategy strategy) {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
 	public void goToNextPoint() {
-		mission.pointReached();
-		Point nextPoint = this.mission.getNextPoint();
-		if(nextPoint != null) {
-			setDestination(nextPoint);
-		}
-		else {
-			working = false;
-		}
 	}
 
-	public Point getLocation(String name) {
-		// TODO to delete
-		return null;
+	/**
+	 * 
+	 * @param roverName 
+	 * @return 
+	 */
+	public Point getLocation(String roverName) {
 	}
 
-	public void goTo(Point savePoint) {
-		// TODO to delete
-		
+	/**
+	 * 
+	 * @param mission 
+	 * @return 
+	 * @param strategy 
+	 */
+	public boolean provideMission(Mission mission, IStrategy strategy) {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public boolean pauseRover() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public boolean continueRover() {
+	}
+
+	/**
+	 * 
+	 * @param strategy 
+	 * @return 
+	 */
+	public boolean changeStrategy(IStrategy strategy) {
 	}
 };

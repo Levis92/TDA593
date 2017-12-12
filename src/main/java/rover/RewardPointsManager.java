@@ -4,13 +4,14 @@
 
 package rover;
 
-import java.util.HashMap;
 import java.util.Map;
+import rover.IOperatorRewardPointsView;
 import rover.IRewardPoints;
 import rover.IRewardPointsManagar;
 import rover.IRoverLocation;
 import rover.ProcedureA;
 import rover.ProcedureB;
+import rover.Rover;
 
 /************************************************************/
 /**
@@ -18,13 +19,13 @@ import rover.ProcedureB;
  */
 public class RewardPointsManager implements IRewardPointsManagar {
 	/**
-				 * 
-				 */
-				private ProcedureA procedureA;
+	 * 
+	 */
+	private ProcedureA procedureA;
 	/**
-				 * 
-				 */
-				private ProcedureB procedureB;
+	 * 
+	 */
+	private ProcedureB procedureB;
 	/**
 	 * 
 	 */
@@ -33,26 +34,20 @@ public class RewardPointsManager implements IRewardPointsManagar {
 	/**
 	 * 
 	 */
-	public Map<String, Integer> map = new HashMap <String, Integer>();
+	public map<Rover, int> map<Rover, int>;
 	/**
 	 * 
 	 * @return 
 	 */
-	public void updateProcedure() {
-		
+	private void updateProcedure() {
 	}
 
 	/**
 	 * 
 	 * @param additionalPoint 
-	 * @param nameRover 
+	 * @param rover 
 	 * @return 
 	 */
-	public void setRewardPoints(int additionalPoint, String nameRover) {
-	}
-
-	public void updateRewardPoints() {
-		// TODO Auto-generated method stub
-		
+	private void setRewardPoints(int additionalPoint, Rover rover) {
 	}
 };

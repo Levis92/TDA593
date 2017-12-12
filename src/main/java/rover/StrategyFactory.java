@@ -4,24 +4,16 @@
 
 package rover;
 
-import rover.IOperatorEnvironmentView;
+import rover.IStrategy;
 
 /************************************************************/
 /**
  * 
  */
-public class NTOperatorEnvironmentView implements IOperatorEnvironmentView {
+public class StrategyFactory {
 	/**
 	 * 
-	 * @return 
 	 */
-	public void updateLocation() {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public void updateMissionProgress() {
+	public void createStrategy() {
 	}
 };

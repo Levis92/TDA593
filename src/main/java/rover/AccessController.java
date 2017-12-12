@@ -4,17 +4,9 @@
 
 package rover;
 
-import project.Point;
-
 /************************************************************/
 /**
  * 
  */
-public interface IRoverStrategy {
-	/**
-	 * 
-	 * @param savePoint 
-	 * @return 
-	 */
-	public void goTo(Point savePoint);
+public class AccessController {
 };

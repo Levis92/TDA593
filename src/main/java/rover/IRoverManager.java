@@ -4,45 +4,38 @@
 
 package rover;
 
+import rover.IStrategy;
 import rover.Mission;
-import rover.Strategy;
 
 /************************************************************/
 /**
  * 
  */
-public interface IStrategyManager {
+public interface IRoverManager {
 	/**
 	 * 
 	 * @param mission 
 	 * @return 
+	 * @param strategy 
 	 */
-	public boolean provideMission(Mission mission);
-
-	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean pauseStrategy(Mission mission);
-
-	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean continueStrategy(Mission mission);
-
-	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean changeMission(Mission mission);
+	public boolean provideMission(Mission mission, IStrategy strategy);
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public Strategy getStrategyPaused();
+	public boolean pauseRover();
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public boolean continueRover();
+
+	/**
+	 * 
+	 * @param strategy 
+	 * @return 
+	 */
+	public boolean changeStrategy(IStrategy strategy);
 };

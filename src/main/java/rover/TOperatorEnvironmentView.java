@@ -11,19 +11,17 @@ import rover.IOperatorEnvironmentView;
  * 
  */
 public class TOperatorEnvironmentView implements IOperatorEnvironmentView {
-
+	/**
+	 * 
+	 * @return 
+	 */
 	public void updateLocation() {
-		// TODO Auto-generated method stub
-		
 	}
 
-	public void updateEnvironmentStatus() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	/**
+	 * 
+	 * @return 
+	 */
 	public void updateMissionProgress() {
-		// TODO Auto-generated method stub
-		
 	}
 };

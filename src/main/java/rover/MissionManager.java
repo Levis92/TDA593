@@ -4,22 +4,54 @@
 
 package rover;
 
-import java.util.ArrayList;
 import java.util.List;
-import rover.IMissionAchieved;
+import project.Point;
 import rover.IMissionManager;
-import rover.IStrategyManager;
 import rover.Mission;
+import rover.Rover;
 
 /************************************************************/
 /**
  * 
  */
-public class MissionManager implements IMissionAchieved, IMissionManager {
+public class MissionManager implements IMissionManager {
+	/**
+				 * 
+				 */
+				public List<Mission> list<mission>;
+	/**
+				 * 
+				 */
+				public List<Rover> list<rover>;
+
 	/**
 	 * 
+	 * @param rovers 
 	 */
-	public List<Mission> missions = new ArrayList<Mission>();
+	public void MissionManager(Rover rovers) {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Mission getMissions() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Rover getRovers() {
+	}
+
+	/**
+	 * 
+	 * @param roverName 
+	 * @return 
+	 */
+	public boolean checkRoverAvailability(String roverName) {
+	}
 
 	/**
 	 * 
@@ -35,38 +67,135 @@ public class MissionManager implements IMissionAchieved, IMissionManager {
 	public void achievedPoint() {
 	}
 
-	public boolean createMission(Mission mission) {
-		// TODO Auto-generated method stub
-		return false;
+	/**
+	 * 
+	 * @param mission 
+	 * @return 
+	 */
+	public boolean createMission(undefined mission) {
 	}
 
-	public boolean removeMission(Mission mission) {
-		// TODO Auto-generated method stub
-		return false;
+	/**
+	 * 
+	 * @param mission 
+	 * @return 
+	 */
+	public boolean removeMission(undefined mission) {
 	}
 
+	/**
+	 * 
+	 * @return 
+	 */
 	public boolean removeAllMissions() {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
-	public boolean pauseMission(Mission mission) {
-		// TODO Auto-generated method stub
-		return false;
+	/**
+	 * 
+	 * @param mission 
+	 * @return 
+	 */
+	public boolean pauseMission(undefined mission) {
 	}
 
-	public boolean continueMission(Mission mission) {
-		// TODO Auto-generated method stub
-		return false;
+	/**
+	 * 
+	 * @param mission 
+	 * @return 
+	 */
+	public boolean continueMission(undefined mission) {
 	}
 
+	/**
+	 * 
+	 * @return 
+	 */
 	public boolean pauseAllMissions() {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
+	/**
+	 * 
+	 * @return 
+	 */
 	public boolean continueAllMissions() {
-		// TODO Auto-generated method stub
-		return false;
+	}
+
+	/**
+	 * 
+	 * @param mission 
+	 * @return 
+	 */
+	public boolean removeMission(undefined mission) {
+	}
+
+	/**
+	 * 
+	 * @param mission 
+	 * @return 
+	 */
+	public boolean pauseMission(undefined mission) {
+	}
+
+	/**
+	 * 
+	 * @param mission 
+	 * @return 
+	 */
+	public boolean continueMission(undefined mission) {
+	}
+
+	/**
+	 * 
+	 * @param points 
+	 * @return 
+	 */
+	public boolean createMission(undefined points) {
+	}
+
+	/**
+	 * 
+	 * @param points 
+	 * @return 
+	 */
+	public boolean createMission(Point points) {
+	}
+
+	/**
+	 * 
+	 * @param points 
+	 * @return 
+	 */
+	public boolean createMission(Point points) {
+	}
+
+	/**
+	 * 
+	 * @param points 
+	 * @return 
+	 */
+	public boolean createMission(Point points) {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public void achievedMission() {
+	}
+
+	/**
+	 * 
+	 * @param points 
+	 * @return 
+	 * @param rover 
+	 */
+	public boolean createMission(Point[] points, Rover rover) {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public void achievedPoint() {
 	}
 };

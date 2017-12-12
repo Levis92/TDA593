@@ -4,34 +4,32 @@
 
 package rover;
 
-import project.Point;
-import rover.IRewardPoints;
+import rover.IStrategy;
 import rover.Rover;
 
 /************************************************************/
 /**
  * 
  */
-public class ProcedureA implements IRewardPoints {
+public class Strategy1 implements IStrategy {
 	/**
 	 * 
+	 * @param rover 
 	 */
-	public int rewardPoint;
-
-	/**
-	 * 
-	 * @param points 
-	 * @return 
-	 */
-	public void updateRewardPoints(int[] points) {
+	public void computeStrategy(undefined rover) {
 	}
 
 	/**
 	 * 
 	 * @param rover 
-	 * @param point 
-	 * @return 
 	 */
-	public void calculateRewardPoints(Rover rover, Point point) {
+	public void computeStrategy(Rover rover) {
+	}
+
+	/**
+	 * 
+	 * @param rover 
+	 */
+	public void applyBehaviour(Rover rover) {
 	}
 };

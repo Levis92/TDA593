@@ -11,9 +11,4 @@ import rover.IOperatorCreateMissionView;
  * 
  */
 public class TOperatorCreateMissionView implements IOperatorCreateMissionView {
-
-	public void createMission(int points, String roverName) {
-		// TODO Auto-generated method stub
-		
-	}
 };

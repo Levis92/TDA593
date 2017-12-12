@@ -5,6 +5,7 @@
 package rover;
 
 import project.Point;
+import rover.Area;
 
 /************************************************************/
 /**
@@ -13,8 +14,14 @@ import project.Point;
 public interface IRoverLocation {
 	/**
 	 * 
-	 * @param name 
+	 * @param roverName 
 	 * @return 
 	 */
-	public Point getLocation(String name);
+	public Point getLocation(String roverName);
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Area isInArea();
 };

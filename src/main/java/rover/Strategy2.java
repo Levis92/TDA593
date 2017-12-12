@@ -4,24 +4,16 @@
 
 package rover;
 
-import rover.IOperatorEnvironmentView;
+import rover.Area;
+import rover.IStrategy;
 
 /************************************************************/
 /**
  * 
  */
-public class NTOperatorEnvironmentView implements IOperatorEnvironmentView {
+public class Strategy2 implements IStrategy {
 	/**
 	 * 
-	 * @return 
 	 */
-	public void updateLocation() {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public void updateMissionProgress() {
-	}
+	public Area currentArea;
 };

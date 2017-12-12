@@ -5,6 +5,7 @@
 package rover;
 
 import project.Point;
+import rover.Rover;
 
 /************************************************************/
 /**
@@ -13,15 +14,15 @@ import project.Point;
 public interface IRewardPoints {
 	/**
 	 * 
-	 * @param name 
+	 * @param rover 
 	 * @param point 
 	 * @return 
 	 */
-	public void calculateRewardPoints(String name, Point point);
+	public void calculateRewardPoints(Rover rover, Point point);
 
 	/**
 	 * 
-	 * @param  
+	 * @param points 
 	 * @return 
 	 */
 	public void updateRewardPoints(int[] points);

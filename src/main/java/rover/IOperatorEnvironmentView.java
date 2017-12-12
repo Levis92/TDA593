@@ -19,11 +19,5 @@ public interface IOperatorEnvironmentView {
 	 * 
 	 * @return 
 	 */
-	public void updateEnvironmentStatus();
-
-	/**
-	 * 
-	 * @return 
-	 */
 	public void updateMissionProgress();
 };

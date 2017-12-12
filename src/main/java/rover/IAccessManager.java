@@ -4,18 +4,17 @@
 
 package rover;
 
-import project.Point;
+import rover.Rover;
 
 /************************************************************/
 /**
  * 
  */
-public interface IPointAchieved {
+public interface IAccessManager {
 	/**
 	 * 
-	 * @param savePoint 
+	 * @param rover 
 	 * @return 
-	 * @param roverName 
 	 */
-	public void achievedPoint(Point savePoint, RobotAvatar rover);
+	public void manageAccess(Rover rover);
 };

@@ -4,7 +4,8 @@
 
 package rover;
 
-import rover.Mission;
+import project.Point;
+import rover.Rover;
 
 /************************************************************/
 /**
@@ -13,17 +14,18 @@ import rover.Mission;
 public interface IMissionManager {
 	/**
 	 * 
-	 * @param mission 
+	 * @param points 
 	 * @return 
+	 * @param rover 
 	 */
-	public boolean createMission(Mission mission);
+	public boolean createMission(Point[] points, Rover rover);
 
 	/**
 	 * 
 	 * @param mission 
 	 * @return 
 	 */
-	public boolean removeMission(Mission mission);
+	public boolean removeMission(undefined mission);
 
 	/**
 	 * 
@@ -36,14 +38,14 @@ public interface IMissionManager {
 	 * @param mission 
 	 * @return 
 	 */
-	public boolean pauseMission(Mission mission);
+	public boolean pauseMission(undefined mission);
 
 	/**
 	 * 
 	 * @param mission 
 	 * @return 
 	 */
-	public boolean continueMission(Mission mission);
+	public boolean continueMission(undefined mission);
 
 	/**
 	 * 
