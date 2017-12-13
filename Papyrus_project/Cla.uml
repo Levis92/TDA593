@@ -829,9 +829,16 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_sbLykN0BEeeDO5Ph8U49Pw" client="_sxp5MNz-EeeDO5Ph8U49Pw" supplier="_nHzoEM6VEee_RaSB9J5JlA"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_owGygN0CEeeDO5Ph8U49Pw" name="Area"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_owGygN0CEeeDO5Ph8U49Pw" name="IVisitableArea"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_YyU_0N0FEeeDO5Ph8U49Pw" client="_ebaNQNmZEeeWuJKrAou04A" supplier="_nHzoEM6VEee_RaSB9J5JlA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5jW1wOBOEeeqi52QNghZnA" name="AbstractArea" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_WUOZEOBPEeeqi52QNghZnA" name="PhysicalArea"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_0NMz8OBPEeeqi52QNghZnA" name="LogicalArea"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_z90MwOBSEeeqi52QNghZnA" client="_5jW1wOBOEeeqi52QNghZnA" supplier="_owGygN0CEeeDO5Ph8U49Pw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_9DlecOBSEeeqi52QNghZnA" client="_nHzoEM6VEee_RaSB9J5JlA" supplier="_owGygN0CEeeDO5Ph8U49Pw"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_JWt5cOBSEeeqi52QNghZnA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_L9xbQOBSEeeqi52QNghZnA"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b8wPcM6WEee_RaSB9J5JlA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8zSwM6WEee_RaSB9J5JlA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
