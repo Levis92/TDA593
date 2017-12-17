@@ -6,48 +6,23 @@ package rover;
 
 import java.util.Map;
 import rover.IOperatorRewardPointsView;
-import rover.IRewardPoints;
 import rover.IRewardPointsManagar;
-import rover.IRoverLocation;
-import rover.ProcedureA;
-import rover.ProcedureB;
-import rover.Rover;
+import rover.IVisitableRover;
+import rover.IVisitorProcedure;
+import rover.runnable;
 
 /************************************************************/
 /**
  * 
  */
-public class RewardPointsManager implements IRewardPointsManagar {
-	/**
-	 * 
-	 */
-	private ProcedureA procedureA;
-	/**
-	 * 
-	 */
-	private ProcedureB procedureB;
-	/**
-	 * 
-	 */
-	private IRewardPoints currentProcedure;
-
-	/**
-	 * 
-	 */
-	public map<Rover, int> map<Rover, int>;
-	/**
-	 * 
-	 * @return 
-	 */
-	private void updateProcedure() {
-	}
-
-	/**
-	 * 
-	 * @param additionalPoint 
-	 * @param rover 
-	 * @return 
-	 */
-	private void setRewardPoints(int additionalPoint, Rover rover) {
-	}
+public class RewardPointsManager implements IRewardPointsManagar, runnable
+ {
+				/**
+				 * 
+				 */
+				private IVisitorProcedure[] procedureList;
+				/**
+				 * 
+				 */
+				private map<Rover, int> map<Rover, int>;
 };

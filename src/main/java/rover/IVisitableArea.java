@@ -4,16 +4,19 @@
 
 package rover;
 
-import rover.IStrategy;
-import rover.IVisitableArea;
+import rover.IVisitableRover;
+import rover.IVisitorProcedure;
 
 /************************************************************/
 /**
  * 
  */
-public class Strategy2 implements IStrategy {
+public interface IVisitableArea {
 	/**
 	 * 
+	 * @param procedure 
+	 * @param rover 
+	 * @return 
 	 */
-	public IVisitableArea currentArea;
+	public void accept(IVisitorProcedure procedure, IVisitableRover rover);
 };

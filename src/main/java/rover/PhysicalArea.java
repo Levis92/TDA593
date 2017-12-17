@@ -8,5 +8,5 @@ package rover;
 /**
  * 
  */
-public interface Area {
+public class PhysicalArea {
 };

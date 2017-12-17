@@ -4,16 +4,9 @@
 
 package rover;
 
-import rover.IStrategy;
-import rover.IVisitableArea;
-
 /************************************************************/
 /**
  * 
  */
-public class Strategy2 implements IStrategy {
-	/**
-	 * 
-	 */
-	public IVisitableArea currentArea;
+public class LogicalArea {
 };

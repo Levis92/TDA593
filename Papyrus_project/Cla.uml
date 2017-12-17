@@ -591,6 +591,11 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_9AXMYtNOEee5lrHP_PkN2Q" name="name">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_besH0OM5Eee0XNh8FFND0A" name="accessManager" type="_sxp5MNz-EeeDO5Ph8U49Pw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_lbJw8OM5Eee0XNh8FFND0A" name="listAreas" type="_owGygN0CEeeDO5Ph8U49Pw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nSLkAOM5Eee0XNh8FFND0A"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nSee8OM5Eee0XNh8FFND0A" value="*"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_DrK3gNNPEee5lrHP_PkN2Q" name="getDestination">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_DrK3gdNPEee5lrHP_PkN2Q" type="_ocFBcM6XEee_RaSB9J5JlA" direction="return"/>
@@ -868,22 +873,22 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_0NMz8OBPEeeqi52QNghZnA" name="LogicalArea"/>
       <packagedElement xmi:type="uml:Realization" xmi:id="_z90MwOBSEeeqi52QNghZnA" client="_5jW1wOBOEeeqi52QNghZnA" supplier="_owGygN0CEeeDO5Ph8U49Pw"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_9DlecOBSEeeqi52QNghZnA" client="_nHzoEM6VEee_RaSB9J5JlA" supplier="_owGygN0CEeeDO5Ph8U49Pw"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_JWt5cOBSEeeqi52QNghZnA"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_L9xbQOBSEeeqi52QNghZnA"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_eR6bMOMqEeebRM9gSuL0jA" memberEnd="_eR9eguMqEeebRM9gSuL0jA _eR9eheMqEeebRM9gSuL0jA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eR9egOMqEeebRM9gSuL0jA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eR9egeMqEeebRM9gSuL0jA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_eR9eheMqEeebRM9gSuL0jA" name="procedurea" type="_xOILUNBXEeeybtOC6kw8lg" association="_eR6bMOMqEeebRM9gSuL0jA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_g74uIOMqEeebRM9gSuL0jA" memberEnd="_g74uI-MqEeebRM9gSuL0jA _g74uJuMqEeebRM9gSuL0jA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_g74uIeMqEeebRM9gSuL0jA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_g74uIuMqEeebRM9gSuL0jA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_g74uJuMqEeebRM9gSuL0jA" name="procedureb" type="_DHVBgNBYEeeybtOC6kw8lg" association="_g74uIOMqEeebRM9gSuL0jA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_ZSisQOMsEeebRM9gSuL0jA" name="runnable"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_JWt5cOBSEeeqi52QNghZnA"/>
-    <packagedElement xmi:type="uml:Association" xmi:id="_L9xbQOBSEeeqi52QNghZnA"/>
-    <packagedElement xmi:type="uml:Association" xmi:id="_eR6bMOMqEeebRM9gSuL0jA" memberEnd="_eR9eguMqEeebRM9gSuL0jA _eR9eheMqEeebRM9gSuL0jA">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eR9egOMqEeebRM9gSuL0jA" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eR9egeMqEeebRM9gSuL0jA" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_eR9eheMqEeebRM9gSuL0jA" name="procedurea" type="_xOILUNBXEeeybtOC6kw8lg" association="_eR6bMOMqEeebRM9gSuL0jA"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_g74uIOMqEeebRM9gSuL0jA" memberEnd="_g74uI-MqEeebRM9gSuL0jA _g74uJuMqEeebRM9gSuL0jA">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_g74uIeMqEeebRM9gSuL0jA" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_g74uIuMqEeebRM9gSuL0jA" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_g74uJuMqEeebRM9gSuL0jA" name="procedureb" type="_DHVBgNBYEeeybtOC6kw8lg" association="_g74uIOMqEeebRM9gSuL0jA"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_ZSisQOMsEeebRM9gSuL0jA" name="runnable"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b8wPcM6WEee_RaSB9J5JlA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8zSwM6WEee_RaSB9J5JlA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>

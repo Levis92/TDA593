@@ -4,26 +4,28 @@
 
 package rover;
 
-import project.Point;
+import rover.LogicalArea;
+import rover.PhysicalArea;
 import rover.Rover;
 
 /************************************************************/
 /**
  * 
  */
-public interface IRewardPoints {
+public interface IVisitorProcedure {
 	/**
 	 * 
+	 * @param logicalArea 
 	 * @param rover 
-	 * @param point 
 	 * @return 
 	 */
-	public void calculateRewardPoints(Rover rover, Point point);
+	public void visit(LogicalArea logicalArea, Rover rover);
 
 	/**
 	 * 
-	 * @param points 
+	 * @param physicalArea 
 	 * @return 
+	 * @param rover 
 	 */
-	public void updateRewardPoints(int[] points);
+	public void visit(PhysicalArea physicalArea, Rover rover);
 };

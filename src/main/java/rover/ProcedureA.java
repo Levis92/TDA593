@@ -4,34 +4,36 @@
 
 package rover;
 
+import java.util.Map;
 import project.Point;
-import rover.IRewardPoints;
+import rover.IVisitorProcedure;
+import rover.LogicalArea;
 import rover.Rover;
 
 /************************************************************/
 /**
  * 
  */
-public class ProcedureA implements IRewardPoints {
+public class ProcedureA implements IVisitorProcedure {
 	/**
 	 * 
 	 */
-	public int rewardPoint;
-
+	public map<Rover, int> map<rover, int>;
 	/**
 	 * 
-	 * @param points 
+	 * @param logicalArea 
+	 * @param rover 
 	 * @return 
 	 */
-	public void updateRewardPoints(int[] points) {
+	public void visit(Point logicalArea, Rover rover) {
 	}
 
 	/**
 	 * 
+	 * @param logicalArea 
 	 * @param rover 
-	 * @param point 
 	 * @return 
 	 */
-	public void calculateRewardPoints(Rover rover, Point point) {
+	public void visit(LogicalArea logicalArea, Rover rover) {
 	}
 };

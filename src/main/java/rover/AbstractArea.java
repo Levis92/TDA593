@@ -4,24 +4,11 @@
 
 package rover;
 
-import project.Point;
-import rover.Area;
+import rover.IVisitableArea;
 
 /************************************************************/
 /**
  * 
  */
-public interface IRoverLocation {
-	/**
-	 * 
-	 * @param roverName 
-	 * @return 
-	 */
-	public Point getLocation(String roverName);
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public Area isInArea();
+public abstract class AbstractArea {
 };

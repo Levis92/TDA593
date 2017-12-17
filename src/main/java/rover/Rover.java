@@ -6,19 +6,19 @@ package rover;
 
 import project.AbstractRobot;
 import project.Point;
-import rover.Area;
 import rover.IAccessManager;
 import rover.IOperatorFaultView;
-import rover.IRoverLocation;
 import rover.IRoverManager;
 import rover.IStrategy;
+import rover.IVisitableArea;
+import rover.IVisitableRover;
 import rover.Mission;
 
 /************************************************************/
 /**
  * 
  */
-public class Rover extends AbstractRobotSimulator implements IRoverManager, IRoverLocation {
+public class Rover extends AbstractRobotSimulator implements IRoverManager, IVisitableRover {
 	/**
 	 * 
 	 */
@@ -46,14 +46,16 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	/**
 	 * 
 	 */
-	public Area[] listAreas;
+	public IVisitableArea[] listAreas;
 
 	/**
 	 * 
 	 * @param position 
 	 * @param name 
+	 * @param accessManager 
+	 * @param listAreas 
 	 */
-	public void Rover(Point position, String name) {
+	public void Rover(Point position, String name, IAccessManager accessManager, IVisitableArea[] listAreas) {
 	}
 
 	/**
@@ -95,7 +97,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * 
 	 * @return 
 	 */
-	public Area[] getListArea() {
+	public IVisitableArea[] getListArea() {
 	}
 
 	/**
@@ -158,5 +160,34 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public boolean changeStrategy(IStrategy strategy) {
+	}
+
+	/**
+	 * 
+	 * @param roverName 
+	 * @return 
+	 */
+	public Point getLocation(undefined roverName) {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public IVisitableArea isInArea() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public void getLocation() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public void isInArea() {
 	}
 };

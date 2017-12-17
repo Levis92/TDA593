@@ -55,28 +55,6 @@ public class MissionManager implements IMissionManager {
 
 	/**
 	 * 
-	 * @return 
-	 */
-	public void achievedMission() {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public void achievedPoint() {
-	}
-
-	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean createMission(undefined mission) {
-	}
-
-	/**
-	 * 
 	 * @param mission 
 	 * @return 
 	 */
@@ -122,80 +100,10 @@ public class MissionManager implements IMissionManager {
 
 	/**
 	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean removeMission(undefined mission) {
-	}
-
-	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean pauseMission(undefined mission) {
-	}
-
-	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean continueMission(undefined mission) {
-	}
-
-	/**
-	 * 
-	 * @param points 
-	 * @return 
-	 */
-	public boolean createMission(undefined points) {
-	}
-
-	/**
-	 * 
-	 * @param points 
-	 * @return 
-	 */
-	public boolean createMission(Point points) {
-	}
-
-	/**
-	 * 
-	 * @param points 
-	 * @return 
-	 */
-	public boolean createMission(Point points) {
-	}
-
-	/**
-	 * 
-	 * @param points 
-	 * @return 
-	 */
-	public boolean createMission(Point points) {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public void achievedMission() {
-	}
-
-	/**
-	 * 
 	 * @param points 
 	 * @return 
 	 * @param rover 
 	 */
 	public boolean createMission(Point[] points, Rover rover) {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public void achievedPoint() {
 	}
 };

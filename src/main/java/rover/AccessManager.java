@@ -12,7 +12,7 @@ import rover.Rover;
 /**
  * 
  */
-public class AccessManager extends IAccessManager {
+public class AccessManager implements IAccessManager {
 	/**
 	 * 
 	 */
@@ -39,5 +39,13 @@ public class AccessManager extends IAccessManager {
 	 * @return 
 	 */
 	public void releaseArea(Rover rover) {
+	}
+
+	/**
+	 * 
+	 * @param rover 
+	 * @return 
+	 */
+	public void acquireAccess(Rover rover) {
 	}
 };
