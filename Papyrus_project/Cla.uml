@@ -534,15 +534,9 @@
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_g_5xgM6cEee_RaSB9J5JlA" name="IRoverLocation">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_0d5bQM6cEee_RaSB9J5JlA" name="getLocation">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_0d5bQc6cEee_RaSB9J5JlA" name="roverName">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_0d5bQs6cEee_RaSB9J5JlA" type="_ocFBcM6XEee_RaSB9J5JlA" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_wfIVUN8TEeevasZJ2fo1mQ" name="isInArea">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_wfIVUd8TEeevasZJ2fo1mQ" type="_owGygN0CEeeDO5Ph8U49Pw" direction="return"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_g_5xgM6cEee_RaSB9J5JlA" name="IVisitableRover">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_U_BEwOMwEeebRM9gSuL0jA" name="accept">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_U_BEweMwEeebRM9gSuL0jA" name="visitor" type="_l5-ocNBVEeeybtOC6kw8lg"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_14zvgM6bEee_RaSB9J5JlA" name="IRoverManager">
@@ -704,6 +698,34 @@
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wfDc098TEeevasZJ2fo1mQ" value="1"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_CuyOoOMwEeebRM9gSuL0jA" name="getLocation">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Cuy1sOMwEeebRM9gSuL0jA" name="roverName">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CuzcwOMwEeebRM9gSuL0jA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CuzcweMwEeebRM9gSuL0jA" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_CuzcwuMwEeebRM9gSuL0jA" type="_ocFBcM6XEee_RaSB9J5JlA" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Cu0D0OMwEeebRM9gSuL0jA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Cu0D0eMwEeebRM9gSuL0jA" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Cu6xgOMwEeebRM9gSuL0jA" name="isInArea">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Cu7YkOMwEeebRM9gSuL0jA" type="_owGygN0CEeeDO5Ph8U49Pw" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Cu7YkeMwEeebRM9gSuL0jA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Cu7_oOMwEeebRM9gSuL0jA" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_CvbH0OMwEeebRM9gSuL0jA" name="getLocation">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_CvbH0eMwEeebRM9gSuL0jA" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CvbH0uMwEeebRM9gSuL0jA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Cvbu4OMwEeebRM9gSuL0jA" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Cw0O8OMwEeebRM9gSuL0jA" name="isInArea">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Cw02AOMwEeebRM9gSuL0jA" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Cw02AeMwEeebRM9gSuL0jA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Cw02AuMwEeebRM9gSuL0jA" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_XoLmQNNUEee5lrHP_PkN2Q" client="_sVYMUNBaEeeybtOC6kw8lg" supplier="_6XdS4NBNEeeybtOC6kw8lg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_f6dwENNVEee5lrHP_PkN2Q" client="_ZK3G8NBUEeeybtOC6kw8lg" supplier="_tNJP4NBcEeeybtOC6kw8lg"/>
@@ -825,7 +847,15 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_sbLykN0BEeeDO5Ph8U49Pw" client="_sxp5MNz-EeeDO5Ph8U49Pw" supplier="_nHzoEM6VEee_RaSB9J5JlA"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_owGygN0CEeeDO5Ph8U49Pw" name="IVisitableArea"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_owGygN0CEeeDO5Ph8U49Pw" name="IVisitableArea">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_bdcEQOMxEeebRM9gSuL0jA" name="accept">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bdcEQeMxEeebRM9gSuL0jA" name="procedure" type="_l5-ocNBVEeeybtOC6kw8lg"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bdcEQuMxEeebRM9gSuL0jA" name="rover" type="_g_5xgM6cEee_RaSB9J5JlA"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bdcEQ-MxEeebRM9gSuL0jA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_YyU_0N0FEeeDO5Ph8U49Pw" client="_ebaNQNmZEeeWuJKrAou04A" supplier="_nHzoEM6VEee_RaSB9J5JlA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_5jW1wOBOEeeqi52QNghZnA" name="AbstractArea" isAbstract="true"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_WUOZEOBPEeeqi52QNghZnA" name="PhysicalArea"/>
