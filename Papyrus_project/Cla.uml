@@ -802,11 +802,11 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_PmHWoNz_EeeDO5Ph8U49Pw" name="AccessController"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_defbsNz_EeeDO5Ph8U49Pw" name="AccessManager">
-        <generalization xmi:type="uml:Generalization" xmi:id="_vmkl8N0AEeeDO5Ph8U49Pw" general="_sxp5MNz-EeeDO5Ph8U49Pw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_w6fhYNz_EeeDO5Ph8U49Pw" name="listAreaController" type="_PmHWoNz_EeeDO5Ph8U49Pw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zGgF8Nz_EeeDO5Ph8U49Pw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zGoBwNz_EeeDO5Ph8U49Pw" value="*"/>
         </ownedAttribute>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zszIEOMtEeebRM9gSuL0jA" client="_defbsNz_EeeDO5Ph8U49Pw" supplier="_sxp5MNz-EeeDO5Ph8U49Pw" contract="_sxp5MNz-EeeDO5Ph8U49Pw"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_7UgCINz_EeeDO5Ph8U49Pw" name="AccessManager">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_7UgCIdz_EeeDO5Ph8U49Pw" name="listAreaController" type="_PmHWoNz_EeeDO5Ph8U49Pw">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9tq48Nz_EeeDO5Ph8U49Pw"/>
