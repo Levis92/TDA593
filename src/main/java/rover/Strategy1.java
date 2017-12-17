@@ -12,24 +12,18 @@ import rover.Rover;
  * 
  */
 public class Strategy1 implements IStrategy {
-	/**
-	 * 
-	 * @param rover 
-	 */
-	public void computeStrategy(undefined rover) {
-	}
-
-	/**
-	 * 
-	 * @param rover 
-	 */
-	public void computeStrategy(Rover rover) {
-	}
-
+	
 	/**
 	 * 
 	 * @param rover 
 	 */
 	public void applyBehaviour(Rover rover) {
+		System.out.println(rover.getPosition());
+		if(!rover.isSleeping()) { // the rover has a mission to perform
+			if(rover.isAtPosition(rover.getDestination()) && !rover.isPaused()) {
+				rover.goToNextPoint();
+			}
+			rover.getAccessManager().manageAccess(rover);
+		}
 	}
 };

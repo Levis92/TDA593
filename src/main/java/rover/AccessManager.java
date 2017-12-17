@@ -4,6 +4,9 @@
 
 package rover;
 
+import java.util.Iterator;
+import java.util.List;
+
 import rover.AccessController;
 import rover.IAccessManager;
 import rover.Rover;
@@ -16,13 +19,14 @@ public class AccessManager implements IAccessManager {
 	/**
 	 * 
 	 */
-	public AccessController[] listAreaController;
+	public List<AccessController> listAccessController;
 
 	/**
 	 * 
 	 * @param listAreaController 
 	 */
-	public void AccessManager(AccessController[] listAreaController) {
+	public AccessManager(List<AccessController> listAccessController) {
+		this.listAccessController = listAccessController;
 	}
 
 	/**
@@ -31,6 +35,13 @@ public class AccessManager implements IAccessManager {
 	 * @return 
 	 */
 	public AccessController isInAreaController(Rover rover) {
+		for (Iterator<AccessController> iter = listAccessController.iterator(); iter.hasNext(); ) {
+			AccessController ac = iter.next();
+			if(ac.isInArea(rover) && !ac.isTheOwner(rover)) {
+				return ac;
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -38,7 +49,11 @@ public class AccessManager implements IAccessManager {
 	 * @param rover 
 	 * @return 
 	 */
-	public void releaseArea(Rover rover) {
+	public void releaseAccess(Rover rover) {
+		for (Iterator<AccessController> iter = listAccessController.iterator(); iter.hasNext(); ) {
+			AccessController ac = iter.next();
+			ac.release(rover);
+		}
 	}
 
 	/**
@@ -47,5 +62,26 @@ public class AccessManager implements IAccessManager {
 	 * @return 
 	 */
 	public void acquireAccess(Rover rover) {
+		AccessController ac = isInAreaController(rover);
+		if(ac != null) {	//if the rover is in an area
+			if(!ac.tryAcquire(rover)) {	//if the rover cannot acces to the area
+				if(!rover.isPaused()) {	//pause the rover if it is not already paused
+					rover.pauseRover();
+				}
+			}
+			else {						//if the rover can acces to the area
+				if(rover.isPaused()) {	//allow the rover to move if it was paused
+					rover.continueRover();
+				}
+			}
+		}
 	}
+
+	@Override
+	public void manageAccess(Rover rover) {
+		releaseAccess(rover);
+		acquireAccess(rover);	
+	}
+	
+	
 };

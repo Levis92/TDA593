@@ -4,7 +4,9 @@
 
 package rover;
 
-import project.AbstractRobot;
+import java.util.List;
+
+import project.AbstractRobotSimulator;
 import project.Point;
 import rover.IAccessManager;
 import rover.IOperatorFaultView;
@@ -46,7 +48,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	/**
 	 * 
 	 */
-	public IVisitableArea[] listAreas;
+	public List<IVisitableArea> listAreas;
 
 	/**
 	 * 
@@ -55,7 +57,13 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @param accessManager 
 	 * @param listAreas 
 	 */
-	public void Rover(Point position, String name, IAccessManager accessManager, IVisitableArea[] listAreas) {
+	public Rover(Point position, String name, IAccessManager accessManager, List<IVisitableArea> listAreas) {
+		super(position, name);
+		paused = false;
+		sleeping = true;
+		this.accessManager = accessManager;
+		this.listAreas = listAreas;
+		this.strategy = new Strategy1(); //By default
 	}
 
 	/**
@@ -63,6 +71,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public Point getDestination() {
+		return destination;
 	}
 
 	/**
@@ -70,6 +79,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public Mission getMission() {
+		return mission;
 	}
 
 	/**
@@ -77,6 +87,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public boolean isPaused() {
+		return paused;
 	}
 
 	/**
@@ -84,6 +95,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public boolean isSleeping() {
+		return sleeping;
 	}
 
 	/**
@@ -91,13 +103,23 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public IStrategy getStrategy() {
+		return strategy;
 	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public IVisitableArea[] getListArea() {
+	public List<IVisitableArea> getListArea() {
+		return listAreas;
+	}
+	
+	/**
+	 * 
+	 * @return 
+	 */
+	public IAccessManager getAccessManager() {
+		return accessManager;
 	}
 
 	/**
@@ -105,15 +127,12 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @param point 
 	 * @return 
 	 */
-	public void setDestination(Point point) {
-	}
-
-	/**
-	 * 
-	 * @param strategy 
-	 * @return 
-	 */
-	public void setStrategy(IStrategy strategy) {
+	public void setDestination(Point destination) {
+		if (destination == null) {
+			throw new NullPointerException("The destination cannot be null");
+		}
+		getAgent().setDestination(destination);
+		this.destination = destination;
 	}
 
 	/**
@@ -121,6 +140,14 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public void goToNextPoint() {
+		mission.pointReached();
+		Point nextPoint = this.mission.getNextPoint();
+		if(nextPoint != null) {
+			setDestination(nextPoint);
+		}
+		else {
+			sleeping = true;
+		}
 	}
 
 	/**
@@ -129,6 +156,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public Point getLocation(String roverName) {
+		return this.getPosition();
 	}
 
 	/**
@@ -138,6 +166,14 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @param strategy 
 	 */
 	public boolean provideMission(Mission mission, IStrategy strategy) {
+		this.strategy = strategy;
+		this.mission = mission;
+		Point nextPoint = this.mission.getNextPoint();
+		if(nextPoint != null) {
+			setDestination(nextPoint);
+		}
+		sleeping = false;
+		return true;
 	}
 
 	/**
@@ -145,6 +181,15 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public boolean pauseRover() {
+		if(!sleeping){
+			Point p = this.getPosition();
+			paused = true;
+			setDestination(p); //see what happen with NULL
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/**
@@ -152,6 +197,15 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public boolean continueRover() {
+		if(!sleeping){
+			Point nextPoint = this.mission.getNextPoint();
+			setDestination(nextPoint);
+			paused = false;
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/**
@@ -160,34 +214,28 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IVis
 	 * @return 
 	 */
 	public boolean changeStrategy(IStrategy strategy) {
-	}
-
-	/**
-	 * 
-	 * @param roverName 
-	 * @return 
-	 */
-	public Point getLocation(undefined roverName) {
+		this.strategy = strategy;
+		return true;
 	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public IVisitableArea isInArea() {
+	public List<IVisitableArea> isInArea() { //TODO
+		return null;
 	}
-
+	
 	/**
 	 * 
 	 * @return 
 	 */
-	public void getLocation() {
+	public void routine() {
+		strategy.applyBehaviour(this);
+	}
+	
+	public void accept(IVisitorProcedure visitor) {// TODO
+		
 	}
 
-	/**
-	 * 
-	 * @return 
-	 */
-	public void isInArea() {
-	}
 };

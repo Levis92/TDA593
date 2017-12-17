@@ -4,54 +4,44 @@
 
 package rover;
 
+import java.util.LinkedList;
 import project.Point;
 
 /************************************************************/
 /**
  * 
  */
+
 public class Mission {
-	/**
-	 * 
-	 */
-	public Point[] pointsToReach;
-	/**
-	 * 
-	 */
-	public Point[] pointsReached;
+	private LinkedList<Point> pointsToReach;
+	private LinkedList<Point> pointsReached;
 
-	/**
-	 * 
-	 * @param pointsToReach 
-	 */
-	public void Mission(Point[] pointsToReach) {
+	
+	public Mission(LinkedList<Point> pointsToReach){
+		this.pointsToReach = pointsToReach;
+		this.pointsReached = new LinkedList<Point>();
 	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public Point[] getPointsToReach() {
+	
+	public LinkedList<Point> getPointsToReach(){
+		return this.pointsToReach;
 	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public Point[] getPointsReached() {
+	
+	public LinkedList<Point> getPointsReached(){
+		return this.pointsReached;
 	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public void pointReached() {
+	
+	public void pointReached(){
+		if(!pointsToReach.isEmpty()) {
+			pointsReached.add(pointsToReach.removeFirst());
+		}
 	}
-
-	/**
-	 * 
-	 * @return 
-	 */
+	
 	public Point getNextPoint() {
+		if(!pointsToReach.isEmpty()) {
+			return pointsToReach.getFirst();
+		}
+		else {
+			return null;
+		}
 	}
 };
