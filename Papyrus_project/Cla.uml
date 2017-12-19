@@ -636,7 +636,7 @@
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Interface" xmi:id="_ZSisQOMsEeebRM9gSuL0jA" name="runnable"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_ZSisQOMsEeebRM9gSuL0jA" name="Runnable"/>
         <packagedElement xmi:type="uml:Interface" xmi:id="_mm5mkNBaEeeybtOC6kw8lg" name="IOperatorFaultView">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_sAdFMNBaEeeybtOC6kw8lg" name="notifyFault">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_sAdFMdBaEeeybtOC6kw8lg" direction="return">
@@ -896,4 +896,5 @@
   <PapyrusJava:External xmi:id="_3PCMUNDwEee4GYKcLz6eUA" name="project.Point" base_Classifier="_ocFBcM6XEee_RaSB9J5JlA"/>
   <PapyrusJava:External xmi:id="_G3xbwNDxEee4GYKcLz6eUA" name="project.AbstractRobot&#xD;&#xA;" base_Classifier="_EIyF8NDxEee4GYKcLz6eUA"/>
   <PapyrusJava:External xmi:id="_E1Pc8NNaEee5lrHP_PkN2Q" name="java.util.List&#xD;&#xA;" base_Classifier="_DT_soNNaEee5lrHP_PkN2Q"/>
+  <PapyrusJava:External xmi:id="_Q2b6IOTCEeeUc8k90gq-9w" name="java.lang.Runnable&#xD;&#xA;" base_Classifier="_ZSisQOMsEeebRM9gSuL0jA"/>
 </xmi:XMI>
