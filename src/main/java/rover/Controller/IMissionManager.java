@@ -6,6 +6,7 @@ package rover.Controller;
 
 import project.Point;
 import rover.Model.Rover;
+import rover.Model.Mission;
 
 /************************************************************/
 /**
@@ -21,16 +22,14 @@ public interface IMissionManager {
 	public boolean createMission(Point[] points, Rover rover);
 
 	/**
-	 * 
-	 * @param mission 
-	 * @return 
+	 * @param mission            
+	 * @return            
 	 */
 	public boolean removeAllMissions();
 
 	/**
-	 * 
-	 * @param mission 
-	 * @return 
+	 * @param mission            
+	 * @return            
 	 */
 	public boolean pauseAllMissions();
 
@@ -39,4 +38,26 @@ public interface IMissionManager {
 	 * @return 
 	 */
 	public boolean continueAllMissions();
+
+	/**
+	 * 
+	 * @param rover 
+	 * @return 
+	 */
+	public boolean pauseMission(Rover rover);
+
+	/**
+	 * 
+	 * @param rover 
+	 * @return 
+	 */
+	public boolean continueMission(Rover rover);
+
+	/**
+	 * 
+	 * @param rover 
+	 * @return 
+	 * @param mission 
+	 */
+	public boolean removeMission(Rover rover);
 };

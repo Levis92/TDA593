@@ -24,7 +24,8 @@ public class Mission {
 	 * 
 	 * @param pointsToReach 
 	 */
-	public void Mission(Point[] pointsToReach) {
+	public Mission(Point[] pointsToReach) {
+		this.pointsToReach = pointsToReach;
 	}
 
 	/**
@@ -32,13 +33,6 @@ public class Mission {
 	 * @return 
 	 */
 	public Point[] getPointsToReach() {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public Point[] getPointsReached() {
 	}
 
 	/**
@@ -53,5 +47,19 @@ public class Mission {
 	 * @return 
 	 */
 	public Point getNextPoint() {
+	}
+
+	/**
+	 * 
+	 * @param pointsToReach 
+	 */
+	public void Mission(Point[] pointsToReach) {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Point[] getPointsReached() {
 	}
 };

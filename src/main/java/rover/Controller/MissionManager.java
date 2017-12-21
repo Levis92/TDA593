@@ -16,79 +16,66 @@ import rover.Model.Rover;
  */
 public class MissionManager implements IMissionManager {
 	/**
-				 * 
-				 */
-				public List<Mission> list<mission>;
+	 * 
+	 */
+	public List<Mission> missionList;
 	/**
-				 * 
-				 */
-				public List<Rover> list<rover>;
+	 * 
+	 */
+	public List<Rover> roverList;
 
 	/**
 	 * 
 	 * @param rovers 
 	 */
-	public void MissionManager(Rover rovers) {
+	public MissionManager(Rover[] rovers) {
 	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public Mission getMissions() {
+	public List<Mission> getMissions() {
+		return missionList;
 	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public Rover getRovers() {
+	public List<Rover> getRovers() {
+		return roverList;
 	}
 
 	/**
 	 * 
-	 * @param roverName 
+	 * @param rover 
 	 * @return 
 	 */
-	public boolean checkRoverAvailability(String roverName) {
+	public boolean checkRoverAvailability(Rover rover) {
+		return rover.isSleeping();
 	}
 
 	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean removeMission(undefined mission) {
-	}
-
-	/**
-	 * 
-	 * @return 
+	 * @param mission         
+	 * @return         
 	 */
 	public boolean removeAllMissions() {
+		for (int i = 0; i < missionList.size(); i++) {
+			missionList.add(i, null);
+		}
+		return true;
 	}
 
 	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean pauseMission(undefined mission) {
-	}
-
-	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean continueMission(undefined mission) {
-	}
-
-	/**
-	 * 
-	 * @return 
+	 * @param mission         
+	 * @return         
 	 */
 	public boolean pauseAllMissions() {
+		for (Rover rover: roverList) {
+			rover.pauseRover();
+		}
+		return true;
 	}
 
 	/**
@@ -96,6 +83,20 @@ public class MissionManager implements IMissionManager {
 	 * @return 
 	 */
 	public boolean continueAllMissions() {
+		for (Rover rover  : roverList) {
+			rover.continueRover();
+		}
+		return true;
+	}
+
+	/**
+	 * 
+	 * @param rover 
+	 * @return 
+	 */
+	public boolean pauseMission(Rover rover) {
+		boolean isPaused = rover.pauseRover();
+		return isPaused;
 	}
 
 	/**
@@ -105,5 +106,39 @@ public class MissionManager implements IMissionManager {
 	 * @param rover 
 	 */
 	public boolean createMission(Point[] points, Rover rover) {
+		Mission mission = new Mission(points);
+		rover.provideMission(mission, null);
+		boolean isAdded = missionList.add(mission);
+		return isAdded;
 	}
+
+	/**
+	 * 
+	 * @param rover 
+	 * @return 
+	 */
+	public boolean continueMission(Rover rover) {
+		boolean isPaused = rover.pauseRover();
+		return isPaused;
+	}
+
+	/**
+	 * 
+	 * @param rovers 
+	 */
+	public void MissionManager(Rover[] rovers) {
+	}
+
+
+	/**
+	 * 
+	 * @param rover 
+	 * @return 
+	 */
+	public boolean removeMission(Rover rover) {
+		boolean isRemoved = rover.removeMission();
+		return isRemoved;
+	}
+
+
 };

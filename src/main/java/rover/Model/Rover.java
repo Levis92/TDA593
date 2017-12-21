@@ -27,27 +27,27 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	/**
 	 * 
 	 */
-	public Mission mission;
+	private Mission mission;
 	/**
 	 * 
 	 */
-	public boolean paused;
+	private boolean paused;
 	/**
 	 * 
 	 */
-	public boolean sleeping;
+	private boolean sleeping;
 	/**
 	 * 
 	 */
-	public IStrategy strategy;
+	private IStrategy strategy;
 	/**
 	 * 
 	 */
-	public IAccessManager accessManager;
+	private IAccessManager accessManager;
 	/**
 	 * 
 	 */
-	public AbstractArea[] listAreas;
+	private AbstractArea[] listAreas;
 
 	/**
 	 * 
@@ -182,5 +182,14 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public IVisitableArea getAreas() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public boolean removeMission() {
+		mission = null;
+		return true;
 	}
 };
