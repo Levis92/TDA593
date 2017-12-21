@@ -415,7 +415,7 @@
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_42q0kNBYEeeybtOC6kw8lg" name="Map&lt;IRoverLocator, int>"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_42q0kNBYEeeybtOC6kw8lg" name="Map&lt;IRoverLocator, Integer>"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_xOILUNBXEeeybtOC6kw8lg" name="ProcedureA">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_eR9eguMqEeebRM9gSuL0jA" name="rewardPoints" type="_42q0kNBYEeeybtOC6kw8lg" association="_eR6bMOMqEeebRM9gSuL0jA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eR9eg-MqEeebRM9gSuL0jA" value="1"/>
