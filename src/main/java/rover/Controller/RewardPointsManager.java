@@ -5,9 +5,11 @@
 package rover.Controller;
 
 import java.util.Map;
+
+import com.jogamp.common.util.InterruptSource.Thread;
+
 import rover.Controller.IRewardPointsManagar;
 import rover.Controller.IVisitorProcedure;
-import rover.Controller.runnable;
 import rover.Model.IRoverLocator;
 import rover.Model.IVisitableArea;
 import rover.View.IOperatorRewardPointsView;
@@ -20,11 +22,50 @@ import java.lang.Runnable;
 public class RewardPointsManager implements IRewardPointsManagar, Runnable
  {
 				/**
-				 * 
+				 * List of procedures that shall be used each time rewardspoints are calculated
 				 */
 				private IVisitorProcedure[] procedureList;
 				/**
-				 * 
+				 * A map of all the rovers and their rewardpoints
 				 */
-				private map<Rover, int> map<Rover, int>;
+				private Map<IRoverLocator, Integer> rewardPoints;
+				
+				public RewardPointsManager(IVisitorProcedure[] procList, Map<IRoverLocator, Integer> points) {
+					procedureList = procList;
+					rewardPoints = points;
+				}
+				
+				/**
+				 * Main algorithm of RPM, updates all the rewardpoints and then sleeps for 20s.
+				 * TODO add some UI, most likely console printing
+				 */
+				@Override
+				public void run() {
+					while (true) {
+						updateRewardPoints();
+						try {
+							Thread.sleep(20000);
+						} catch (InterruptedException e) {
+							//Should never happen
+							e.printStackTrace();
+						}
+					}
+					
+				}
+				
+				/**
+				 * Updates the rewardpoints for each of the rovers. Called once every 20s by run
+				 */
+				@Override
+				public void updateRewardPoints() {
+					for (IRoverLocator rover: rewardPoints.keySet()) {
+						IVisitableArea[] areas = rover.getAreas();
+						for (IVisitableArea a : areas) {
+							for (IVisitorProcedure proc : procedureList) {
+								a.accept(proc, rover);
+							}//End proc
+						}//End area
+					} //End rover
+					
+				}
 };

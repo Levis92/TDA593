@@ -5,10 +5,10 @@
 package rover.Controller;
 
 import java.util.Map;
-import project.Point;
 import rover.Controller.IVisitorProcedure;
 import rover.Model.LogicalArea;
-import rover.Model.Rover;
+import rover.Model.PhysicalArea;
+import rover.Model.IRoverLocator;
 
 /************************************************************/
 /**
@@ -18,14 +18,15 @@ public class ProcedureB implements IVisitorProcedure {
 	/**
 	 * 
 	 */
-	public map<Rover, int> map<rover, int>;
+	public Map<IRoverLocator, Integer> rewardPoints;
+
 	/**
 	 * 
-	 * @param logicalArea 
+	 * @param physicalArea 
 	 * @param rover 
 	 * @return 
 	 */
-	public void visit(Point logicalArea, Rover rover) {
+	public void visit(PhysicalArea physicalArea, IRoverLocator rover) {
 	}
 
 	/**
@@ -34,6 +35,7 @@ public class ProcedureB implements IVisitorProcedure {
 	 * @param rover 
 	 * @return 
 	 */
-	public void visit(LogicalArea logicalArea, Rover rover) {
+	public void visit(LogicalArea logicalArea, IRoverLocator rover) {
 	}
+
 };

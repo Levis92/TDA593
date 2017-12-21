@@ -490,6 +490,13 @@
             <element xmi:type="uml:Operation" href="Cla.uml#_U_BEwOMwEeebRM9gSuL0jA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_VA0bkeMwEeebRM9gSuL0jA"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_suGY4OZUEeemds_GjDfsXw" type="Operation_InterfaceOperationLabel">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_szsDgOZUEeemds_GjDfsXw" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_szsDgeZUEeemds_GjDfsXw" key="mutable" value="true"/>
+            </eAnnotations>
+            <element xmi:type="uml:Operation" href="Cla.uml#_sqkjwOZUEeemds_GjDfsXw"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_suGY4eZUEeemds_GjDfsXw"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_g_802M6cEee_RaSB9J5JlA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_g_802c6cEee_RaSB9J5JlA"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_g_802s6cEee_RaSB9J5JlA"/>

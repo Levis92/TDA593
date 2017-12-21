@@ -16,4 +16,10 @@ public interface IRoverLocator {
 	 * @return 
 	 */
 	public IVisitableArea[] getAreas();
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getName();
 };

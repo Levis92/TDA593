@@ -6,26 +6,21 @@ package rover.Controller;
 
 import rover.Model.LogicalArea;
 import rover.Model.PhysicalArea;
-import rover.Model.Rover;
+import rover.Model.IRoverLocator;
 
 /************************************************************/
 /**
  * 
  */
 public interface IVisitorProcedure {
+	
+	public void visit(PhysicalArea physicalArea, IRoverLocator rover);
+
 	/**
 	 * 
 	 * @param logicalArea 
 	 * @param rover 
 	 * @return 
 	 */
-	public void visit(LogicalArea logicalArea, Rover rover);
-
-	/**
-	 * 
-	 * @param physicalArea 
-	 * @return 
-	 * @param rover 
-	 */
-	public void visit(PhysicalArea physicalArea, Rover rover);
+	public void visit(LogicalArea logicalArea, IRoverLocator rover);
 };
