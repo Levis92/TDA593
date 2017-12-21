@@ -25,30 +25,11 @@ public interface IMissionManager {
 	 * @param mission 
 	 * @return 
 	 */
-	public boolean removeMission(undefined mission);
-
-	/**
-	 * 
-	 * @return 
-	 */
 	public boolean removeAllMissions();
 
 	/**
 	 * 
 	 * @param mission 
-	 * @return 
-	 */
-	public boolean pauseMission(undefined mission);
-
-	/**
-	 * 
-	 * @param mission 
-	 * @return 
-	 */
-	public boolean continueMission(undefined mission);
-
-	/**
-	 * 
 	 * @return 
 	 */
 	public boolean pauseAllMissions();
