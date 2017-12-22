@@ -9,11 +9,12 @@ import java.util.Set;
 import project.AbstractSimulatorMonitor;
 import project.Point;
 import rover.AccessController;
-import rover.AccessManager;
-import rover.IStrategy;
-import rover.Mission;
-import rover.Rover;
-import rover.Strategy1;
+import rover.Controller.AccessManager;
+import rover.Controller.IStrategy;
+import rover.Model.Mission;
+import rover.Model.Rover;
+import rover.Controller.Strategy1;
+
 
 public class Main {
 
@@ -35,6 +36,7 @@ public class Main {
 		listAreaController.add(aC4);
 		
 		//Missions Initialization
+		
 		LinkedList<Point> point1 = new LinkedList<Point>();
 		point1.add(new Point(-3.5,-3.5));
 		point1.add(new Point(3.5, -3.5));
@@ -55,6 +57,7 @@ public class Main {
 		point4.add(new Point(3.5, 3.5));
 		point4.add(new Point(8, 3.5));
 		
+		//need to figure out if List or arrays
 		Mission mission1 = new Mission(point1);
 		Mission mission2 = new Mission(point2);
 		Mission mission3 = new Mission(point3);
@@ -64,6 +67,7 @@ public class Main {
 		IStrategy strategy = new Strategy1(); 
 		
 		//AccessManager Initialization
+		//need to figure out if List or arrays
 		AccessManager accessManager = new AccessManager(listAreaController);
 		
 		//Rovers Initialization

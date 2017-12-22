@@ -341,8 +341,8 @@
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_defbsNz_EeeDO5Ph8U49Pw" name="AccessManager">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_w6fhYNz_EeeDO5Ph8U49Pw" name="listAccessController">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zGgF8Nz_EeeDO5Ph8U49Pw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zGoBwNz_EeeDO5Ph8U49Pw" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zGgF8Nz_EeeDO5Ph8U49Pw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zGoBwNz_EeeDO5Ph8U49Pw" value="1"/>
           </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zszIEOMtEeebRM9gSuL0jA" client="_defbsNz_EeeDO5Ph8U49Pw" supplier="_sxp5MNz-EeeDO5Ph8U49Pw" contract="_sxp5MNz-EeeDO5Ph8U49Pw"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_7UgCINz_EeeDO5Ph8U49Pw" name="AccessManager">

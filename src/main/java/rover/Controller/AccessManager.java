@@ -6,6 +6,7 @@ package rover.Controller;
 
 import rover.Controller.IAccessManager;
 import rover.Model.Rover;
+import rover.AccessController;
 
 /************************************************************/
 /**
@@ -15,13 +16,13 @@ public class AccessManager implements IAccessManager {
 	/**
 	 * 
 	 */
-	public undefined[] listAccessController;
+	public AccessController[] listAccessController;
 
 	/**
 	 * 
 	 * @param listAreaController 
 	 */
-	public void AccessManager(undefined[] listAreaController) {
+	public void AccessManager(AccessController[] listAreaController) {
 	}
 
 	/**
@@ -29,7 +30,15 @@ public class AccessManager implements IAccessManager {
 	 * @param rover 
 	 * @return 
 	 */
-	public void isInAreaController(Rover rover) {
+	public boolean isInAreaController(Rover rover) {
+		//need to figure out if List or array
+		for (Iterator<AccessController> iter = listAccessController.iterator; iter.hasNext(); ) {
+			AccessController ac = iter.next();
+			if(ac.isInArea(rover) && !ac.isTheOwner(rover)) {
+				return ac;
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -46,5 +55,11 @@ public class AccessManager implements IAccessManager {
 	 * @return 
 	 */
 	public void acquireAccess(Rover rover) {
+	}
+
+	@Override
+	public void manageAccess(Rover rover) {
+		// TODO Auto-generated method stub
+		
 	}
 };

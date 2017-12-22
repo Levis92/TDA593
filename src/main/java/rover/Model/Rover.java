@@ -4,11 +4,12 @@
 
 package rover.Model;
 
-import project.AbstractRobot;
+import project.AbstractRobotSimulator;
 import project.Point;
 import rover.Controller.IAccessManager;
 import rover.Controller.IOperatorFaultView;
 import rover.Controller.IStrategy;
+import rover.Controller.Strategy1;
 import rover.Model.AbstractArea;
 import rover.Model.IRoverLocator;
 import rover.Model.IRoverManager;
@@ -20,6 +21,12 @@ import rover.Model.Mission;
  * 
  */
 public class Rover extends AbstractRobotSimulator implements IRoverManager, IRoverLocator {
+	
+	public Rover(Point position, String name) {
+		super(position, name);
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * 
 	 */
@@ -56,7 +63,14 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @param accessManager 
 	 * @param listAreas 
 	 */
-	public void Rover(Point position, String name, IAccessManager accessManager, IVisitableArea[] listAreas) {
+	public Rover(Point position, String name, IAccessManager accessManager, IVisitableArea[] listAreas) {
+		super(position, name);
+		paused = false;
+		sleeping = true;
+		this.accessManager = accessManager;
+		this.listAreas = (AbstractArea[]) listAreas;
+		this.strategy = new Strategy1(); //By default
+		
 	}
 
 	/**
@@ -64,6 +78,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public Point getDestination() {
+		return destination;
 	}
 
 	/**
@@ -71,6 +86,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public Mission getMission() {
+		return mission;
 	}
 
 	/**
@@ -78,6 +94,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public boolean isPaused() {
+		return paused;
 	}
 
 	/**
@@ -85,6 +102,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public boolean isSleeping() {
+		return sleeping;
 	}
 
 	/**
@@ -92,6 +110,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public IStrategy getStrategy() {
+		return strategy;
 	}
 
 	/**
@@ -99,6 +118,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public IAccessManager getAccessManager() {
+		return accessManager;
 	}
 
 	/**
@@ -122,6 +142,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public Point getLocation(String roverName) {
+		return null;
 	}
 
 	/**
@@ -131,6 +152,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @param strategy 
 	 */
 	public boolean provideMission(Mission mission, IStrategy strategy) {
+		return true;
 	}
 
 	/**
@@ -138,6 +160,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public boolean pauseRover() {
+		return true;
 	}
 
 	/**
@@ -145,6 +168,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public boolean continueRover() {
+		return true;
 	}
 
 	/**
@@ -153,6 +177,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public boolean changeStrategy(IStrategy strategy) {
+		return true;
 	}
 
 	/**
@@ -160,14 +185,13 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @param roverName 
 	 * @return 
 	 */
-	public Point getLocation(undefined roverName) {
-	}
 
 	/**
 	 * 
 	 * @return 
 	 */
 	public IVisitableArea[] isInArea() {
+		return null;
 	}
 
 	/**
@@ -181,8 +205,6 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * 
 	 * @return 
 	 */
-	public IVisitableArea getAreas() {
-	}
 
 	/**
 	 * 
@@ -191,5 +213,17 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	public boolean removeMission() {
 		mission = null;
 		return true;
+	}
+
+	@Override
+	public IVisitableArea[] getAreas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 };

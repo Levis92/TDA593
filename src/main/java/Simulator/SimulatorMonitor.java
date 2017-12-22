@@ -3,7 +3,7 @@ package Simulator;
 import java.util.Set;
 
 import project.AbstractSimulatorMonitor;
-import rover.Rover;
+import rover.Model.Rover;
 import simbad.sim.EnvironmentDescription;
 
 public class SimulatorMonitor extends AbstractSimulatorMonitor<Rover> {

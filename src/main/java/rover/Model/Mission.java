@@ -26,6 +26,7 @@ public class Mission {
 	 */
 	public Mission(Point[] pointsToReach) {
 		this.pointsToReach = pointsToReach;
+		this.pointsReached = new Point[pointsToReach.length];
 	}
 
 	/**
@@ -33,6 +34,7 @@ public class Mission {
 	 * @return 
 	 */
 	public Point[] getPointsToReach() {
+		return pointsToReach;
 	}
 
 	/**
@@ -47,6 +49,12 @@ public class Mission {
 	 * @return 
 	 */
 	public Point getNextPoint() {
+		if(pointsToReach.length > 0) {
+			return pointsToReach[0];
+		}
+		else {
+			return null;
+		}
 	}
 
 	/**
@@ -60,6 +68,4 @@ public class Mission {
 	 * 
 	 * @return 
 	 */
-	public Point[] getPointsReached() {
-	}
 };
