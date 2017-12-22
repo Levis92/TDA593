@@ -6,6 +6,9 @@ package rover.Model;
 
 import project.Point;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /************************************************************/
 /**
  * 
@@ -14,26 +17,27 @@ public class Mission {
 	/**
 	 * 
 	 */
-	public Point[] pointsToReach;
+	public List<Point> pointsReached;
 	/**
 	 * 
 	 */
-	public Point[] pointsReached;
+	public List<Point> pointsToReach;
 
 	/**
 	 * 
 	 * @param pointsToReach 
 	 */
-	public Mission(Point[] pointsToReach) {
+	
+	public Mission(List<Point> pointsToReach) {
 		this.pointsToReach = pointsToReach;
-		this.pointsReached = new Point[pointsToReach.length];
+		this.pointsReached = new ArrayList<Point>();
 	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public Point[] getPointsToReach() {
+	public List<Point> getPointsToReach() {
 		return pointsToReach;
 	}
 
@@ -42,6 +46,9 @@ public class Mission {
 	 * @return 
 	 */
 	public void pointReached() {
+		if(!pointsToReach.isEmpty()) {
+			pointsReached.add(pointsToReach.remove(0));
+		}
 	}
 
 	/**
@@ -49,8 +56,8 @@ public class Mission {
 	 * @return 
 	 */
 	public Point getNextPoint() {
-		if(pointsToReach.length > 0) {
-			return pointsToReach[0];
+		if(!pointsToReach.isEmpty()) {
+			return pointsToReach.get(0);
 		}
 		else {
 			return null;
@@ -61,11 +68,15 @@ public class Mission {
 	 * 
 	 * @param pointsToReach 
 	 */
-	public void Mission(Point[] pointsToReach) {
-	}
+
 
 	/**
 	 * 
 	 * @return 
 	 */
+	public List<Point> getPointsReached() {
+		return pointsReached;
+	}
+
+
 };

@@ -86,30 +86,30 @@
       <packagedElement xmi:type="uml:Usage" xmi:id="_b_4JQOP9EeeRAsRDyFXyCw" client="_ZK3G8NBUEeeybtOC6kw8lg" supplier="_owGygN0CEeeDO5Ph8U49Pw"/>
       <packagedElement xmi:type="uml:Package" xmi:id="_CBgKYOS7EeeUc8k90gq-9w" name="Model">
         <packagedElement xmi:type="uml:Class" xmi:id="_rJ4BENNQEee5lrHP_PkN2Q" name="Mission">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_2XGHcNNQEee5lrHP_PkN2Q" name="pointsToReach" type="_ocFBcM6XEee_RaSB9J5JlA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_2XGHcNNQEee5lrHP_PkN2Q" name="pointsToReach" type="_gPoi0OdhEee2B_wCGzBaJg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Oa5PwNz2EeeDO5Ph8U49Pw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ObDn0Nz2EeeDO5Ph8U49Pw" value="*"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ObDn0Nz2EeeDO5Ph8U49Pw" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_7mPs4NNQEee5lrHP_PkN2Q" name="pointsReached" type="_ocFBcM6XEee_RaSB9J5JlA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_7mPs4NNQEee5lrHP_PkN2Q" name="pointsReached" type="_gPoi0OdhEee2B_wCGzBaJg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_da65YNz2EeeDO5Ph8U49Pw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dbCOINz2EeeDO5Ph8U49Pw" value="*"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dbCOINz2EeeDO5Ph8U49Pw" value="1"/>
           </ownedAttribute>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_On7OENNREee5lrHP_PkN2Q" name="Mission">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_On7OEdNREee5lrHP_PkN2Q" name="pointsToReach" type="_ocFBcM6XEee_RaSB9J5JlA">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_On7OEdNREee5lrHP_PkN2Q" name="pointsToReach" type="_gPoi0OdhEee2B_wCGzBaJg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rzwAINz2EeeDO5Ph8U49Pw"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rz8NYNz2EeeDO5Ph8U49Pw" value="*"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rz8NYNz2EeeDO5Ph8U49Pw" value="1"/>
             </ownedParameter>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_Uhr2wNNREee5lrHP_PkN2Q" name="getPointsToReach">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Uhr2wdNREee5lrHP_PkN2Q" type="_ocFBcM6XEee_RaSB9J5JlA" direction="return">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Uhr2wdNREee5lrHP_PkN2Q" type="_gPoi0OdhEee2B_wCGzBaJg" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4w2IsNz2EeeDO5Ph8U49Pw"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4xCV8Nz2EeeDO5Ph8U49Pw" value="*"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4xCV8Nz2EeeDO5Ph8U49Pw" value="1"/>
             </ownedParameter>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_cOZDwNNREee5lrHP_PkN2Q" name="getPointsReached">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_cOZDwdNREee5lrHP_PkN2Q" type="_ocFBcM6XEee_RaSB9J5JlA" direction="return">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_cOZDwdNREee5lrHP_PkN2Q" type="_gPoi0OdhEee2B_wCGzBaJg" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HA01cNz3EeeDO5Ph8U49Pw"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HBBCsNz3EeeDO5Ph8U49Pw" value="*"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HBBCsNz3EeeDO5Ph8U49Pw" value="1"/>
             </ownedParameter>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_Tdi00Nz3EeeDO5Ph8U49Pw" name="pointReached">
@@ -136,9 +136,9 @@
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_EcB2ENz6EeeDO5Ph8U49Pw" name="strategy" visibility="private" type="_ebaNQNmZEeeWuJKrAou04A"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_6ykSYN0CEeeDO5Ph8U49Pw" name="accessManager" visibility="private" type="_sxp5MNz-EeeDO5Ph8U49Pw"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_BgYOMN0DEeeDO5Ph8U49Pw" name="listAreas" visibility="private" type="_5jW1wOBOEeeqi52QNghZnA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_BgYOMN0DEeeDO5Ph8U49Pw" name="listAreas" visibility="private" type="_LqFlsOdiEee2B_wCGzBaJg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DJfhEN0DEeeDO5Ph8U49Pw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DJp5IN0DEeeDO5Ph8U49Pw" value="*"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DJp5IN0DEeeDO5Ph8U49Pw" value="1"/>
           </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UpICEM6cEee_RaSB9J5JlA" client="_nHzoEM6VEee_RaSB9J5JlA" supplier="_14zvgM6bEee_RaSB9J5JlA" contract="_14zvgM6bEee_RaSB9J5JlA"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_AzRnEM6eEee_RaSB9J5JlA" client="_nHzoEM6VEee_RaSB9J5JlA" supplier="_g_5xgM6cEee_RaSB9J5JlA" contract="_g_5xgM6cEee_RaSB9J5JlA"/>
@@ -329,6 +329,12 @@
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Npcq0OdhEee2B_wCGzBaJg" name="List&lt;Rover>"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_WzYDwOdhEee2B_wCGzBaJg" name="CopyOf_List&lt;Rover>_1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_e_fJkOdhEee2B_wCGzBaJg" name="CopyOf_List&lt;Rover>_2"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gPoi0OdhEee2B_wCGzBaJg" name="List&lt;Point>"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vSEKwOdiEee2B_wCGzBaJg" name="CopyOf_List&lt;Point>_1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LqFlsOdiEee2B_wCGzBaJg" name="List&lt;AbstractArea>"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_m9Kk4OS7EeeUc8k90gq-9w" name="Controller" URI="">
         <packagedElement xmi:type="uml:Interface" xmi:id="_sxp5MNz-EeeDO5Ph8U49Pw" name="IAccessManager">
@@ -1018,4 +1024,10 @@
   <PapyrusJava:External xmi:id="_G3xbwNDxEee4GYKcLz6eUA" name="project.AbstractRobot&#xD;&#xA;" base_Classifier="_EIyF8NDxEee4GYKcLz6eUA"/>
   <PapyrusJava:External xmi:id="_E1Pc8NNaEee5lrHP_PkN2Q" name="java.util.List&#xD;&#xA;" base_Classifier="_DT_soNNaEee5lrHP_PkN2Q"/>
   <PapyrusJava:External xmi:id="_Q2b6IOTCEeeUc8k90gq-9w" name="java.lang.Runnable&#xD;&#xA;" base_Classifier="_ZSisQOMsEeebRM9gSuL0jA"/>
+  <PapyrusJava:External xmi:id="_NqOG4OdhEee2B_wCGzBaJg" name="java.util.List&#xD;&#xA;" base_Classifier="_Npcq0OdhEee2B_wCGzBaJg"/>
+  <PapyrusJava:External xmi:id="_Wzc8QOdhEee2B_wCGzBaJg" name="java.util.List&#xD;&#xA;" base_Classifier="_WzYDwOdhEee2B_wCGzBaJg"/>
+  <PapyrusJava:External xmi:id="_e_iz8OdhEee2B_wCGzBaJg" name="java.util.List&#xD;&#xA;" base_Classifier="_e_fJkOdhEee2B_wCGzBaJg"/>
+  <PapyrusJava:External xmi:id="_gPxswOdhEee2B_wCGzBaJg" name="java.util.List&#xD;&#xA;" base_Classifier="_gPoi0OdhEee2B_wCGzBaJg"/>
+  <PapyrusJava:External xmi:id="_LqIB8OdiEee2B_wCGzBaJg" name="java.util.List&#xD;&#xA;" base_Classifier="_LqFlsOdiEee2B_wCGzBaJg"/>
+  <PapyrusJava:External xmi:id="_vSIcMOdiEee2B_wCGzBaJg" name="java.util.List&#xD;&#xA;" base_Classifier="_vSEKwOdiEee2B_wCGzBaJg"/>
 </xmi:XMI>
