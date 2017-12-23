@@ -160,7 +160,6 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @return 
 	 */
 	public Point getLocation(String roverName) {
-		return null;
 	}
 
 	/**

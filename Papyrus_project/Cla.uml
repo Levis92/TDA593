@@ -344,7 +344,7 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NM3sMOgUEeeIOuAY5cIMnQ" client="_X3zzcOfpEeej85pBCBDRiQ" supplier="_lqrUUOgTEeeIOuAY5cIMnQ" contract="_lqrUUOgTEeeIOuAY5cIMnQ"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_QPor4OgPEeeIOuAY5cIMnQ" name="abstractArea" isAbstract="true">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_QPor4OgPEeeIOuAY5cIMnQ" name="abstractArea">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_QPor4egPEeeIOuAY5cIMnQ" name="position" type="_ocFBcM6XEee_RaSB9J5JlA"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_QPor4ugPEeeIOuAY5cIMnQ" name="width">
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
@@ -356,20 +356,20 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="__A5H8OgOEeeIOuAY5cIMnQ" name="getPosition" isAbstract="true">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="__A5H8OgOEeeIOuAY5cIMnQ" name="getPosition">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="__A5H8egOEeeIOuAY5cIMnQ" type="_ocFBcM6XEee_RaSB9J5JlA" direction="return"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_deJUkOgPEeeIOuAY5cIMnQ" name="getWidth" isAbstract="true">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_deJUkOgPEeeIOuAY5cIMnQ" name="getWidth">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_deJUkegPEeeIOuAY5cIMnQ" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_mADEMOgPEeeIOuAY5cIMnQ" name="getHeight" isAbstract="true">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_mADEMOgPEeeIOuAY5cIMnQ" name="getHeight">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_mADEMegPEeeIOuAY5cIMnQ" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_wUoxEOgdEeeIOuAY5cIMnQ" name="getAreaType" isAbstract="true">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_wUoxEOgdEeeIOuAY5cIMnQ" name="getAreaType">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_wUoxEegdEeeIOuAY5cIMnQ" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>

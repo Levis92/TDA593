@@ -28,6 +28,7 @@ public class LogicalArea extends AbstractArea {
 	 * @return 
 	 */
 	public boolean contains(Point point) {
+		return true;
 	}
 
 	/**
@@ -35,5 +36,36 @@ public class LogicalArea extends AbstractArea {
 	 * @return 
 	 */
 	public String getAreaType() {
+		return "";
+	}
+
+	@Override
+	public boolean isInArea(Point point) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void abstractArea(Point position, double width, double height, String areaType) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Point getPosition() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public double getWidth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getHeight() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 };
