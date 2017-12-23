@@ -343,6 +343,7 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_z3ejgOgOEeeIOuAY5cIMnQ" name="areaType" visibility="private">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NM3sMOgUEeeIOuAY5cIMnQ" client="_X3zzcOfpEeej85pBCBDRiQ" supplier="_lqrUUOgTEeeIOuAY5cIMnQ" contract="_lqrUUOgTEeeIOuAY5cIMnQ"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_QPor4OgPEeeIOuAY5cIMnQ" name="abstractArea" isAbstract="true">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_QPor4egPEeeIOuAY5cIMnQ" name="position" type="_ocFBcM6XEee_RaSB9J5JlA"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_QPor4ugPEeeIOuAY5cIMnQ" name="width">
@@ -421,6 +422,14 @@
           <ownedOperation xmi:type="uml:Operation" xmi:id="_ilQOwOgDEeeIOuAY5cIMnQ" name="getAreaType">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_ilQOwegDEeeIOuAY5cIMnQ" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_lqrUUOgTEeeIOuAY5cIMnQ" name="IArea">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_4dsHYOgTEeeIOuAY5cIMnQ" name="isInArea">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_4dsHYegTEeeIOuAY5cIMnQ" name="point" type="_ocFBcM6XEee_RaSB9J5JlA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_4dsHYugTEeeIOuAY5cIMnQ" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
