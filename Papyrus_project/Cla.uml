@@ -333,9 +333,36 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_vSEKwOdiEee2B_wCGzBaJg" name="CopyOf_List&lt;Point>_1"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_LqFlsOdiEee2B_wCGzBaJg" name="List&lt;AbstractArea>"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_X3zzcOfpEeej85pBCBDRiQ" name="AbstractArea" visibility="public" isAbstract="true"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_JJnrQOfqEeej85pBCBDRiQ" name="LogicalArea"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_JJnrQOfqEeej85pBCBDRiQ" name="LogicalArea">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_gvLFoOf9Eeej85pBCBDRiQ" name="logicalArea">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_gvLFoef9Eeej85pBCBDRiQ" name="position" type="_ocFBcM6XEee_RaSB9J5JlA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_gvLFouf9Eeej85pBCBDRiQ" name="width">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_gvLFo-f9Eeej85pBCBDRiQ" name="height">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_gvLFpOf9Eeej85pBCBDRiQ" name="areaType">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_riuu0Of9Eeej85pBCBDRiQ" name="contains">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_riuu0ef9Eeej85pBCBDRiQ" name="point" type="_ocFBcM6XEee_RaSB9J5JlA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_EmhjcOf-Eeej85pBCBDRiQ" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_f1X6YOf-Eeej85pBCBDRiQ" name="getAreaType">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_f1X6Yef-Eeej85pBCBDRiQ" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_P9snIOfqEeej85pBCBDRiQ" name="PhysicalArea">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_vwpbYOfqEeej85pBCBDRiQ" name="nestedAreas" type="_X3zzcOfpEeej85pBCBDRiQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_V8nM4Of7Eeej85pBCBDRiQ" name="nestedAreas" visibility="private" type="_X3zzcOfpEeej85pBCBDRiQ"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_uu2XcOf7Eeej85pBCBDRiQ" name="physicalArea">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_uu2Xcef7Eeej85pBCBDRiQ" name="position" type="_ocFBcM6XEee_RaSB9J5JlA"/>
+          </ownedOperation>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_m9Kk4OS7EeeUc8k90gq-9w" name="Controller" URI="">
@@ -715,6 +742,7 @@
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1jqMEOabEeeORekUaAc9ig" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1jzWAOabEeeORekUaAc9ig" value="*"/>
             </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5SOaIOf8Eeej85pBCBDRiQ"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_0Ev_cNNSEee5lrHP_PkN2Q" name="getMissions">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_0Ev_cdNSEee5lrHP_PkN2Q" type="_9Y7VQNBMEeeybtOC6kw8lg" direction="return">
