@@ -402,7 +402,10 @@
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EIS34OgVEeeIOuAY5cIMnQ"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EIY-gOgVEeeIOuAY5cIMnQ" value="*"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_PeX_UOgVEeeIOuAY5cIMnQ" name="nestedLogicalAreas" visibility="private" type="_JJnrQOfqEeej85pBCBDRiQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_PeX_UOgVEeeIOuAY5cIMnQ" name="nestedLogicalAreas" visibility="private" type="_JJnrQOfqEeej85pBCBDRiQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DFVwoOgWEeeIOuAY5cIMnQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DFfhoOgWEeeIOuAY5cIMnQ" value="*"/>
+          </ownedAttribute>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_uu2XcOf7Eeej85pBCBDRiQ" name="physicalArea">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_uu2Xcef7Eeej85pBCBDRiQ" name="position" type="_ocFBcM6XEee_RaSB9J5JlA"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_nTjtwOf_EeeIOuAY5cIMnQ" name="width">
