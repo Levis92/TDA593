@@ -4,6 +4,8 @@
 
 package rover.Model;
 
+import java.util.ArrayList;
+import java.util.List;
 import project.Point;
 import rover.Model.AbstractArea;
 import rover.Model.LogicalArea;
@@ -16,12 +18,13 @@ public class PhysicalArea extends AbstractArea {
 	/**
 	 * 
 	 */
-	private rover.Model.PhysicalArea[] nestedAreas;
+	private List<PhysicalArea> nestedPhysicalAreasList;
 	/**
 	 * 
 	 */
-	private LogicalArea[] nestedLogicalAreas;
+	private List<LogicalArea> nestedLogicalAreasList;
 
+	//TODO change constructor to super
 	/**
 	 * 
 	 * @param position 
@@ -32,10 +35,16 @@ public class PhysicalArea extends AbstractArea {
 	 * @param nestedPhysicalAreas 
 	 */
 	public void physicalArea(Point position, double width, double height, String areaType,
-			LogicalArea nestedLogicalArea, rover.Model.PhysicalArea nestedPhysicalAreas) {
+			LogicalArea nestedLogicalArea, PhysicalArea nestedPhysicalArea) {
+		abstractArea(position, width, height, areaType);
 		
+		nestedPhysicalAreasList= new ArrayList<PhysicalArea>();
+		nestedLogicalAreasList = new ArrayList<LogicalArea>();
+		
+		nestedPhysicalAreasList.add(nestedPhysicalArea);
+		nestedLogicalAreasList.add(nestedLogicalArea);
 	}
-
+	//TODO implement contains, do we need contains though?
 	/**
 	 * 
 	 * @param point 
@@ -50,7 +59,7 @@ public class PhysicalArea extends AbstractArea {
 	 * @return 
 	 */
 	public String getAreaType() {
-		return "";
+		return super.getAreaType();
 	}
 
 	@Override
@@ -69,27 +78,19 @@ public class PhysicalArea extends AbstractArea {
 		return isInArea;
 	}
 
-	@Override
-	public void abstractArea(Point position, double width, double height, String areaType) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 	@Override
 	public Point getPosition() {
-		// TODO Auto-generated method stub
-		return null;
+		return super.getPosition();
 	}
 
 	@Override
 	public double getWidth() {
-		// TODO Auto-generated method stub
-		return 0;
+		return super.getWidth();
 	}
 
 	@Override
 	public double getHeight() {
-		// TODO Auto-generated method stub
-		return 0;
+		return super.getHeight();
 	}
 };
