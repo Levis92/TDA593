@@ -24,6 +24,7 @@ public class LogicalArea extends AbstractArea {
 		abstractArea(position,width,height,areaType);
 	}
 
+	//TODO implement contains, not sure if it's needed
 	/**
 	 * 
 	 * @param point 
