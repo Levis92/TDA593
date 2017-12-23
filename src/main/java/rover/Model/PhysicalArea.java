@@ -33,7 +33,6 @@ public class PhysicalArea extends AbstractArea {
 	 */
 	public void physicalArea(Point position, double width, double height, String areaType,
 			LogicalArea nestedLogicalArea, rover.Model.PhysicalArea nestedPhysicalAreas) {
-		
 	}
 
 	/**

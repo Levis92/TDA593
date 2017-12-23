@@ -31,10 +31,10 @@ public abstract class AbstractArea implements IArea {
 
 	/**
 	 * Constructor creats abstract area
-	 * @param position 
-	 * @param width 
-	 * @param height 
-	 * @param areaType 
+	 * @param position  
+	 * @param width  
+	 * @param height  
+	 * @param areaType  
 	 */
 	public void abstractArea(Point position, double width, double height, String areaType) {
 		position = this.position;
@@ -47,23 +47,27 @@ public abstract class AbstractArea implements IArea {
 	 * 
 	 * @return 
 	 */
-	public abstract Point getPosition();
+	public Point getPosition() {
+	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public abstract double getWidth();
+	public double getWidth() {
+	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public abstract double getHeight();
+	public double getHeight() {
+	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public abstract String getAreaType();
+	public String getAreaType() {
+	}
 };
