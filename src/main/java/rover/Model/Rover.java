@@ -138,6 +138,22 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	public void goToNextPoint() {
 	}
 
+	
+
+	
+
+	
+
+	
+
+	
+
+	/**
+	 * 
+	 * @param roverName 
+	 * @return 
+	 */
+
 	/**
 	 * 
 	 * @param roverName 
@@ -156,18 +172,6 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	public boolean provideMission(Mission mission, IStrategy strategy) {
 		return true;
 	}
-
-	
-
-	
-
-	
-
-	/**
-	 * 
-	 * @param roverName 
-	 * @return 
-	 */
 
 	/**
 	 * 

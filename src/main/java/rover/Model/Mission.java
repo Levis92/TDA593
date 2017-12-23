@@ -50,8 +50,13 @@ public class Mission {
 	 * @return 
 	 */
 	public List<Point> getPointsToReach() {
-		return pointsToReach;
 	}
+
+
+
+
+
+
 
 	/**
 	 * 
@@ -81,6 +86,12 @@ public class Mission {
 			return null;
 		}
 	}
+
+
+
+
+
+
 
 	/**
 	 * 

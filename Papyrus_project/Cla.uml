@@ -369,6 +369,11 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
             </ownedParameter>
           </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_wUoxEOgdEeeIOuAY5cIMnQ" name="getAreaType" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_wUoxEegdEeeIOuAY5cIMnQ" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_JJnrQOfqEeej85pBCBDRiQ" name="LogicalArea">
           <generalization xmi:type="uml:Generalization" xmi:id="_u8QC0OgSEeeIOuAY5cIMnQ" general="_X3zzcOfpEeej85pBCBDRiQ"/>
