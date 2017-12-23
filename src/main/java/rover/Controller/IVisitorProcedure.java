@@ -23,4 +23,12 @@ public interface IVisitorProcedure {
 	 * @return 
 	 */
 	public void visit(LogicalArea logicalArea, IRoverLocator rover);
+
+	/**
+	 * 
+	 * @param physicalArea 
+	 * @param rover 
+	 * @return 
+	 */
+	public void visit(undefined physicalArea, IRoverLocator rover);
 };

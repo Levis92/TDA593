@@ -364,7 +364,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_mADEMOgPEeeIOuAY5cIMnQ" name="getHeight">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_mADEMOgPEeeIOuAY5cIMnQ" name="getHeight" isAbstract="true">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_mADEMegPEeeIOuAY5cIMnQ" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
             </ownedParameter>

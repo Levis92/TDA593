@@ -33,6 +33,18 @@ public class Mission {
 		this.pointsReached = new ArrayList<Point>();
 	}
 
+	
+
+	
+
+	
+
+	/**
+	 * 
+	 * @param pointsToReach 
+	 */
+
+
 	/**
 	 * 
 	 * @return 
@@ -51,6 +63,12 @@ public class Mission {
 		}
 	}
 
+
+
+
+
+
+
 	/**
 	 * 
 	 * @return 
@@ -66,16 +84,23 @@ public class Mission {
 
 	/**
 	 * 
-	 * @param pointsToReach 
-	 */
-
-
-	/**
-	 * 
 	 * @return 
 	 */
 	public List<Point> getPointsReached() {
 		return pointsReached;
+	}
+
+
+
+
+
+
+
+	/**
+	 * 
+	 * @param pointsToReach 
+	 */
+	public void Mission(List<Point> pointsToReach) {
 	}
 
 
