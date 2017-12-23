@@ -12,6 +12,7 @@ import rover.Model.AbstractArea;
  * 
  */
 public class LogicalArea extends AbstractArea {
+	//TODO change constructor call to super
 	/**
 	 * 
 	 * @param position 
@@ -20,6 +21,7 @@ public class LogicalArea extends AbstractArea {
 	 * @param areaType 
 	 */
 	public void logicalArea(Point position, double width, double height, String areaType) {
+		abstractArea(position,width,height,areaType);
 	}
 
 	/**
@@ -36,36 +38,36 @@ public class LogicalArea extends AbstractArea {
 	 * @return 
 	 */
 	public String getAreaType() {
-		return "";
+		return super.getAreaType();
 	}
 
 	@Override
 	public boolean isInArea(Point point) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void abstractArea(Point position, double width, double height, String areaType) {
-		// TODO Auto-generated method stub
-		
+		boolean isInArea;
+		Point position = super.getPosition();
+		double areaWidth =super.getWidth();
+		double areaHeight = super.getHeight();
+		if(position.getX() < point.getX() && position.getZ() < point.getZ() &&
+				position.getX() + areaWidth > point.getX() && position.getZ() + areaHeight > point.getZ()) {
+			isInArea = false;
+		}else {
+			isInArea = true;
+		}
+		return isInArea;
 	}
 
 	@Override
 	public Point getPosition() {
-		// TODO Auto-generated method stub
-		return null;
+		return super.getPosition();
 	}
 
 	@Override
 	public double getWidth() {
-		// TODO Auto-generated method stub
-		return 0;
+		return super.getWidth();
 	}
 
 	@Override
 	public double getHeight() {
-		// TODO Auto-generated method stub
-		return 0;
+		return super.getHeight();
 	}
 };

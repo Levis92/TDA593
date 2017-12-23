@@ -33,6 +33,7 @@ public class PhysicalArea extends AbstractArea {
 	 */
 	public void physicalArea(Point position, double width, double height, String areaType,
 			LogicalArea nestedLogicalArea, rover.Model.PhysicalArea nestedPhysicalAreas) {
+		
 	}
 
 	/**
@@ -54,8 +55,18 @@ public class PhysicalArea extends AbstractArea {
 
 	@Override
 	public boolean isInArea(Point point) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		boolean isInArea;
+		Point position = super.getPosition();
+		double areaWidth =super.getWidth();
+		double areaHeight = super.getHeight();
+		if(position.getX() < point.getX() && position.getZ() < point.getZ() &&
+				position.getX() + areaWidth > point.getX() && position.getZ() + areaHeight > point.getZ()) {
+			isInArea = false;
+		}else {
+			isInArea = true;
+		}
+		return isInArea;
 	}
 
 	@Override
