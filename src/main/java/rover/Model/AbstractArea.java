@@ -48,6 +48,7 @@ public abstract class AbstractArea implements IArea {
 	 * @return 
 	 */
 	public Point getPosition() {
+		return position;
 	}
 
 	/**
@@ -55,6 +56,7 @@ public abstract class AbstractArea implements IArea {
 	 * @return 
 	 */
 	public double getWidth() {
+		return width;
 	}
 
 	/**
@@ -62,6 +64,7 @@ public abstract class AbstractArea implements IArea {
 	 * @return 
 	 */
 	public double getHeight() {
+		return height;
 	}
 
 	/**
@@ -69,5 +72,6 @@ public abstract class AbstractArea implements IArea {
 	 * @return 
 	 */
 	public String getAreaType() {
+		return areaType;
 	}
 };
