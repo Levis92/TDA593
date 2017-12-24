@@ -13,6 +13,7 @@ import rover.Controller.IStrategy;
 import rover.Model.Mission;
 import rover.Model.Rover;
 import rover.Controller.Strategy1;
+import rover.Controller.StrategyFactory;
 
 
 public class Main {
@@ -63,7 +64,8 @@ public class Main {
 		Mission mission4 = new Mission(point4);
 		
 		//Strategy Initialization
-		IStrategy strategy = new Strategy1(); 
+		StrategyFactory strategyFactory = new StrategyFactory();
+		IStrategy strategy = strategyFactory.createStrategy(1); 
 		
 		//AccessManager Initialization
 		//need to figure out if List or arrays

@@ -505,7 +505,14 @@
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uojU0NmaEeeWuJKrAou04A" client="_pLwKYNmZEeeWuJKrAou04A" supplier="_ebaNQNmZEeeWuJKrAou04A" contract="_ebaNQNmZEeeWuJKrAou04A"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_X7qioNmZEeeWuJKrAou04A" name="StrategyFactory" visibility="public">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_bQBPUNmZEeeWuJKrAou04A" name="createStrategy"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_bQBPUNmZEeeWuJKrAou04A" name="createStrategy">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_yKVloOilEeeIDJfVbABFmA" name="number">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_ILxaUPaLEeW5KOK8aDMdgA"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_z5aWkOilEeeIDJfVbABFmA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_ZK3G8NBUEeeybtOC6kw8lg" name="RewardPointsManager">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_2pOFkNBYEeeybtOC6kw8lg" name="procedureList" visibility="private" type="_l5-ocNBVEeeybtOC6kw8lg">

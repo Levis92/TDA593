@@ -4,6 +4,9 @@
 
 package rover.Controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import rover.Controller.IStrategy;
 
 /************************************************************/
@@ -11,9 +14,31 @@ import rover.Controller.IStrategy;
  * 
  */
 public class StrategyFactory {
+	
+	private Map<Integer, IStrategy> strategies;
+	
+	public StrategyFactory() {
+		this.strategies = new HashMap<Integer, IStrategy>();
+	}
+	
 	/**
 	 * 
 	 */
-	public void createStrategy() {
+	public IStrategy createStrategy(Integer number) {
+		if (strategies.containsKey(number)) {
+			return strategies.get(number);
+		}
+		else {
+			IStrategy strat = null;
+			if(number == 1) {
+				strat = new Strategy1();
+				strategies.put(1, strat);
+			}
+			if(number == 2) {
+				strat = new Strategy2();
+				strategies.put(2, strat);
+			}
+			return strat;
+		}
 	}
 };
