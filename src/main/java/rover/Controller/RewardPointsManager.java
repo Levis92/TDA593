@@ -13,6 +13,8 @@ import rover.Controller.IVisitorProcedure;
 import rover.Model.IRoverLocator;
 import rover.Model.IVisitableArea;
 import rover.View.IOperatorRewardPointsView;
+
+import java.util.List;
 import java.lang.Runnable;
 
 /************************************************************/
@@ -59,7 +61,7 @@ public class RewardPointsManager implements IRewardPointsManagar, Runnable
 				@Override
 				public void updateRewardPoints() {
 					for (IRoverLocator rover: rewardPoints.keySet()) {
-						IVisitableArea[] areas = rover.getAreas();
+						List<IVisitableArea> areas = rover.getAreas();
 						for (IVisitableArea a : areas) {
 							for (IVisitorProcedure proc : procedureList) {
 								a.accept(proc, rover);

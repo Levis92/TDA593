@@ -136,7 +136,7 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_6ykSYN0CEeeDO5Ph8U49Pw" name="accessManager" visibility="private" type="_sxp5MNz-EeeDO5Ph8U49Pw"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_BgYOMN0DEeeDO5Ph8U49Pw" name="listAreas" visibility="private" type="_LqFlsOdiEee2B_wCGzBaJg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DJfhEN0DEeeDO5Ph8U49Pw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DJp5IN0DEeeDO5Ph8U49Pw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DJp5IN0DEeeDO5Ph8U49Pw" value="*"/>
           </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UpICEM6cEee_RaSB9J5JlA" client="_nHzoEM6VEee_RaSB9J5JlA" supplier="_14zvgM6bEee_RaSB9J5JlA" contract="_14zvgM6bEee_RaSB9J5JlA"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_AzRnEM6eEee_RaSB9J5JlA" client="_nHzoEM6VEee_RaSB9J5JlA" supplier="_g_5xgM6cEee_RaSB9J5JlA" contract="_g_5xgM6cEee_RaSB9J5JlA"/>

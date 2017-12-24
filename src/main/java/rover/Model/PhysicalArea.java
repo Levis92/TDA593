@@ -35,7 +35,7 @@ public class PhysicalArea extends AbstractArea {
 	 * @param nestedLogicalArea 
 	 * @param nestedPhysicalAreas 
 	 */
-	public void physicalArea(Point position, double width, double height, String areaType,
+	public PhysicalArea(Point position, double width, double height, String areaType,
 			LogicalArea nestedLogicalArea, PhysicalArea nestedPhysicalArea) {
 		abstractArea(position, width, height, areaType);
 		
@@ -70,8 +70,8 @@ public class PhysicalArea extends AbstractArea {
 		Point position = super.getPosition();
 		double areaWidth =super.getWidth();
 		double areaHeight = super.getHeight();
-		if(position.getX() < point.getX() && position.getZ() < point.getZ() &&
-				position.getX() + areaWidth > point.getX() && position.getZ() + areaHeight > point.getZ()) {
+		if(position.getX() > point.getX() || position.getZ() > point.getZ() ||
+				position.getX() + areaWidth < point.getX() || position.getZ() + areaHeight < point.getZ()) {
 			isInArea = false;
 		}else {
 			isInArea = true;

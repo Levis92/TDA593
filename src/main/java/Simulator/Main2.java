@@ -10,9 +10,13 @@ import project.AbstractSimulatorMonitor;
 import project.Point;
 import rover.Controller.AccessManager;
 import rover.Controller.IStrategy;
+import rover.Model.AbstractArea;
+import rover.Model.LogicalArea;
 import rover.Model.Mission;
+import rover.Model.PhysicalArea;
 import rover.Model.Rover;
 import rover.Controller.Strategy1;
+import rover.Controller.StrategyFactory;
 
 
 public class Main2 {
@@ -57,8 +61,14 @@ public static void main(String[] args) throws InterruptedException {
 		Mission mission3 = new Mission(point3);
 		Mission mission4 = new Mission(point4);
 		
+		//Area Initialization
+		List<AbstractArea> areas = new ArrayList<AbstractArea>(); 
+		
+		PhysicalArea area1 = new PhysicalArea(new Point(-5,-2), 10, 4, "Consulting", null, null);
+		areas.add(area1);
+		
 		//Strategy Initialization
-		IStrategy strategy = new Strategy1(); 
+		StrategyFactory strategyFactory = new StrategyFactory(); 
 		
 		//AccessManager Initialization
 		AccessManager accessManager = new AccessManager(listAreaController);
@@ -66,10 +76,10 @@ public static void main(String[] args) throws InterruptedException {
 		//Rovers Initialization
 		Set<Rover> robots = new HashSet<>();
 		
-		Rover robot1 = new Rover(new Point(3, 8), "Robot 1", accessManager, null);
-		Rover robot2 = new Rover(new Point(3, -8), "Robot 2", accessManager, null);
-		Rover robot3 = new Rover(new Point(-3, 8), "Robot 3", accessManager, null);
-		Rover robot4 = new Rover(new Point(-3, -8), "Robot 4",  accessManager, null);
+		Rover robot1 = new Rover(new Point(3, 8), "Robot 1", accessManager, areas);
+		Rover robot2 = new Rover(new Point(3, -8), "Robot 2", accessManager, areas);
+		Rover robot3 = new Rover(new Point(-3, 8), "Robot 3", accessManager, areas);
+		Rover robot4 = new Rover(new Point(-3, -8), "Robot 4",  accessManager, areas);
 		
 		robots.add(robot1);
 		robots.add(robot2);
@@ -80,10 +90,10 @@ public static void main(String[] args) throws InterruptedException {
 		AbstractSimulatorMonitor<Rover> controller = new SimulatorMonitor(robots, e);
 		
 		//Beginning of the mission 
-		robot1.provideMission(mission1, strategy);
-		robot2.provideMission(mission2, strategy);
-		robot3.provideMission(mission3, strategy);
-//		robot4.provideMission(mission4, strategy);
+		robot1.provideMission(mission1, strategyFactory.createStrategy(2));
+		robot2.provideMission(mission2, strategyFactory.createStrategy(2));
+		robot3.provideMission(mission3, strategyFactory.createStrategy(2));
+		robot4.provideMission(mission4, strategyFactory.createStrategy(2));
 
 
 	}

@@ -38,10 +38,10 @@ public abstract class AbstractArea implements IArea, IVisitableArea {
 	 * @param areaType  
 	 */
 	public void abstractArea(Point position, double width, double height, String areaType) {
-		position = this.position;
-		width = this.width;
-		height = this.height;
-		areaType = this.areaType;
+		this.position = position;
+		this.width = width;
+		this.height = height;
+		this.areaType = areaType;
 	}
 
 	/**

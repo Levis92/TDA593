@@ -30,5 +30,5 @@ public interface IVisitorProcedure {
 	 * @param rover 
 	 * @return 
 	 */
-	public void visit(undefined physicalArea, IRoverLocator rover);
+
 };

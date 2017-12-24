@@ -15,7 +15,12 @@ import rover.Model.IRoverLocator;
 import rover.Model.IRoverManager;
 import rover.Model.IVisitableArea;
 import rover.Model.Mission;
+
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+
+import Simulator.AccessController;
 
 /************************************************************/
 /**
@@ -50,7 +55,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	/**
 	 * 
 	 */
-	public List<IVisitableArea> listAreas;
+	public List<AbstractArea> listAreas;
 
 	/**
 	 * 
@@ -59,7 +64,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @param accessManager 
 	 * @param listAreas 
 	 */
-	public Rover(Point position, String name, IAccessManager accessManager, List<IVisitableArea> listAreas) {
+	public Rover(Point position, String name, IAccessManager accessManager, List<AbstractArea> listAreas) {
 		super(position, name);
 		paused = false;
 		sleeping = true;
@@ -112,7 +117,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * 
 	 * @return 
 	 */
-	public List<IVisitableArea> getListArea() {
+	public List<AbstractArea> getListArea() {
 		return listAreas;
 	}
 	
@@ -229,9 +234,16 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	}
 
 	@Override
-	public IVisitableArea[] getAreas() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<IVisitableArea> getAreas() {
+		List<IVisitableArea> res = new ArrayList<IVisitableArea>();
+		Iterator<AbstractArea> iter = listAreas.iterator();
+		while (iter.hasNext()) {
+			IArea area = iter.next();
+			if(area.isInArea(this.getPosition())) {
+				res.add((IVisitableArea) area);
+			}
+		}
+		return res;
 	}
 
 };

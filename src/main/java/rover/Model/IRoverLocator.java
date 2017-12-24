@@ -4,6 +4,8 @@
 
 package rover.Model;
 
+import java.util.List;
+
 import rover.Model.IVisitableArea;
 
 /************************************************************/
@@ -15,7 +17,7 @@ public interface IRoverLocator {
 	 * 
 	 * @return 
 	 */
-	public IVisitableArea[] getAreas();
+	public List<IVisitableArea> getAreas();
 
 	/**
 	 * 
