@@ -7,6 +7,7 @@ package rover.Model;
 import java.util.ArrayList;
 import java.util.List;
 import project.Point;
+import rover.Controller.IVisitorProcedure;
 import rover.Model.AbstractArea;
 import rover.Model.LogicalArea;
 
@@ -92,5 +93,10 @@ public class PhysicalArea extends AbstractArea {
 	@Override
 	public double getHeight() {
 		return super.getHeight();
+	}
+	@Override
+	public void accept(IVisitorProcedure procedure, IRoverLocator rover) {
+		procedure.visit(this, rover);
+		
 	}
 };

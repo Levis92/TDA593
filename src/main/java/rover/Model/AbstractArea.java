@@ -5,13 +5,14 @@
 package rover.Model;
 
 import project.Point;
+import rover.Controller.IVisitorProcedure;
 import rover.Model.IArea;
 
 /************************************************************/
 /**
  * 
  */
-public abstract class AbstractArea implements IArea {
+public abstract class AbstractArea implements IArea, IVisitableArea {
 	/**
 	 * 
 	 */
@@ -74,4 +75,5 @@ public abstract class AbstractArea implements IArea {
 	public String getAreaType() {
 		return areaType;
 	}
-};
+	
+}
