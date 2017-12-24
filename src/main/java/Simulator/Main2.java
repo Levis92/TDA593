@@ -8,12 +8,12 @@ import java.util.Set;
 
 import project.AbstractSimulatorMonitor;
 import project.Point;
-import rover.AccessController;
-import rover.AccessManager;
-import rover.IStrategy;
-import rover.Mission;
-import rover.Rover;
-import rover.Strategy1;
+import rover.Controller.AccessManager;
+import rover.Controller.IStrategy;
+import rover.Model.Mission;
+import rover.Model.Rover;
+import rover.Controller.Strategy1;
+
 
 public class Main2 {
 public static void main(String[] args) throws InterruptedException {

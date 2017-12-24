@@ -6,113 +6,43 @@ package rover.Model;
 
 import project.Point;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
 
 /************************************************************/
 /**
  * 
  */
+
 public class Mission {
-	/**
-	 * 
-	 */
-	public List<Point> pointsReached;
-	/**
-	 * 
-	 */
-	public List<Point> pointsToReach;
+	private LinkedList<Point> pointsToReach;
+	private LinkedList<Point> pointsReached;
 
-	/**
-	 * 
-	 * @param pointsToReach 
-	 */
 	
-	public Mission(List<Point> pointsToReach) {
+	public Mission(LinkedList<Point> pointsToReach){
 		this.pointsToReach = pointsToReach;
-		this.pointsReached = new ArrayList<Point>();
+		this.pointsReached = new LinkedList<Point>();
 	}
-
 	
-
-	
-
-	
-
-	/**
-	 * 
-	 * @param pointsToReach 
-	 */
-
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public List<Point> getPointsToReach() {
+	public LinkedList<Point> getPointsToReach(){
+		return this.pointsToReach;
 	}
-
-
-
-
-
-
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public void pointReached() {
+	
+	public LinkedList<Point> getPointsReached(){
+		return this.pointsReached;
+	}
+	
+	public void pointReached(){
 		if(!pointsToReach.isEmpty()) {
-			pointsReached.add(pointsToReach.remove(0));
+			pointsReached.add(pointsToReach.removeFirst());
 		}
 	}
-
-
-
-
-
-
-
-	/**
-	 * 
-	 * @return 
-	 */
+	
 	public Point getNextPoint() {
 		if(!pointsToReach.isEmpty()) {
-			return pointsToReach.get(0);
+			return pointsToReach.getFirst();
 		}
 		else {
 			return null;
 		}
 	}
-
-
-
-
-
-
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public List<Point> getPointsReached() {
-		return pointsReached;
-	}
-
-
-
-
-
-
-
-	/**
-	 * 
-	 * @param pointsToReach 
-	 */
-	public void Mission(List<Point> pointsToReach) {
-	}
-
-
 };
