@@ -32,11 +32,11 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	/**
 	 * 
 	 */
-	public IOperatorFaultView ioperatorfaultview;
+	public IOperatorFaultView iOperatorFaultView;
 	/**
 	 * 
 	 */
-	public StrategyFactory strategyfactory;
+	public StrategyFactory strategyFactory;
 
 	/**
 	 * 

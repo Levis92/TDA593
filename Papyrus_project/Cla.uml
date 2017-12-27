@@ -952,23 +952,23 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_cK6RUOS9EeeUc8k90gq-9w" name="View">
         <packagedElement xmi:type="uml:Class" xmi:id="_sVYMUNBaEeeybtOC6kw8lg" name="Operator" visibility="public">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_VkxQY9BcEeeybtOC6kw8lg" name="ioperatorrewardpointsview" type="_7Bov8NBbEeeybtOC6kw8lg" association="_VkxQYNBcEeeybtOC6kw8lg">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_VkxQY9BcEeeybtOC6kw8lg" name="iOperatorCreateMissionView" type="_7Bov8NBbEeeybtOC6kw8lg" association="_VkxQYNBcEeeybtOC6kw8lg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VkxQZNBcEeeybtOC6kw8lg" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VkxQZdBcEeeybtOC6kw8lg" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_OO-co9BeEeeybtOC6kw8lg" name="ioperatorrewardpointsview" type="_tNJP4NBcEeeybtOC6kw8lg" association="_OO-coNBeEeeybtOC6kw8lg">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_OO-co9BeEeeybtOC6kw8lg" name="iOperatorRewardPointsView" type="_tNJP4NBcEeeybtOC6kw8lg" association="_OO-coNBeEeeybtOC6kw8lg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OO-cpNBeEeeybtOC6kw8lg" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OO-cpdBeEeeybtOC6kw8lg" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_CGGUY9BgEeeybtOC6kw8lg" name="ioperatorenvironmentview" type="_ZUYOUNBfEeeybtOC6kw8lg" association="_CGGUYNBgEeeybtOC6kw8lg">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_CGGUY9BgEeeybtOC6kw8lg" name="iOperatorEnvironmentView" type="_ZUYOUNBfEeeybtOC6kw8lg" association="_CGGUYNBgEeeybtOC6kw8lg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CGGUZNBgEeeybtOC6kw8lg" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CGGUZdBgEeeybtOC6kw8lg" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_gMjxo9BgEeeybtOC6kw8lg" name="ioperatorfaultview" type="_c1mc4NBgEeeybtOC6kw8lg" association="_gMjxoNBgEeeybtOC6kw8lg">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_gMjxo9BgEeeybtOC6kw8lg" name="iOperatorFaultView" type="_c1mc4NBgEeeybtOC6kw8lg" association="_gMjxoNBgEeeybtOC6kw8lg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gMjxpNBgEeeybtOC6kw8lg" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gMjxpdBgEeeybtOC6kw8lg" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_yDRvQtmaEeeWuJKrAou04A" name="strategyfactory" type="_X7qioNmZEeeWuJKrAou04A" association="_yDRIMNmaEeeWuJKrAou04A">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_yDRvQtmaEeeWuJKrAou04A" name="strategyFactory" type="_X7qioNmZEeeWuJKrAou04A" association="_yDRIMNmaEeeWuJKrAou04A">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yDSWUNmaEeeWuJKrAou04A"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yDSWUdmaEeeWuJKrAou04A" value="1"/>
           </ownedAttribute>
