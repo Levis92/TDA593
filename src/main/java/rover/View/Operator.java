@@ -20,15 +20,15 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	/**
 	 * 
 	 */
-	public IOperatorCreateMissionView ioperatorrewardpointsview;
+	public IOperatorCreateMissionView iOperatorCreateMissionview;
 	/**
 	 * 
 	 */
-	public IOperatorRewardPointsView ioperatorrewardpointsview;
+	public IOperatorRewardPointsView iOperatorRewardPointsView;
 	/**
 	 * 
 	 */
-	public IOperatorEnvironmentView ioperatorenvironmentview;
+	public IOperatorEnvironmentView iOperatorEnvironmentView;
 	/**
 	 * 
 	 */
@@ -66,5 +66,11 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	 * @param roverName 
 	 */
 	public void createMission(Point points, String roverName) {
+	}
+
+	@Override
+	public void notifyFault() {
+		// TODO Auto-generated method stub
+		
 	}
 };
