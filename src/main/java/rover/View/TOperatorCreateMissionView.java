@@ -4,6 +4,10 @@
 
 package rover.View;
 
+import java.util.List;
+
+import project.Point;
+import rover.Model.Rover;
 import rover.View.IOperatorCreateMissionView;
 
 /************************************************************/
@@ -11,4 +15,10 @@ import rover.View.IOperatorCreateMissionView;
  * 
  */
 public class TOperatorCreateMissionView implements IOperatorCreateMissionView {
+
+	@Override
+	public void createMission(List<Point> points, Rover rover) {
+		// TODO Auto-generated method stub
+		
+	}
 };

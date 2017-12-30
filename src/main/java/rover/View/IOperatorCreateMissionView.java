@@ -4,6 +4,10 @@
 
 package rover.View;
 
+import java.util.List;
+
+import project.Point;
+import rover.Model.Rover;
 /************************************************************/
 /**
  * 
@@ -15,5 +19,5 @@ public interface IOperatorCreateMissionView {
 	 * @param roverName 
 	 * @return 
 	 */
-	public void createMission(int points, String roverName);
+	public void createMission(List<Point> points, Rover rover);
 };

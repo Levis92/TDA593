@@ -14,7 +14,8 @@ import rover.Model.Mission;
 import rover.Model.Rover;
 import rover.Controller.Strategy1;
 import rover.Controller.StrategyFactory;
-
+import rover.View.Operator;
+import rover.View.OperatorFactory;
 
 public class Main {
 
@@ -37,6 +38,12 @@ public class Main {
 		
 		//Missions Initialization
 		
+		//Initialize operator //not fully implemented
+		/*
+		OperatorFactory operatorFactory = new OperatorFactory();
+		Operator operator = operatorFactory.getTechnicalOperatorInstance();
+		*/
+		
 		LinkedList<Point> point1 = new LinkedList<Point>();
 		point1.add(new Point(-3.5,-3.5));
 		point1.add(new Point(3.5, -3.5));
@@ -56,6 +63,7 @@ public class Main {
 		point4.add(new Point(3.5, -3.5));
 		point4.add(new Point(3.5, 3.5));
 		point4.add(new Point(8, 3.5));
+		
 		
 		//need to figure out if List or arrays
 		Mission mission1 = new Mission(point1);
@@ -84,10 +92,20 @@ public class Main {
 		robots.add(robot3);
 		robots.add(robot4);
 		
+
+
+		
 		//Simulator Initialization
 		AbstractSimulatorMonitor<Rover> controller = new SimulatorMonitor(robots, e);
 		
 		//Beginning of the mission 
+		/*
+		operator.iOperatorCreateMissionview.createMission(point1, robot1);
+		operator.iOperatorCreateMissionview.createMission(point2, robot2);
+		operator.iOperatorCreateMissionview.createMission(point3, robot3);
+		operator.iOperatorCreateMissionview.createMission(point4, robot4);
+		*/
+		
 		robot1.provideMission(mission1, strategy);
 		robot2.provideMission(mission2, strategy);
 		robot3.provideMission(mission3, strategy);

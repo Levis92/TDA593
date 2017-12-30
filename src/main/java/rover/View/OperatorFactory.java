@@ -29,6 +29,7 @@ public class OperatorFactory {
 	 * @return 
 	 */
 	public Operator getNonTechnicalOperatorInstance() {
+		return new Operator();
 	}
 
 	/**
@@ -36,5 +37,6 @@ public class OperatorFactory {
 	 * @return 
 	 */
 	public Operator getTechnicalOperatorInstance() {
+		return new Operator();
 	}
 };

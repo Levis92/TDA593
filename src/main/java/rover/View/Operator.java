@@ -4,9 +4,12 @@
 
 package rover.View;
 
+import java.util.List;
+
 import project.Point;
 import rover.Controller.IMissionManager;
 import rover.Controller.StrategyFactory;
+import rover.Model.Rover;
 import rover.View.IOperatorCreateMissionView;
 import rover.View.IOperatorEnvironmentView;
 import rover.View.IOperatorFaultView;
@@ -37,6 +40,7 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	 * 
 	 */
 	public StrategyFactory strategyFactory;
+	
 
 	/**
 	 * 
@@ -65,7 +69,8 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	 * @param points 
 	 * @param roverName 
 	 */
-	public void createMission(Point points, String roverName) {
+	public void createMission(List<Point> points, Rover rover) {
+		
 	}
 
 	@Override
