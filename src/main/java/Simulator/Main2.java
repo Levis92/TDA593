@@ -1,6 +1,7 @@
 package Simulator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -10,7 +11,12 @@ import project.AbstractSimulatorMonitor;
 import project.Point;
 import rover.Controller.AccessManager;
 import rover.Controller.IStrategy;
+import rover.Controller.IVisitorProcedure;
+import rover.Controller.ProcedureA;
+import rover.Controller.ProcedureB;
+import rover.Controller.RewardPointsManager;
 import rover.Model.AbstractArea;
+import rover.Model.IRoverLocator;
 import rover.Model.LogicalArea;
 import rover.Model.Mission;
 import rover.Model.PhysicalArea;
@@ -95,6 +101,18 @@ public static void main(String[] args) throws InterruptedException {
 		robot3.provideMission(mission3, strategyFactory.createStrategy(2));
 		robot4.provideMission(mission4, strategyFactory.createStrategy(2));
 
-
+		HashMap<IRoverLocator, Integer> map = new HashMap<IRoverLocator, Integer>();
+		
+		map.put(robot1, 0);
+		map.put(robot2, 0);
+		map.put(robot3, 0);
+		map.put(robot4, 0);
+		
+		IVisitorProcedure[] proc = new IVisitorProcedure[2];
+        proc[0] = new ProcedureA();
+        proc[1] = new ProcedureB();
+        
+        RewardPointsManager rpm = new RewardPointsManager(proc, map);
+        new Thread(rpm).start();
 	}
 }

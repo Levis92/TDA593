@@ -28,17 +28,25 @@ public class ProcedureA implements IVisitorProcedure {
 	 * @return 
 	 */
 	public void visit(PhysicalArea physicalArea, IRoverLocator rover) {
+		int newPoint;
+		String areaType = physicalArea.getAreaType();
 		
+		if (areaType.equals("Consulting")) newPoint = 10;
+		else if (areaType.equals("Surgery")) newPoint = 20;
+		else return;
+		
+		rewardPoints.put(rover, rewardPoints.get(rover) + newPoint);
+		System.out.println("New value" + rewardPoints.get(rover));
 	}
 
 	/**
-	 * 
+	 * Procedure A should not consider logical areas
 	 * @param logicalArea 
 	 * @param rover 
 	 * @return 
 	 */
 	public void visit(LogicalArea logicalArea, IRoverLocator rover) {
-		
+		return; 
 	}
 	
 };
