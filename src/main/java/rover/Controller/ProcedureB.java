@@ -18,7 +18,11 @@ public class ProcedureB implements IVisitorProcedure {
 	/**
 	 * 
 	 */
-	public Map<IRoverLocator, Integer> rewardPoints;
+	private Map<IRoverLocator, Integer> rewardPoints;
+	
+	public ProcedureB(Map<IRoverLocator, Integer> rewardPoints) {
+		this.rewardPoints = rewardPoints;
+	}
 
 	/**
 	 * Procedure B should not consider physical areas
@@ -31,7 +35,7 @@ public class ProcedureB implements IVisitorProcedure {
 	}
 
 	/**
-	 * 
+	 * Computes rewardpoints based on logical areas, amount of points defined in assignement
 	 * @param logicalArea 
 	 * @param rover 
 	 * @return 

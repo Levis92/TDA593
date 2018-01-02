@@ -19,7 +19,11 @@ public class ProcedureA implements IVisitorProcedure {
 	/**
 	 * 
 	 */
-	public Map<IRoverLocator, Integer> rewardPoints;
+	private Map<IRoverLocator, Integer> rewardPoints;
+	
+	public ProcedureA (Map<IRoverLocator, Integer> rewardPoints) {
+		this.rewardPoints = rewardPoints;
+	}
 
 	/**
 	 * 
@@ -36,7 +40,7 @@ public class ProcedureA implements IVisitorProcedure {
 		else return;
 		
 		rewardPoints.put(rover, rewardPoints.get(rover) + newPoint);
-		System.out.println("New value" + rewardPoints.get(rover));
+		System.out.println(rover.getName() + " new value: " + rewardPoints.get(rover));
 	}
 
 	/**
