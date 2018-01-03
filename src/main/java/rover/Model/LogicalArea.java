@@ -13,7 +13,7 @@ import rover.Model.AbstractArea;
  * 
  */
 public class LogicalArea extends AbstractArea {
-	//TODO change constructor call to super
+	
 	/**
 	 * 
 	 * @param position 
@@ -21,8 +21,8 @@ public class LogicalArea extends AbstractArea {
 	 * @param height 
 	 * @param areaType 
 	 */
-	public void logicalArea(Point position, double width, double height, String areaType) {
-		abstractArea(position,width,height,areaType);
+	public LogicalArea(Point position, double width, double height, String areaType) {
+		super(position,width,height,areaType);
 	}
 
 	//TODO implement contains, not sure if it's needed

@@ -25,7 +25,7 @@ public class PhysicalArea extends AbstractArea {
 	 */
 	private List<LogicalArea> nestedLogicalAreasList;
 
-	//TODO change constructor to super
+	
 	/**
 	 * 
 	 * @param position 
@@ -37,7 +37,7 @@ public class PhysicalArea extends AbstractArea {
 	 */
 	public PhysicalArea(Point position, double width, double height, String areaType,
 			LogicalArea nestedLogicalArea, PhysicalArea nestedPhysicalArea) {
-		abstractArea(position, width, height, areaType);
+		super(position, width, height, areaType);
 		
 		nestedPhysicalAreasList= new ArrayList<PhysicalArea>();
 		nestedLogicalAreasList = new ArrayList<LogicalArea>();

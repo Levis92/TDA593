@@ -37,7 +37,7 @@ public abstract class AbstractArea implements IArea, IVisitableArea {
 	 * @param height  
 	 * @param areaType  
 	 */
-	public void abstractArea(Point position, double width, double height, String areaType) {
+	public AbstractArea(Point position, double width, double height, String areaType) {
 		this.position = position;
 		this.width = width;
 		this.height = height;
