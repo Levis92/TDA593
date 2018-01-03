@@ -8,6 +8,7 @@ import java.util.List;
 
 import project.Point;
 import rover.Controller.IMissionManager;
+import rover.Controller.IStrategy;
 import rover.Controller.StrategyFactory;
 import rover.Model.Rover;
 import rover.View.IOperatorCreateMissionView;
@@ -27,27 +28,36 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	/**
 	 * 
 	 */
-	public IOperatorRewardPointsView iOperatorRewardPointsView;
+	private IOperatorRewardPointsView iOperatorRewardPointsView;
 	/**
 	 * 
 	 */
-	public IOperatorEnvironmentView iOperatorEnvironmentView;
+	private IOperatorEnvironmentView iOperatorEnvironmentView;
 	/**
 	 * 
 	 */
-	public IOperatorFaultView iOperatorFaultView;
+	private IOperatorFaultView iOperatorFaultView;
 	/**
 	 * 
 	 */
-	public StrategyFactory strategyFactory;
+	private StrategyFactory strategyFactory;
+	/**
+	 * 
+	 */
+	private IMissionManager missionManager;
+	/**
+	 * 
+	 */
+	private IOperatorCreateMissionView iOperatorCreateMissionView;
 	
 	
-	public Operator(String type) {
+	public Operator(String type, IMissionManager missionManager) {
 		if (type.equals("technical")) {
 			iOperatorCreateMissionview = new TOperatorCreateMissionView();
 			iOperatorEnvironmentView = new TOperatorEnvironmentView();
 			iOperatorFaultView = new IOperatorFaultView();
 			iOperatorRewardPointsView = new TOperatorRewardPointsView();
+			strategyFactory = new StrategyFactory();
 		
 		} else if (type.equals("non-technical")) {
 			iOperatorCreateMissionview = null;
@@ -65,12 +75,14 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	public void updateLocation() {
 	}
 
+
 	/**
 	 * 
 	 * @return 
 	 */
 	public void updateMissionProgress() {
 	}
+
 
 	/**
 	 * 
@@ -80,14 +92,16 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	public void notifyRewardPoints(int[] rewardPoints) {
 	}
 
+
 	/**
 	 * 
 	 * @param points 
 	 * @param roverName 
 	 */
-	public void createMission(List<Point> points, Rover rover) {
+	public void createMission(List<Point> points, Rover rover, IMissionManager missionManager) {
 		if (iOperatorCreateMissionview != null) {
-			this.iOperatorCreateMissionview.createMission(points, rover);
+			IStrategy strategy = strategyFactory.createStrategy(1);
+			this.iOperatorCreateMissionview.createMission(points, rover, missionManager, strategy);
 		} else {
 			System.out.println("Access to create mission denied");
 		}
@@ -99,4 +113,5 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 		// TODO Auto-generated method stub
 		
 	}
+
 };

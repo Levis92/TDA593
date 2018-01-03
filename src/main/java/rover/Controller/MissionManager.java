@@ -4,7 +4,10 @@
 
 package rover.Controller;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+
 import project.Point;
 import rover.Controller.IMissionManager;
 import rover.Model.Mission;
@@ -18,19 +21,11 @@ public class MissionManager implements IMissionManager {
 	/**
 	 * 
 	 */
-	public List<Mission> missionList;
+	public List<Mission> missionList = new LinkedList<Mission>();
 	/**
 	 * 
 	 */
-	public List<Rover> roverList;
-
-	/**
-	 * 
-	 * @param rovers 
-	 */
-	public MissionManager(Rover[] rovers) {
-	}
-
+	public List<Rover> roverList = new LinkedList<Rover>();
 	/**
 	 * 
 	 * @return 
@@ -57,8 +52,8 @@ public class MissionManager implements IMissionManager {
 	}
 
 	/**
-	 * @param mission         
-	 * @return         
+	 * @param mission             
+	 * @return             
 	 */
 	public boolean removeAllMissions() {
 		for (int i = 0; i < missionList.size(); i++) {
@@ -68,8 +63,8 @@ public class MissionManager implements IMissionManager {
 	}
 
 	/**
-	 * @param mission         
-	 * @return         
+	 * @param mission             
+	 * @return             
 	 */
 	public boolean pauseAllMissions() {
 		for (Rover rover: roverList) {
@@ -101,19 +96,6 @@ public class MissionManager implements IMissionManager {
 
 	/**
 	 * 
-	 * @param points 
-	 * @return 
-	 * @param rover 
-	 */
-	public boolean createMission(Point[] points, Rover rover) {
-		Mission mission = new Mission(points);
-		rover.provideMission(mission, null);
-		boolean isAdded = missionList.add(mission);
-		return isAdded;
-	}
-
-	/**
-	 * 
 	 * @param rover 
 	 * @return 
 	 */
@@ -121,14 +103,6 @@ public class MissionManager implements IMissionManager {
 		boolean isPaused = rover.pauseRover();
 		return isPaused;
 	}
-
-	/**
-	 * 
-	 * @param rovers 
-	 */
-	public void MissionManager(Rover[] rovers) {
-	}
-
 
 	/**
 	 * 
@@ -140,5 +114,26 @@ public class MissionManager implements IMissionManager {
 		return isRemoved;
 	}
 
+	/**
+	 * 
+	 * @param points 
+	 * @return 
+	 * @param rover 
+	 */
+	public boolean createMission(List<Point> points, Rover rover, IStrategy strategy) {
+		Mission mission = new Mission(points);
+		rover.provideMission(mission, strategy);
+		boolean isAdded = missionList.add(mission);
+		return isAdded;
+	}
 
+	/**
+	 * 
+	 * @param rovers 
+	 */
+	public MissionManager(Set<Rover> rovers) {
+		List<Rover> temp = new LinkedList<Rover>();
+		temp.addAll(rovers);
+		roverList = temp;
+	}
 };

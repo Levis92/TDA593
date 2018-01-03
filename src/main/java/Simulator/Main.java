@@ -9,7 +9,9 @@ import java.util.Set;
 import project.AbstractSimulatorMonitor;
 import project.Point;
 import rover.Controller.AccessManager;
+import rover.Controller.IMissionManager;
 import rover.Controller.IStrategy;
+import rover.Controller.MissionManager;
 import rover.Model.Mission;
 import rover.Model.Rover;
 import rover.Controller.Strategy1;
@@ -39,10 +41,8 @@ public class Main {
 		//Missions Initialization
 		
 		//Initialize operator //not fully implemented
-		/*
-		OperatorFactory operatorFactory = new OperatorFactory();
-		Operator operator = operatorFactory.getTechnicalOperatorInstance();
-		*/
+		
+
 		
 		LinkedList<Point> point1 = new LinkedList<Point>();
 		point1.add(new Point(-3.5,-3.5));
@@ -72,8 +72,7 @@ public class Main {
 		Mission mission4 = new Mission(point4);
 		
 		//Strategy Initialization
-		StrategyFactory strategyFactory = new StrategyFactory();
-		IStrategy strategy = strategyFactory.createStrategy(1); 
+		
 		
 		//AccessManager Initialization
 		//need to figure out if List or arrays
@@ -92,25 +91,29 @@ public class Main {
 		robots.add(robot3);
 		robots.add(robot4);
 		
+		IMissionManager missionManager = new MissionManager(robots);
 
-
+		OperatorFactory operatorFactory = new OperatorFactory();
+		Operator technicalOperator = operatorFactory.getTechnicalOperatorInstance(missionManager);
+		
+		//Beginning of the mission 
+		
+		technicalOperator.createMission(point1, robot1, missionManager);
+		technicalOperator.createMission(point2, robot2, missionManager);
+		technicalOperator.createMission(point3, robot3, missionManager);
+		technicalOperator.createMission(point4, robot4, missionManager);
+		
 		
 		//Simulator Initialization
 		AbstractSimulatorMonitor<Rover> controller = new SimulatorMonitor(robots, e);
 		
-		//Beginning of the mission 
+
 		/*
-		operator.iOperatorCreateMissionview.createMission(point1, robot1);
-		operator.iOperatorCreateMissionview.createMission(point2, robot2);
-		operator.iOperatorCreateMissionview.createMission(point3, robot3);
-		operator.iOperatorCreateMissionview.createMission(point4, robot4);
-		*/
-		
 		robot1.provideMission(mission1, strategy);
 		robot2.provideMission(mission2, strategy);
 		robot3.provideMission(mission3, strategy);
 		robot4.provideMission(mission4, strategy);
-		
+		*/
 
 	}
 

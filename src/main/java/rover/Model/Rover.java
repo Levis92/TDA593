@@ -21,6 +21,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import Simulator.AccessController;
+import project.AbstractRobotSimulator;
 
 /************************************************************/
 /**
@@ -35,27 +36,27 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	/**
 	 * 
 	 */
-	public Mission mission;
+	private Mission mission;
 	/**
 	 * 
 	 */
-	public boolean paused;
+	private boolean paused;
 	/**
 	 * 
 	 */
-	public boolean sleeping;
+	private boolean sleeping;
 	/**
 	 * 
 	 */
-	public IStrategy strategy;
+	private IStrategy strategy;
 	/**
 	 * 
 	 */
-	public IAccessManager accessManager;
+	private IAccessManager accessManager;
 	/**
 	 * 
 	 */
-	public List<AbstractArea> listAreas;
+	private List<AbstractArea> listAreas;
 
 	/**
 	 * 
@@ -131,7 +132,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 
 	/**
 	 * 
-	 * @param point 
+	 * @param destination 
 	 * @return 
 	 */
 	public void setDestination(Point destination) {
@@ -233,7 +234,10 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 		strategy.applyBehaviour(this);
 	}
 
-	@Override
+	/**
+	 * 
+	 * @return 
+	 */
 	public List<IVisitableArea> getAreas() {
 		List<IVisitableArea> res = new ArrayList<IVisitableArea>();
 		Iterator<AbstractArea> iter = listAreas.iterator();
@@ -244,6 +248,38 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 			}
 		}
 		return res;
+	}
+
+	/**
+	 * 
+	 * @param position 
+	 * @param name 
+	 * @param accessManager 
+	 * @param listAreas 
+	 */
+	public void Rover(Point position, String name, IAccessManager accessManager, IVisitableArea[] listAreas) {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public boolean removeMission() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public IVisitableArea[] isInArea() {
+	}
+
+	/**
+	 * 
+	 * @param roverName 
+	 * @return 
+	 */
+	public Point getLocation(undefined roverName) {
 	}
 
 };
