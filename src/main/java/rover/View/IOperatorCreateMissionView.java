@@ -25,4 +25,5 @@ public interface IOperatorCreateMissionView {
 	 * @param strategy 
 	 */
 	public void createMission(List<Point> points, Rover rover, IMissionManager missionManager, IStrategy strategy);
+
 };
