@@ -41,6 +41,22 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	 */
 	public StrategyFactory strategyFactory;
 	
+	
+	public Operator(String type) {
+		if (type.equals("technical")) {
+			iOperatorCreateMissionview = new TOperatorCreateMissionView();
+			iOperatorEnvironmentView = new TOperatorEnvironmentView();
+			iOperatorFaultView = new IOperatorFaultView();
+			iOperatorRewardPointsView = new TOperatorRewardPointsView();
+		
+		} else if (type.equals("non-technical")) {
+			iOperatorCreateMissionview = null;
+			iOperatorEnvironmentView = new NTOperatorEnvironmentView();
+			iOperatorFaultView = new IOperatorFaultView();
+			iOperatorRewardPointsView = new NTOperatorRewardPointsView();
+		}
+	}
+	
 
 	/**
 	 * 
