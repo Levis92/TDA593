@@ -84,5 +84,4 @@ public class AccessManager implements IAccessManager {
 		acquireAccess(rover);	
 	}
 	
-	
 };

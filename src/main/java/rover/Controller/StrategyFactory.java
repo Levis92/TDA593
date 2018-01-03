@@ -15,6 +15,8 @@ public class StrategyFactory {
 	
 	/**
 	 * 
+	 * @param number 
+	 * @return 
 	 */
 	public IStrategy createStrategy(Integer number) {
 		

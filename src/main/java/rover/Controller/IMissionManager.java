@@ -7,29 +7,53 @@ package rover.Controller;
 import project.Point;
 import rover.Model.Rover;
 import rover.Model.Mission;
+import rover.Controller.IStrategy;
+import java.util.List;
 
 /************************************************************/
 /**
  * 
  */
 public interface IMissionManager {
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
 	/**
 	 * 
 	 * @param points 
 	 * @return 
 	 * @param rover 
+	 * @param strategy 
 	 */
-	public boolean createMission(Point[] points, Rover rover);
 
 	/**
-	 * @param mission            
-	 * @return            
+	 * 
+	 * @return 
 	 */
 	public boolean removeAllMissions();
 
+
+
+
+
+
+
+
+
+
+
 	/**
-	 * @param mission            
-	 * @return            
+	 * 
+	 * @return 
 	 */
 	public boolean pauseAllMissions();
 
@@ -38,6 +62,16 @@ public interface IMissionManager {
 	 * @return 
 	 */
 	public boolean continueAllMissions();
+
+
+
+
+
+
+
+
+
+
 
 	/**
 	 * 
@@ -53,11 +87,39 @@ public interface IMissionManager {
 	 */
 	public boolean continueMission(Rover rover);
 
+
+
+
+
+
+
+
+
+
+
 	/**
 	 * 
 	 * @param rover 
 	 * @return 
-	 * @param mission 
 	 */
 	public boolean removeMission(Rover rover);
+
+
+
+
+
+
+
+
+
+
+
+	/**
+	 * 
+	 * @param points 
+	 * @return 
+	 * @param rover 
+	 * @param strategy 
+	 */
+	public boolean createMission(List<Point> points, Rover rover, IStrategy strategy);
 };
