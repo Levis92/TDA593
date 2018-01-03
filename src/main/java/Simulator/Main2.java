@@ -10,8 +10,10 @@ import java.util.Set;
 import project.AbstractSimulatorMonitor;
 import project.Point;
 import rover.Controller.AccessManager;
+import rover.Controller.IMissionManager;
 import rover.Controller.IStrategy;
 import rover.Controller.IVisitorProcedure;
+import rover.Controller.MissionManager;
 import rover.Controller.ProcedureA;
 import rover.Controller.ProcedureB;
 import rover.Controller.RewardPointsManager;
@@ -21,6 +23,8 @@ import rover.Model.LogicalArea;
 import rover.Model.Mission;
 import rover.Model.PhysicalArea;
 import rover.Model.Rover;
+import rover.View.Operator;
+import rover.View.OperatorFactory;
 import rover.Controller.Strategy1;
 import rover.Controller.StrategyFactory;
 
@@ -104,12 +108,25 @@ public static void main(String[] args) throws InterruptedException {
 		//Simulator Initialization
 		AbstractSimulatorMonitor<Rover> controller = new SimulatorMonitor(robots, e);
 		
+		IMissionManager missionManager = new MissionManager(robots);
+
+		OperatorFactory operatorFactory = new OperatorFactory();
+		Operator technicalOperator = operatorFactory.getTechnicalOperatorInstance(missionManager);
+		
+		//Beginning of the mission 
+		
+		technicalOperator.createMission(point1, robot1, missionManager);
+		technicalOperator.createMission(point2, robot2, missionManager);
+		technicalOperator.createMission(point3, robot3, missionManager);
+		technicalOperator.createMission(point4, robot4, missionManager);
+		
+		/*
 		//Beginning of the mission 
 		robot1.provideMission(mission1, strategyFactory.createStrategy(2));
 		robot2.provideMission(mission2, strategyFactory.createStrategy(2));
 		robot3.provideMission(mission3, strategyFactory.createStrategy(2));
 		robot4.provideMission(mission4, strategyFactory.createStrategy(2));
-
+		 */
 		
 		//Map storing rovers and their rewardpoints
 		HashMap<IRoverLocator, Integer> map = new HashMap<IRoverLocator, Integer>();
