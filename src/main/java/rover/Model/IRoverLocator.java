@@ -23,5 +23,5 @@ public interface IRoverLocator {
 	 * 
 	 * @return 
 	 */
-	public String getName();
+	public String getName(); 
 };
