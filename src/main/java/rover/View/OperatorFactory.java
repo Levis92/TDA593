@@ -14,29 +14,36 @@ public class OperatorFactory {
 	/**
 	 * 
 	 */
-	private Operator nonTechnicalOperator;
+	private Operator nonTechnicalOperator = null;
 	/**
 	 * 
 	 */
-	private Operator technicalOperator;
+	private Operator technicalOperator = null;
 	/**
 	 * 
 	 */
-	public Operator operator;
+	public Operator operator = null;
 
 	/**
 	 * 
 	 * @return 
 	 */
 	public Operator getNonTechnicalOperatorInstance() {
-		return new Operator();
+		if (nonTechnicalOperator == null) {
+			nonTechnicalOperator = new Operator("non-technical");
+		} 
+		return nonTechnicalOperator;
 	}
+	
 
 	/**
 	 * 
 	 * @return 
 	 */
 	public Operator getTechnicalOperatorInstance() {
-		return new Operator();
+		if (technicalOperator == null) {
+			technicalOperator = new Operator("technical");
+		} 
+		return technicalOperator;
 	}
 };
