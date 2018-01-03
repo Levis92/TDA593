@@ -4,8 +4,12 @@
 
 package rover.Controller;
 
+
 import java.util.concurrent.TimeUnit;
 
+import javax.swing.Timer;
+
+import Simulator.RoverTimer;
 import rover.Controller.IStrategy;
 import rover.Model.IVisitableArea;
 import rover.Model.Rover;
@@ -26,19 +30,19 @@ public class Strategy2 implements IStrategy {
 	
 	public void pauseRover2s(Rover rover){
 		rover.pauseRover();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		rover.continueRover();
-		
+		int delay = 2000; //milliseconds
+		RoverTimer taskPerformer = new RoverTimer(rover);
+		Timer timer = new Timer(delay, taskPerformer);
+		timer.start();
+		timer.setRepeats(false);
 	}
 	
 	private void enterNewAreaRule(Rover rover) {
 		if(!rover.getAreas().isEmpty()) {
 			//System.out.println(currentArea);
+			if(currentArea == null) {
+				currentArea = rover.getAreas().get(0);
+			}
 			if(currentArea != rover.getAreas().get(0)) {
 				this.pauseRover2s(rover);
 				currentArea = rover.getAreas().get(0);
