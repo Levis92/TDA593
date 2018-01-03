@@ -1,6 +1,7 @@
 package Simulator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -10,7 +11,12 @@ import project.AbstractSimulatorMonitor;
 import project.Point;
 import rover.Controller.AccessManager;
 import rover.Controller.IStrategy;
+import rover.Controller.IVisitorProcedure;
+import rover.Controller.ProcedureA;
+import rover.Controller.ProcedureB;
+import rover.Controller.RewardPointsManager;
 import rover.Model.AbstractArea;
+import rover.Model.IRoverLocator;
 import rover.Model.LogicalArea;
 import rover.Model.Mission;
 import rover.Model.PhysicalArea;
@@ -64,8 +70,17 @@ public static void main(String[] args) throws InterruptedException {
 		//Area Initialization
 		List<AbstractArea> areas = new ArrayList<AbstractArea>(); 
 		
-		PhysicalArea area1 = new PhysicalArea(new Point(-5,-2), 10, 4, "Consulting", null, null);
+		PhysicalArea area1 = new PhysicalArea(new Point(-6, -3), 12, 6, "Consulting", null, null); 
+		PhysicalArea area2 = new PhysicalArea(new Point(0, 3.1), 6, 5.9, "Surgery", null, null);
+		PhysicalArea area3 = new PhysicalArea(new Point(0, -9), 6, 5.8, "Surgery", null, null);
+		PhysicalArea area4 = new PhysicalArea(new Point(-6, 3.1), 6, 5.8, "Surgery", null, null);
+		PhysicalArea area5 = new PhysicalArea(new Point(-6, -9), 6, 5.8, "Surgery", null, null);
+		
 		areas.add(area1);
+		areas.add(area2);
+		areas.add(area3);
+		areas.add(area4);
+		areas.add(area5);
 		
 		//Strategy Initialization
 		StrategyFactory strategyFactory = new StrategyFactory(); 
@@ -95,6 +110,24 @@ public static void main(String[] args) throws InterruptedException {
 		robot3.provideMission(mission3, strategyFactory.createStrategy(2));
 		robot4.provideMission(mission4, strategyFactory.createStrategy(2));
 
-
+		
+		//Map storing rovers and their rewardpoints
+		HashMap<IRoverLocator, Integer> map = new HashMap<IRoverLocator, Integer>();
+		
+		//Add all rovers to the map with zero points
+		map.put(robot1, 0);
+		map.put(robot2, 0);
+		map.put(robot3, 0);
+		map.put(robot4, 0);
+		
+		//List with all the procedures
+		IVisitorProcedure[] proc = new IVisitorProcedure[2];
+        proc[0] = new ProcedureA(map);
+        proc[1] = new ProcedureB(map);
+        
+        //Start the rewardpoints thread
+        RewardPointsManager rpm = new RewardPointsManager(proc, map);
+        new Thread(rpm).start();
+        
 	}
 }

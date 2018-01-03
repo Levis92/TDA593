@@ -70,6 +70,11 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	 * @param roverName 
 	 */
 	public void createMission(List<Point> points, Rover rover) {
+		if (iOperatorCreateMissionview != null) {
+			this.iOperatorCreateMissionview.createMission(points, rover);
+		} else {
+			System.out.println("Access to create mission denied");
+		}
 		
 	}
 

@@ -38,7 +38,7 @@ public class Strategy2 implements IStrategy {
 	
 	private void enterNewAreaRule(Rover rover) {
 		if(!rover.getAreas().isEmpty()) {
-			System.out.println(currentArea);
+			//System.out.println(currentArea);
 			if(currentArea != rover.getAreas().get(0)) {
 				this.pauseRover2s(rover);
 				currentArea = rover.getAreas().get(0);
@@ -49,7 +49,7 @@ public class Strategy2 implements IStrategy {
 
 	@Override
 	public void applyBehaviour(Rover rover) {
-		System.out.println(rover.getPosition());
+		//System.out.println(rover.getPosition());
 		if(!rover.isSleeping()) { // the rover has a mission to perform
 			if(rover.isAtPosition(rover.getDestination()) && !rover.isPaused()) {
 				rover.goToNextPoint();

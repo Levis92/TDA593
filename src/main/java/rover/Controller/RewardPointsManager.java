@@ -62,6 +62,7 @@ public class RewardPointsManager implements IRewardPointsManagar, Runnable
 				public void updateRewardPoints() {
 					for (IRoverLocator rover: rewardPoints.keySet()) {
 						List<IVisitableArea> areas = rover.getAreas();
+						System.out.println(rover.getName() + " is in " + areas.size() + " area(s)");
 						for (IVisitableArea a : areas) {
 							for (IVisitorProcedure proc : procedureList) {
 								a.accept(proc, rover);
