@@ -100,7 +100,7 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 	 */
 	public void createMission(List<Point> points, Rover rover, IMissionManager missionManager) {
 		if (iOperatorCreateMissionview != null) {
-			IStrategy strategy = strategyFactory.createStrategy(1);
+			IStrategy strategy = strategyFactory.createStrategy(2);
 			this.iOperatorCreateMissionview.createMission(points, rover, missionManager, strategy);
 		} else {
 			System.out.println("Access to create mission denied");
