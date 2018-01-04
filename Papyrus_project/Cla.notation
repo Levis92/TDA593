@@ -327,6 +327,13 @@
             <element xmi:type="uml:Operation" href="Cla.uml#_dpylMOahEeeHoOTv3DmBQA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_dsFEMeahEeeHoOTv3DmBQA"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_FTfDoPFgEee2uNHbj5Ed4g" type="Operation_ClassOperationLabel">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FXLQ0PFgEee2uNHbj5Ed4g" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FXLQ0fFgEee2uNHbj5Ed4g" key="mutable" value="true"/>
+            </eAnnotations>
+            <element xmi:type="uml:Operation" href="Cla.uml#_FRmNQPFgEee2uNHbj5Ed4g"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_FTfDofFgEee2uNHbj5Ed4g"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_nIgysc6VEee_RaSB9J5JlA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_nIgyss6VEee_RaSB9J5JlA"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_nIgys86VEee_RaSB9J5JlA"/>

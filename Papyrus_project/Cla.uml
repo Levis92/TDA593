@@ -138,7 +138,7 @@
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DJfhEN0DEeeDO5Ph8U49Pw" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DJp5IN0DEeeDO5Ph8U49Pw" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_4Jqg8PFPEee2uNHbj5Ed4g" name="operatorsToNotify" visibility="private" type="_sVYMUNBaEeeybtOC6kw8lg">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_4Jqg8PFPEee2uNHbj5Ed4g" name="operatorsToNotify" visibility="private" type="_mm5mkNBaEeeybtOC6kw8lg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7cFT8PFPEee2uNHbj5Ed4g"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7cQTEPFPEee2uNHbj5Ed4g" value="*"/>
           </ownedAttribute>
@@ -271,6 +271,12 @@
           <ownedOperation xmi:type="uml:Operation" xmi:id="_dpylMOahEeeHoOTv3DmBQA" name="removeMission">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_meTHwOahEeeHoOTv3DmBQA" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_FRmNQPFgEee2uNHbj5Ed4g" name="addOperator">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_FRmNQfFgEee2uNHbj5Ed4g" name="operator" type="_mm5mkNBaEeeybtOC6kw8lg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_FRmNQvFgEee2uNHbj5Ed4g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
