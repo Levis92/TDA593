@@ -191,6 +191,13 @@
             <element xmi:type="uml:Property" href="Cla.uml#_BgYOMN0DEeeDO5Ph8U49Pw"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_P4wzk90EEeeDO5Ph8U49Pw"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_4L5VkPFPEee2uNHbj5Ed4g" type="Property_ClassAttributeLabel">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4QzDsPFPEee2uNHbj5Ed4g" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4QzDsfFPEee2uNHbj5Ed4g" key="mutable" value="true"/>
+            </eAnnotations>
+            <element xmi:type="uml:Property" href="Cla.uml#_4Jqg8PFPEee2uNHbj5Ed4g"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_4L5VkfFPEee2uNHbj5Ed4g"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_nIgLoc6VEee_RaSB9J5JlA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_nIgLos6VEee_RaSB9J5JlA"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_nIgLo86VEee_RaSB9J5JlA"/>
@@ -312,13 +319,6 @@
             </eAnnotations>
             <element xmi:type="uml:Operation" href="Cla.uml#_eS12MONUEee0XNh8FFND0A"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_eUbxoeNUEee0XNh8FFND0A"/>
-          </children>
-          <children xmi:type="notation:Shape" xmi:id="_xTnpIOP8EeeRAsRDyFXyCw" type="Operation_ClassOperationLabel">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xeKsQuP8EeeRAsRDyFXyCw" source="PapyrusCSSForceValue">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xeKsQ-P8EeeRAsRDyFXyCw" key="mutable" value="true"/>
-            </eAnnotations>
-            <element xmi:type="uml:Operation" href="Cla.uml#_urV_UOP8EeeRAsRDyFXyCw"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_xTnpIeP8EeeRAsRDyFXyCw"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_dsFEMOahEeeHoOTv3DmBQA" type="Operation_ClassOperationLabel">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dvFU4OahEeeHoOTv3DmBQA" source="PapyrusCSSForceValue">

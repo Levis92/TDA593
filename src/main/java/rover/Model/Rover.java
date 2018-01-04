@@ -15,6 +15,7 @@ import rover.Model.IRoverLocator;
 import rover.Model.IRoverManager;
 import rover.Model.IVisitableArea;
 import rover.Model.Mission;
+import rover.View.Operator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -22,7 +23,6 @@ import java.util.List;
 
 import Simulator.AccessController;
 import project.AbstractRobotSimulator;
-import project.AbstractRobot;
 
 /************************************************************/
 /**
@@ -58,6 +58,10 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * 
 	 */
 	private List<AbstractArea> listAreas;
+	/**
+	 * 
+	 */
+	private List<Operator> operatorsToNotify;
 
 	/**
 	 * 
@@ -73,6 +77,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 		this.accessManager = accessManager;
 		this.listAreas = listAreas;
 		this.strategy = new Strategy1(); //By default
+		this.operatorsToNotify = new ArrayList<Operator>();
 	}
 
 	/**
@@ -250,37 +255,14 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 		}
 		return res;
 	}
-
-	/**
-	 * 
-	 * @param position 
-	 * @param name 
-	 * @param accessManager 
-	 * @param listAreas 
-	 */
-	public void Rover(Point position, String name, IAccessManager accessManager, List<IVisitableArea> listAreas) {
+	
+	public void addOperator(Operator operator) {
+		operatorsToNotify.add(operator);
 	}
-
-	/**
-	 * 
-	 * @return 
-	 */
+	
 	public boolean removeMission() {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public List<IVisitableArea> isInArea() {
-	}
-
-	/**
-	 * 
-	 * @param roverName 
-	 * @return 
-	 */
-	public Point getLocation(undefined roverName) {
+		this.mission = null;
+		return true;
 	}
 
 };
