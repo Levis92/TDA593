@@ -21,7 +21,7 @@ import rover.View.IOperatorMissionManagerView;
 /**
  * 
  */
-public class Operator implements rover.Controller.IOperatorFaultView {
+public class Operator implements rover.Controller.INotifyOperator {
 	/**
 	 * 
 	 */
@@ -113,7 +113,21 @@ public class Operator implements rover.Controller.IOperatorFaultView {
 
 
 	@Override
-	public void notifyFault() {
+	public void notifyFault(String status) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void notifyLocation(String location) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void notifyMissionProgress(String progress) {
 		// TODO Auto-generated method stub
 		
 	}
