@@ -1664,10 +1664,6 @@
             <element xmi:type="uml:Operation" href="Cla.uml#_72qBgNBdEeeybtOC6kw8lg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_QNMXMdNbEee5lrHP_PkN2Q"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_QNMXMtNbEee5lrHP_PkN2Q" type="Operation_InterfaceOperationLabel">
-            <element xmi:type="uml:Operation" href="Cla.uml#_BfiVkNBeEeeybtOC6kw8lg"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_QNMXM9NbEee5lrHP_PkN2Q"/>
-          </children>
           <children xmi:type="notation:Shape" xmi:id="_QNMXNNNbEee5lrHP_PkN2Q" type="Operation_InterfaceOperationLabel">
             <element xmi:type="uml:Operation" href="Cla.uml#_KXIoYNBeEeeybtOC6kw8lg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_QNMXNdNbEee5lrHP_PkN2Q"/>
