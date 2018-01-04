@@ -35,7 +35,7 @@ public class AccessManager implements IAccessManager {
 	 * @param rover 
 	 * @return 
 	 */
-	public AccessController isInAreaController(Rover rover) {
+	private AccessController isInAreaController(Rover rover) {
 		for (Iterator<AccessController> iter = listAccessController.iterator(); iter.hasNext(); ) {
 			AccessController ac = iter.next();
 			if(ac.isInArea(rover) && !ac.isTheOwner(rover)) {
@@ -50,7 +50,7 @@ public class AccessManager implements IAccessManager {
 	 * @param rover 
 	 * @return 
 	 */
-	public void releaseAccess(Rover rover) {
+	private void releaseAccess(Rover rover) {
 		for (Iterator<AccessController> iter = listAccessController.iterator(); iter.hasNext(); ) {
 			AccessController ac = iter.next();
 			ac.release(rover);
@@ -62,7 +62,7 @@ public class AccessManager implements IAccessManager {
 	 * @param rover 
 	 * @return 
 	 */
-	public void acquireAccess(Rover rover) {
+	private void acquireAccess(Rover rover) {
 		AccessController ac = isInAreaController(rover);
 		if(ac != null) {	//if the rover is in an area
 			if(!ac.tryAcquire(rover)) {	//if the rover cannot acces to the area

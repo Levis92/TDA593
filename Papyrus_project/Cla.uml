@@ -454,7 +454,7 @@
           </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_defbsNz_EeeDO5Ph8U49Pw" name="AccessManager">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_w6fhYNz_EeeDO5Ph8U49Pw" name="listAccessController">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_w6fhYNz_EeeDO5Ph8U49Pw" name="listAccessController" visibility="private">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zGgF8Nz_EeeDO5Ph8U49Pw" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zGoBwNz_EeeDO5Ph8U49Pw" value="1"/>
           </ownedAttribute>
@@ -465,17 +465,17 @@
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9t14ENz_EeeDO5Ph8U49Pw" value="*"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_bFyCcN0AEeeDO5Ph8U49Pw" name="isInAreaController">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_bFyCcN0AEeeDO5Ph8U49Pw" name="isInAreaController" visibility="private">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_bFyCcd0AEeeDO5Ph8U49Pw" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_bFyCct0AEeeDO5Ph8U49Pw" direction="return"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_kdVnsN0AEeeDO5Ph8U49Pw" name="releaseAccess">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_kdVnsN0AEeeDO5Ph8U49Pw" name="releaseAccess" visibility="private">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_kdVnsd0AEeeDO5Ph8U49Pw" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_kdVnst0AEeeDO5Ph8U49Pw" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_ZntxYOM0Eee0XNh8FFND0A" name="acquireAccess">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ZntxYOM0Eee0XNh8FFND0A" name="acquireAccess" visibility="private">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZntxYeM0Eee0XNh8FFND0A" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_fHUNoOM0Eee0XNh8FFND0A" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
