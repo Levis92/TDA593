@@ -1104,6 +1104,20 @@
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_68LaAN0FEeeDO5Ph8U49Pw" source="PapyrusCSSForceValue">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_68LaAd0FEeeDO5Ph8U49Pw" key="mutable" value="true"/>
           </eAnnotations>
+          <children xmi:type="notation:Shape" xmi:id="_XM-1wPFVEee2uNHbj5Ed4g" type="Operation_ClassOperationLabel">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XR81UPFVEee2uNHbj5Ed4g" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XR81UfFVEee2uNHbj5Ed4g" key="mutable" value="true"/>
+            </eAnnotations>
+            <element xmi:type="uml:Operation" href="Cla.uml#_XLJCsPFVEee2uNHbj5Ed4g"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_XM_c0PFVEee2uNHbj5Ed4g"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_fUkn8PFVEee2uNHbj5Ed4g" type="Operation_ClassOperationLabel">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fZgyUPFVEee2uNHbj5Ed4g" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fZgyUfFVEee2uNHbj5Ed4g" key="mutable" value="true"/>
+            </eAnnotations>
+            <element xmi:type="uml:Operation" href="Cla.uml#_fS-sgPFVEee2uNHbj5Ed4g"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fUkn8fFVEee2uNHbj5Ed4g"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_pLx_m9mZEeeWuJKrAou04A"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_pLx_nNmZEeeWuJKrAou04A"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_pLx_ndmZEeeWuJKrAou04A"/>

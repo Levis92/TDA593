@@ -499,6 +499,18 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_pLwKYNmZEeeWuJKrAou04A" name="Strategy2">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_486Q8N0FEeeDO5Ph8U49Pw" name="currentArea" type="_owGygN0CEeeDO5Ph8U49Pw"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uojU0NmaEeeWuJKrAou04A" client="_pLwKYNmZEeeWuJKrAou04A" supplier="_ebaNQNmZEeeWuJKrAou04A" contract="_ebaNQNmZEeeWuJKrAou04A"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_XLJCsPFVEee2uNHbj5Ed4g" name="enterNewAreaRule" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XLJCsfFVEee2uNHbj5Ed4g" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XLJCsvFVEee2uNHbj5Ed4g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_fS-sgPFVEee2uNHbj5Ed4g" name="pauseRover2s" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_fS-sgfFVEee2uNHbj5Ed4g" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_fS-sgvFVEee2uNHbj5Ed4g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_X7qioNmZEeeWuJKrAou04A" name="StrategyFactory" visibility="public">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_bQBPUNmZEeeWuJKrAou04A" name="createStrategy">

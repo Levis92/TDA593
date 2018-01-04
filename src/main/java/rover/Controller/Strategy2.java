@@ -28,7 +28,7 @@ public class Strategy2 implements IStrategy {
 		currentArea = null;
 	}
 	
-	public void pauseRover2s(Rover rover){
+	private void pauseRover2s(Rover rover){
 		rover.pauseRover();
 		int delay = 2000; //milliseconds
 		RoverTimer taskPerformer = new RoverTimer(rover);
