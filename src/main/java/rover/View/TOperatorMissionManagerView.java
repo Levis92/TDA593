@@ -24,6 +24,7 @@ public class TOperatorMissionManagerView implements IOperatorMissionManagerView 
 	 * @return 
 	 */
 	public boolean removeMission(Rover rover) {
+		return true;
 	}
 
 	/**
@@ -31,6 +32,7 @@ public class TOperatorMissionManagerView implements IOperatorMissionManagerView 
 	 * @return 
 	 */
 	public boolean removeAllMissions() {
+		return true;
 	}
 
 	/**
@@ -39,6 +41,7 @@ public class TOperatorMissionManagerView implements IOperatorMissionManagerView 
 	 * @param rover 
 	 */
 	public boolean pauseMission(Rover rover) {
+		return true;
 	}
 
 	/**
@@ -47,6 +50,7 @@ public class TOperatorMissionManagerView implements IOperatorMissionManagerView 
 	 * @return 
 	 */
 	public boolean continueMission(Rover rover) {
+		return true;
 	}
 
 	/**
@@ -54,6 +58,7 @@ public class TOperatorMissionManagerView implements IOperatorMissionManagerView 
 	 * @return 
 	 */
 	public boolean pauseAllMissions() {
+		return true;
 	}
 
 	/**
@@ -61,6 +66,7 @@ public class TOperatorMissionManagerView implements IOperatorMissionManagerView 
 	 * @return 
 	 */
 	public boolean continueAllMissions() {
+		return true;
 	}
 
 	/**

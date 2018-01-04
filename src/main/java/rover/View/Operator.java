@@ -4,8 +4,10 @@
 
 package rover.View;
 
+import java.util.Iterator;
 import java.util.List;
 
+import Simulator.AccessController;
 import project.Point;
 import rover.Controller.IMissionManager;
 import rover.Controller.IStrategy;
@@ -60,12 +62,19 @@ public class Operator implements rover.Controller.INotifyOperator {
 			iOperatorFaultView = new IOperatorFaultView();
 			iOperatorRewardPointsView = new TOperatorRewardPointsView();
 			strategyFactory = new StrategyFactory();
+			this.missionManager = missionManager;
 		
 		} else if (type.equals("non-technical")) {
 			iOperatorMissionManagerView = null;
 			iOperatorEnvironmentView = new NTOperatorEnvironmentView();
 			iOperatorFaultView = new IOperatorFaultView();
 			iOperatorRewardPointsView = new NTOperatorRewardPointsView();
+		}
+		
+		List<Rover> rovers =  missionManager.getRovers();
+		for (Iterator<Rover> iter = rovers.iterator(); iter.hasNext(); ) {
+			Rover rover = iter.next();
+			rover.addOperator(this);
 		}
 	}
 	
@@ -101,10 +110,10 @@ public class Operator implements rover.Controller.INotifyOperator {
 	 * @param rover 
 	 * @param missionManager 
 	 */
-	public void createMission(List<Point> points, Rover rover, IMissionManager missionManager) {
+	public void createMission(List<Point> points, Rover rover, int strategyNumber) {
 		if (iOperatorMissionManagerView != null) {
-			IStrategy strategy = strategyFactory.createStrategy(2);
-			this.iOperatorMissionManagerView.createMission(points, rover, missionManager, strategy);
+			IStrategy strategy = strategyFactory.createStrategy(strategyNumber);
+			this.iOperatorMissionManagerView.createMission(points, rover, this.missionManager, strategy);
 		} else {
 			System.out.println("Access to create mission denied");
 		}

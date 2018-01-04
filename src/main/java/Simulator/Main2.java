@@ -115,18 +115,10 @@ public static void main(String[] args) throws InterruptedException {
 		
 		//Beginning of the mission 
 		
-		technicalOperator.createMission(point1, robot1, missionManager);
-		technicalOperator.createMission(point2, robot2, missionManager);
-		technicalOperator.createMission(point3, robot3, missionManager);
-		technicalOperator.createMission(point4, robot4, missionManager);
-		
-		/*
-		//Beginning of the mission 
-		robot1.provideMission(mission1, strategyFactory.createStrategy(2));
-		robot2.provideMission(mission2, strategyFactory.createStrategy(2));
-		robot3.provideMission(mission3, strategyFactory.createStrategy(2));
-		robot4.provideMission(mission4, strategyFactory.createStrategy(2));
-		 */
+		technicalOperator.createMission(point1, robot1, 2);
+		technicalOperator.createMission(point2, robot2, 2);
+		technicalOperator.createMission(point3, robot3, 2);
+		technicalOperator.createMission(point4, robot4, 2);
 		
 		//Map storing rovers and their rewardpoints
 		HashMap<IRoverLocator, Integer> map = new HashMap<IRoverLocator, Integer>();

@@ -61,4 +61,6 @@ public interface IMissionManager {
 	 * @param strategy 
 	 */
 	public boolean createMission(List<Point> points, Rover rover, IStrategy strategy);
+	
+	public List<Rover> getRovers();
 };
