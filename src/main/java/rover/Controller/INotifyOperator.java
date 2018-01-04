@@ -8,10 +8,12 @@ package rover.Controller;
 /**
  * 
  */
-public interface IOperatorFaultView {
+public interface INotifyOperator {
 	/**
 	 * 
 	 * @return 
 	 */
-	public void notifyFault();
+	public void notifyFault(String status);
+	public void notifyLocation(String location);
+	public void notifyMissionProgress(String progress);
 };

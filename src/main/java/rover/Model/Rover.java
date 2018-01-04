@@ -7,7 +7,6 @@ package rover.Model;
 import project.AbstractRobotSimulator;
 import project.Point;
 import rover.Controller.IAccessManager;
-import rover.Controller.IOperatorFaultView;
 import rover.Controller.IStrategy;
 import rover.Controller.Strategy1;
 import rover.Model.AbstractArea;
@@ -20,8 +19,6 @@ import rover.View.Operator;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import Simulator.AccessController;
 import project.AbstractRobotSimulator;
 
 /************************************************************/
