@@ -7,6 +7,7 @@ package rover.Model;
 import project.AbstractRobotSimulator;
 import project.Point;
 import rover.Controller.IAccessManager;
+import rover.Controller.INotifyOperator;
 import rover.Controller.IStrategy;
 import rover.Controller.Strategy1;
 import rover.Model.AbstractArea;
@@ -14,7 +15,6 @@ import rover.Model.IRoverLocator;
 import rover.Model.IRoverManager;
 import rover.Model.IVisitableArea;
 import rover.Model.Mission;
-import rover.View.Operator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -58,7 +58,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	/**
 	 * 
 	 */
-	private List<Operator> operatorsToNotify;
+	private List<INotifyOperator> operatorsToNotify;
 
 	/**
 	 * 
@@ -74,7 +74,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 		this.accessManager = accessManager;
 		this.listAreas = listAreas;
 		this.strategy = new Strategy1(); //By default
-		this.operatorsToNotify = new ArrayList<Operator>();
+		this.operatorsToNotify = new ArrayList<INotifyOperator>();
 	}
 
 	/**
@@ -253,7 +253,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 		return res;
 	}
 	
-	public void addOperator(Operator operator) {
+	public void addOperator(INotifyOperator operator) {
 		operatorsToNotify.add(operator);
 	}
 	
