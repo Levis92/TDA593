@@ -45,12 +45,13 @@ public class LogicalArea extends AbstractArea {
 
 	@Override
 	public boolean isInArea(Point point) {
+		
 		boolean isInArea;
 		Point position = super.getPosition();
 		double areaWidth =super.getWidth();
 		double areaHeight = super.getHeight();
-		if(position.getX() < point.getX() && position.getZ() < point.getZ() &&
-				position.getX() + areaWidth > point.getX() && position.getZ() + areaHeight > point.getZ()) {
+		if(position.getX() > point.getX() || position.getZ() > point.getZ() ||
+				position.getX() + areaWidth < point.getX() || position.getZ() + areaHeight < point.getZ()) {
 			isInArea = false;
 		}else {
 			isInArea = true;
