@@ -22,6 +22,7 @@ import java.util.List;
 
 import Simulator.AccessController;
 import project.AbstractRobotSimulator;
+import project.AbstractRobot;
 
 /************************************************************/
 /**
@@ -257,7 +258,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * @param accessManager 
 	 * @param listAreas 
 	 */
-	public void Rover(Point position, String name, IAccessManager accessManager, IVisitableArea[] listAreas) {
+	public void Rover(Point position, String name, IAccessManager accessManager, List<IVisitableArea> listAreas) {
 	}
 
 	/**
@@ -271,7 +272,7 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	 * 
 	 * @return 
 	 */
-	public IVisitableArea[] isInArea() {
+	public List<IVisitableArea> isInArea() {
 	}
 
 	/**

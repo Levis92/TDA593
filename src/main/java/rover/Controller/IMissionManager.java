@@ -15,41 +15,11 @@ import java.util.List;
  * 
  */
 public interface IMissionManager {
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	/**
-	 * 
-	 * @param points 
-	 * @return 
-	 * @param rover 
-	 * @param strategy 
-	 */
-
 	/**
 	 * 
 	 * @return 
 	 */
 	public boolean removeAllMissions();
-
-
-
-
-
-
-
-
-
-
 
 	/**
 	 * 
@@ -57,21 +27,12 @@ public interface IMissionManager {
 	 */
 	public boolean pauseAllMissions();
 
+
 	/**
 	 * 
 	 * @return 
 	 */
 	public boolean continueAllMissions();
-
-
-
-
-
-
-
-
-
-
 
 	/**
 	 * 
@@ -79,40 +40,18 @@ public interface IMissionManager {
 	 * @return 
 	 */
 	public boolean pauseMission(Rover rover);
-
 	/**
 	 * 
 	 * @param rover 
 	 * @return 
 	 */
 	public boolean continueMission(Rover rover);
-
-
-
-
-
-
-
-
-
-
-
 	/**
 	 * 
 	 * @param rover 
 	 * @return 
 	 */
 	public boolean removeMission(Rover rover);
-
-
-
-
-
-
-
-
-
-
 
 	/**
 	 * 

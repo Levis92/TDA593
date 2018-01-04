@@ -918,7 +918,7 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_cK6RUOS9EeeUc8k90gq-9w" name="View">
         <packagedElement xmi:type="uml:Class" xmi:id="_sVYMUNBaEeeybtOC6kw8lg" name="Operator" visibility="public">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_VkxQY9BcEeeybtOC6kw8lg" name="iOperatorCreateMissionView" visibility="private" type="_7Bov8NBbEeeybtOC6kw8lg" association="_VkxQYNBcEeeybtOC6kw8lg">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_VkxQY9BcEeeybtOC6kw8lg" name="iOperatorMissionManagerView" visibility="private" type="_7Bov8NBbEeeybtOC6kw8lg" association="_VkxQYNBcEeeybtOC6kw8lg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VkxQZNBcEeeybtOC6kw8lg" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VkxQZdBcEeeybtOC6kw8lg" value="1"/>
           </ownedAttribute>
@@ -1068,9 +1068,10 @@
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_M8nu0dBcEeeybtOC6kw8lg" name="points" type="_gPoi0OdhEee2B_wCGzBaJg"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_M8nu0tBcEeeybtOC6kw8lg" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_M8nu09BcEeeybtOC6kw8lg" direction="return">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
             </ownedParameter>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_DJfWgPCKEeeD2bMw-YVsvw" name="missionManager" type="_6XdS4NBNEeeybtOC6kw8lg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_hSwZcPE1EeesYOz2tKqnyQ" name="strategy" type="_ebaNQNmZEeeWuJKrAou04A"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_Kh4b8PEwEeesYOz2tKqnyQ" name="removeMission">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kh4b8fEwEeesYOz2tKqnyQ" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA"/>
@@ -1110,7 +1111,7 @@
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_El5wQPExEeesYOz2tKqnyQ" name="strategy" type="_ebaNQNmZEeeWuJKrAou04A"/>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_X86zgNBcEeeybtOC6kw8lg" name="TOperatorCreateMissionView" visibility="public">
+        <packagedElement xmi:type="uml:Class" xmi:id="_X86zgNBcEeeybtOC6kw8lg" name="TOperatorMissionManagerView" visibility="public">
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b9masNBcEeeybtOC6kw8lg" client="_X86zgNBcEeeybtOC6kw8lg" supplier="_7Bov8NBbEeeybtOC6kw8lg" contract="_7Bov8NBbEeeybtOC6kw8lg"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_C0n_4PExEeesYOz2tKqnyQ" name="createMission">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_C0om8PExEeesYOz2tKqnyQ" name="points" type="_gPoi0OdhEee2B_wCGzBaJg">
@@ -1189,6 +1190,35 @@
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_C1W_sfExEeesYOz2tKqnyQ" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C1W_svExEeesYOz2tKqnyQ" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C1XmwPExEeesYOz2tKqnyQ" value="1"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_eGpCwPE1EeesYOz2tKqnyQ" name="createMission">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_eGpp0PE1EeesYOz2tKqnyQ" name="points" type="_gPoi0OdhEee2B_wCGzBaJg">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eGpp0fE1EeesYOz2tKqnyQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eGqQ4PE1EeesYOz2tKqnyQ" value="1"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_eGqQ4fE1EeesYOz2tKqnyQ" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eGqQ4vE1EeesYOz2tKqnyQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eGqQ4_E1EeesYOz2tKqnyQ" value="1"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_eGqQ5PE1EeesYOz2tKqnyQ" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eGqQ5fE1EeesYOz2tKqnyQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eGqQ5vE1EeesYOz2tKqnyQ" value="1"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_eGqQ5_E1EeesYOz2tKqnyQ" name="missionManager" type="_6XdS4NBNEeeybtOC6kw8lg">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eGqQ6PE1EeesYOz2tKqnyQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eGq38PE1EeesYOz2tKqnyQ" value="1"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_eHHj4PE1EeesYOz2tKqnyQ" name="changeStrategy">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_eHIK8PE1EeesYOz2tKqnyQ" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eHIK8fE1EeesYOz2tKqnyQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eHIyAPE1EeesYOz2tKqnyQ" value="1"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_eHIyAfE1EeesYOz2tKqnyQ" name="strategy" type="_ebaNQNmZEeeWuJKrAou04A">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eHJZEPE1EeesYOz2tKqnyQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eHJZEfE1EeesYOz2tKqnyQ" value="1"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
