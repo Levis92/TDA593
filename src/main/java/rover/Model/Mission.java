@@ -81,7 +81,7 @@ public class Mission {
 		int nb2 = pointsReached.size();
 //		System.out.println(nb1);
 //		System.out.println(nb2);
-		return nb2/(nb1+nb2)*100;
+		return (int)((float)nb2/(nb1+nb2)*100);
 	}
 
 	

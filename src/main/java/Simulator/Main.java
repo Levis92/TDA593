@@ -1,6 +1,7 @@
 package Simulator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,8 +12,13 @@ import project.Point;
 import rover.Controller.AccessManager;
 import rover.Controller.IMissionManager;
 import rover.Controller.IStrategy;
+import rover.Controller.IVisitorProcedure;
 import rover.Controller.MissionManager;
+import rover.Controller.ProcedureA;
+import rover.Controller.ProcedureB;
+import rover.Controller.RewardPointsManager;
 import rover.Model.AbstractArea;
+import rover.Model.IRoverLocator;
 import rover.Model.Mission;
 import rover.Model.PhysicalArea;
 import rover.Model.Rover;
@@ -32,7 +38,7 @@ public class Main {
 		
 		AccessController aC1 = new AccessController ( new Point(-3.5,0), 5.1 ,e);
 		AccessController aC2 = new AccessController ( new Point(3.5,0), 5.1 ,e);
-//		AccessController aC3 = new AccessController ( new Point(-3.5,-3.5), 3.5 ,e);
+//		AccessController aC3 = new AccessController ( new Point(-8, 0), 3.5 ,e);
 //		AccessController aC4 = new AccessController ( new Point(3.5,-3.5), 3.5 ,e);
 		
 		listAreaController.add(aC1);
@@ -76,8 +82,8 @@ public class Main {
 		//Area Initialization
 		List<AbstractArea> areas = new ArrayList<AbstractArea>(); 
 		
-		PhysicalArea area1 = new PhysicalArea(new Point(-7, 7), 7, 7, "Surgery", null, null); 
-		PhysicalArea area2 = new PhysicalArea(new Point(0, 7), 7, 7, "Surgery", null, null);
+		PhysicalArea area1 = new PhysicalArea(new Point(-7, 0), 7, 7, "Surgery", null, null); 
+		PhysicalArea area2 = new PhysicalArea(new Point(0, 0), 7, 7, "Surgery", null, null);
 		PhysicalArea area3 = new PhysicalArea(new Point(0, -7), 7, 7, "Surgery", null, null);
 		PhysicalArea area4 = new PhysicalArea(new Point(-7, -7), 7, 7, "Surgery", null, null);
 		
@@ -115,15 +121,31 @@ public class Main {
 		
 		//Beginning of the mission 
 		
-		technicalOperator.getMissionManagerView().createMission(point1, robot1, 1);
-		technicalOperator.getMissionManagerView().createMission(point2, robot2, 1);
-		technicalOperator.getMissionManagerView().createMission(point3, robot3, 1);
-		technicalOperator.getMissionManagerView().createMission(point4, robot4, 1);
+		technicalOperator.getMissionManagerView().createMission(point1, robot1, 2);
+		technicalOperator.getMissionManagerView().createMission(point2, robot2, 2);
+		technicalOperator.getMissionManagerView().createMission(point3, robot3, 2);
+		technicalOperator.getMissionManagerView().createMission(point4, robot4, 2);
 		
+		//Map storing rovers and their rewardpoints
+		HashMap<IRoverLocator, Integer> map = new HashMap<IRoverLocator, Integer>();
 		
+		//Add all rovers to the map with zero points
+		map.put(robot1, 0);
+		map.put(robot2, 0);
+		map.put(robot3, 0);
+		map.put(robot4, 0);
+				
 		//Simulator Initialization
 		AbstractSimulatorMonitor<Rover> controller = new SimulatorMonitor(robots, e);
-
+		
+		//List with all the procedures
+		IVisitorProcedure[] proc = new IVisitorProcedure[2];
+        proc[0] = new ProcedureA(map);
+        proc[1] = new ProcedureB(map);
+        
+        //Start the rewardpoints thread
+        RewardPointsManager rpm = new RewardPointsManager(proc, map, technicalOperator);
+        new Thread(rpm).start();
 	}
 
 }
