@@ -30,15 +30,15 @@ public class Main {
 		//AreaController Initialization
 		List<AccessController> listAreaController = new ArrayList<AccessController>();
 		
-		AccessController aC1 = new AccessController ( new Point(-3.5,3.5), 3.5 ,e);
-		AccessController aC2 = new AccessController ( new Point(3.5,3.5), 3.5 ,e);
-		AccessController aC3 = new AccessController ( new Point(-3.5,-3.5), 3.5 ,e);
-		AccessController aC4 = new AccessController ( new Point(3.5,-3.5), 3.5 ,e);
+		AccessController aC1 = new AccessController ( new Point(-3.5,0), 5.1 ,e);
+		AccessController aC2 = new AccessController ( new Point(3.5,0), 5.1 ,e);
+//		AccessController aC3 = new AccessController ( new Point(-3.5,-3.5), 3.5 ,e);
+//		AccessController aC4 = new AccessController ( new Point(3.5,-3.5), 3.5 ,e);
 		
 		listAreaController.add(aC1);
 		listAreaController.add(aC2);
-		listAreaController.add(aC3);
-		listAreaController.add(aC4);
+//		listAreaController.add(aC3);
+//		listAreaController.add(aC4);
 		
 		//Missions Initialization
 		
@@ -47,9 +47,9 @@ public class Main {
 
 		
 		LinkedList<Point> point1 = new LinkedList<Point>();
-		point1.add(new Point(-3.5,-3.5));
-		point1.add(new Point(3.5, -3.5));
-		point1.add(new Point(8, -3.5));
+		point1.add(new Point(3.5,3.5));
+		point1.add(new Point(-3.5,3.5));
+		point1.add(new Point(-8, 3.5));
 		
 		LinkedList<Point> point2 = new LinkedList<Point>();
 		point2.add(new Point(-3.5, 3.5));
@@ -57,9 +57,9 @@ public class Main {
 		point2.add(new Point(-8, -3.5));
 		
 		LinkedList<Point> point3 = new LinkedList<Point>();
-		point3.add(new Point(3.5,3.5));
-		point3.add(new Point(-3.5,3.5));
-		point3.add(new Point(-8, 3.5));
+		point3.add(new Point(-3.5,-3.5));
+		point3.add(new Point(3.5, -3.5));
+		point3.add(new Point(8, -3.5));
 		
 		LinkedList<Point> point4 = new LinkedList<Point>();
 		point4.add(new Point(3.5, -3.5));
@@ -97,15 +97,16 @@ public class Main {
 		//Rovers Initialization
 		Set<Rover> robots = new HashSet<>();
 		
-		Rover robot1 = new Rover(new Point(-8, -3.5), "Robot 1", accessManager, areas);
+		
+		Rover robot1 = new Rover(new Point(8, 3.5), "Robot 1", accessManager, areas);
 		Rover robot2 = new Rover(new Point(-8, 3.5), "Robot 2", accessManager, areas);
-		Rover robot3 = new Rover(new Point(8, 3.5), "Robot 3", accessManager, areas);
-		Rover robot4 = new Rover(new Point(8, -3.5), "Robot 4",  accessManager, areas);
+		Rover robot3 = new Rover(new Point(-8.1, -3.5), "Robot 3", accessManager, areas);
+		Rover robot4 = new Rover(new Point(8.1, -3.5), "Robot 4",  accessManager, areas);
 		
 		robots.add(robot1);
 		robots.add(robot2);
-		robots.add(robot3);
 		robots.add(robot4);
+		robots.add(robot3);
 			
 		IMissionManager missionManager = new MissionManager(robots);
 		
