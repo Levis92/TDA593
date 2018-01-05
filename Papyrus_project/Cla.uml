@@ -2,12 +2,6 @@
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <uml:Model xmi:id="_DjJcwM6VEee_RaSB9J5JlA" name="se.chalmers.cse.mdse.group12" URI="">
     <packagedElement xmi:type="uml:Package" xmi:id="_YYWDoND-Eee_wohS1ZZyaA" name="rover">
-      <packagedElement xmi:type="uml:Association" xmi:id="_gMjxoNBgEeeybtOC6kw8lg" memberEnd="_gMjxo9BgEeeybtOC6kw8lg _gMjxptBgEeeybtOC6kw8lg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gMjxodBgEeeybtOC6kw8lg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gMjxotBgEeeybtOC6kw8lg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_gMjxptBgEeeybtOC6kw8lg" name="operator" type="_sVYMUNBaEeeybtOC6kw8lg" association="_gMjxoNBgEeeybtOC6kw8lg"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_CGGUYNBgEeeybtOC6kw8lg" memberEnd="_CGGUY9BgEeeybtOC6kw8lg _CGGUZtBgEeeybtOC6kw8lg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CGGUYdBgEeeybtOC6kw8lg" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CGGUYtBgEeeybtOC6kw8lg" key="nature" value="UML_Nature"/>
@@ -800,10 +794,6 @@
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CGGUZNBgEeeybtOC6kw8lg" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CGGUZdBgEeeybtOC6kw8lg" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_gMjxo9BgEeeybtOC6kw8lg" name="iOperatorFaultView" visibility="private" type="_c1mc4NBgEeeybtOC6kw8lg" association="_gMjxoNBgEeeybtOC6kw8lg">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gMjxpNBgEeeybtOC6kw8lg" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gMjxpdBgEeeybtOC6kw8lg" value="1"/>
-          </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rA2M4NBbEeeybtOC6kw8lg" client="_sVYMUNBaEeeybtOC6kw8lg" supplier="_mm5mkNBaEeeybtOC6kw8lg" contract="_mm5mkNBaEeeybtOC6kw8lg"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_zMvqAPIKEee0eL870wMN6A" name="Operator">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_zMvqAfIKEee0eL870wMN6A" name="type">
@@ -821,7 +811,7 @@
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_ixBB8fILEee0eL870wMN6A" type="_ZUYOUNBfEeeybtOC6kw8lg" direction="return"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_neoAkPILEee0eL870wMN6A" name="getFaultView">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_neoAkfILEee0eL870wMN6A" type="_c1mc4NBgEeeybtOC6kw8lg" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_neoAkfILEee0eL870wMN6A" direction="return"/>
           </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_tNJP4NBcEeeybtOC6kw8lg" name="IOperatorRewardPointsView">
@@ -1303,11 +1293,9 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
             </ownedParameter>
           </ownedOperation>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_c1mc4NBgEeeybtOC6kw8lg" name="IOperatorFaultView">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_mMNlgNNWEee5lrHP_PkN2Q" name="getFault">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mMNlgdNWEee5lrHP_PkN2Q" direction="return">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_fGix8PIkEeeVedk8NZV-AA" name="getFault">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_fGix8fIkEeeVedk8NZV-AA" name="faultMessage">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
@@ -1349,6 +1337,9 @@
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_Bxd9odBfEeeybtOC6kw8lg" type="_sVYMUNBaEeeybtOC6kw8lg" direction="return"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_qu0g8PCVEeesYOz2tKqnyQ" name="missionManager" type="_6XdS4NBNEeeybtOC6kw8lg"/>
           </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Qzh0wPIjEeeVedk8NZV-AA" name="NTOperatorMissionManager">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_goosQPIjEeeVedk8NZV-AA" client="_Qzh0wPIjEeeVedk8NZV-AA" supplier="_7Bov8NBbEeeybtOC6kw8lg" contract="_7Bov8NBbEeeybtOC6kw8lg"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>

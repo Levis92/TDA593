@@ -14,7 +14,6 @@ import rover.Controller.IStrategy;
 import rover.Controller.StrategyFactory;
 import rover.Model.Rover;
 import rover.View.IOperatorEnvironmentView;
-import rover.View.IOperatorFaultView;
 import rover.View.IOperatorRewardPointsView;
 import rover.View.IOperatorMissionManagerView;
 
@@ -34,15 +33,10 @@ public class Operator implements rover.Controller.INotifyOperator {
 	/**
 	 * 
 	 */
-	private IOperatorFaultView iOperatorFaultView;
-	/**
-	 * 
-	 */
 	private StrategyFactory strategyFactory;
 	/**
 	 * 
 	 */
-
 	private IOperatorMissionManagerView iOperatorMissionManagerView;
 	/**
 	 * 
@@ -60,10 +54,6 @@ public class Operator implements rover.Controller.INotifyOperator {
 		return iOperatorEnvironmentView;
 	}
 	
-	public IOperatorFaultView getFaultView() {
-		return iOperatorFaultView;
-	}
-	
 	
 	/**
 	 * @param type  
@@ -73,14 +63,12 @@ public class Operator implements rover.Controller.INotifyOperator {
 		if (type.equals("technical")) {
 			iOperatorMissionManagerView = new TOperatorMissionManagerView(missionManager);
 			iOperatorEnvironmentView = new TOperatorEnvironmentView();
-			iOperatorFaultView = new IOperatorFaultView();
 			iOperatorRewardPointsView = new TOperatorRewardPointsView();
 			strategyFactory = new StrategyFactory();
 			
 		} else if (type.equals("non-technical")) {
 			iOperatorMissionManagerView = null;
 			iOperatorEnvironmentView = new NTOperatorEnvironmentView();
-			iOperatorFaultView = new IOperatorFaultView();
 			iOperatorRewardPointsView = new NTOperatorRewardPointsView();
 		}
 		
