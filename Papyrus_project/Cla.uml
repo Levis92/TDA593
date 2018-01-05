@@ -1350,6 +1350,9 @@
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_qu0g8PCVEeesYOz2tKqnyQ" name="missionManager" type="_6XdS4NBNEeeybtOC6kw8lg"/>
           </ownedOperation>
         </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Qzh0wPIjEeeVedk8NZV-AA" name="NTOperatorMissionManager">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_goosQPIjEeeVedk8NZV-AA" client="_Qzh0wPIjEeeVedk8NZV-AA" supplier="_7Bov8NBbEeeybtOC6kw8lg" contract="_7Bov8NBbEeeybtOC6kw8lg"/>
+        </packagedElement>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b8wPcM6WEee_RaSB9J5JlA">
