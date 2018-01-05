@@ -67,7 +67,7 @@ public class Operator implements rover.Controller.INotifyOperator {
 			strategyFactory = new StrategyFactory();
 			
 		} else if (type.equals("non-technical")) {
-			iOperatorMissionManagerView = null;
+			iOperatorMissionManagerView = new NTOperatorMissionManagerView();
 			iOperatorEnvironmentView = new NTOperatorEnvironmentView();
 			iOperatorRewardPointsView = new NTOperatorRewardPointsView();
 		}

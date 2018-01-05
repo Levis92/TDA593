@@ -779,6 +779,8 @@
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_xALhQPIJEee0eL870wMN6A" name="rover" type="_nHzoEM6VEee_RaSB9J5JlA"/>
           </ownedOperation>
         </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Qz3gEPIwEee0eL870wMN6A" name="Map&lt;IRoverLocator, Point>"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_hCcAcPIwEee0eL870wMN6A" name="Map&lt;IRoverLocator, String>"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_cK6RUOS9EeeUc8k90gq-9w" name="View">
         <packagedElement xmi:type="uml:Class" xmi:id="_sVYMUNBaEeeybtOC6kw8lg" name="Operator" visibility="public">
@@ -794,6 +796,10 @@
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CGGUZNBgEeeybtOC6kw8lg" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CGGUZdBgEeeybtOC6kw8lg" value="1"/>
           </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zzZlEPIwEee0eL870wMN6A" name="roverLocations" visibility="private" type="_Qz3gEPIwEee0eL870wMN6A"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Fx_RkPIxEee0eL870wMN6A" name="roverFaults" visibility="private" type="_hCcAcPIwEee0eL870wMN6A"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_LXFR0PIxEee0eL870wMN6A" name="roverProgress" visibility="private" type="_42q0kNBYEeeybtOC6kw8lg"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_bo6hkPIxEee0eL870wMN6A" name="roverRewardPoints" type="_42q0kNBYEeeybtOC6kw8lg"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rA2M4NBbEeeybtOC6kw8lg" client="_sVYMUNBaEeeybtOC6kw8lg" supplier="_mm5mkNBaEeeybtOC6kw8lg" contract="_mm5mkNBaEeeybtOC6kw8lg"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_zMvqAPIKEee0eL870wMN6A" name="Operator">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_zMvqAfIKEee0eL870wMN6A" name="type">
@@ -1376,4 +1382,6 @@
   <PapyrusJava:External xmi:id="_LqIB8OdiEee2B_wCGzBaJg" name="java.util.List&#xD;&#xA;" base_Classifier="_LqFlsOdiEee2B_wCGzBaJg"/>
   <PapyrusJava:External xmi:id="_vSIcMOdiEee2B_wCGzBaJg" name="java.util.List&#xD;&#xA;" base_Classifier="_vSEKwOdiEee2B_wCGzBaJg"/>
   <PapyrusJava:External xmi:id="_WrYVMOfsEeej85pBCBDRiQ" name="java.util.List&#xD;&#xA;" base_Classifier="_Wqu08OfsEeej85pBCBDRiQ"/>
+  <PapyrusJava:External xmi:id="_Qz8YkPIwEee0eL870wMN6A" name="java.util.Map" base_Classifier="_Qz3gEPIwEee0eL870wMN6A"/>
+  <PapyrusJava:External xmi:id="_hCdOkPIwEee0eL870wMN6A" name="java.util.Map" base_Classifier="_hCcAcPIwEee0eL870wMN6A"/>
 </xmi:XMI>
