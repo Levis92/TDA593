@@ -13,7 +13,6 @@ import rover.Controller.IMissionManager;
 import rover.Controller.IStrategy;
 import rover.Controller.StrategyFactory;
 import rover.Model.Rover;
-import rover.View.IOperatorCreateMissionView;
 import rover.View.IOperatorEnvironmentView;
 import rover.View.IOperatorFaultView;
 import rover.View.IOperatorRewardPointsView;
