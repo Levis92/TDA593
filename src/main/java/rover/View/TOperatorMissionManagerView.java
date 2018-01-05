@@ -95,8 +95,8 @@ public class TOperatorMissionManagerView implements IOperatorMissionManagerView 
 
 	@Override
 	public boolean createMission(List<Point> points, Rover rover, Integer strategy) {
-		IStrategy iStrategy = strategyFactory.createStrategy(strategy);
-		return missionManager.createMission(points, rover, iStrategy);
+		
+		return missionManager.createMission(points, rover, strategy);
 	}
 
 };

@@ -106,9 +106,9 @@ public class Main {
 		robots.add(robot2);
 		robots.add(robot3);
 		robots.add(robot4);
-		
+			
 		IMissionManager missionManager = new MissionManager(robots);
-
+		
 		OperatorFactory operatorFactory = new OperatorFactory();
 		Operator technicalOperator = operatorFactory.getTechnicalOperatorInstance(missionManager);
 		

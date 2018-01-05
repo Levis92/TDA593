@@ -681,6 +681,7 @@
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J5R-k9NaEee5lrHP_PkN2Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J5R-lNNaEee5lrHP_PkN2Q" value="1"/>
           </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_L27I8PIEEeeVedk8NZV-AA" name="strategyFactory" type="_X7qioNmZEeeWuJKrAou04A"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_t-RdwNBPEeeybtOC6kw8lg" client="_xe5zQNBMEeeybtOC6kw8lg" supplier="_6XdS4NBNEeeybtOC6kw8lg" contract="_6XdS4NBNEeeybtOC6kw8lg"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_izhvQNNSEee5lrHP_PkN2Q" name="MissionManager">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_rh6bsNNSEee5lrHP_PkN2Q" name="rovers" type="_DT_soNNaEee5lrHP_PkN2Q">
@@ -1028,7 +1029,6 @@
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_X86zgNBcEeeybtOC6kw8lg" name="TOperatorMissionManagerView" visibility="public">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_fQw6MPH-EeeVedk8NZV-AA" name="missionManager" type="_6XdS4NBNEeeybtOC6kw8lg"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_w__fkPH_EeeVedk8NZV-AA" name="strategyFactory" type="_X7qioNmZEeeWuJKrAou04A"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b9masNBcEeeybtOC6kw8lg" client="_X86zgNBcEeeybtOC6kw8lg" supplier="_7Bov8NBbEeeybtOC6kw8lg" contract="_7Bov8NBbEeeybtOC6kw8lg"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_C0n_4PExEeesYOz2tKqnyQ" name="createMission">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_C0om8PExEeesYOz2tKqnyQ" name="points" type="_gPoi0OdhEee2B_wCGzBaJg">
