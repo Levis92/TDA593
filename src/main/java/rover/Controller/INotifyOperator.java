@@ -4,6 +4,9 @@
 
 package rover.Controller;
 
+import project.Point;
+import rover.Model.Rover;
+
 /************************************************************/
 /**
  * 
@@ -13,7 +16,7 @@ public interface INotifyOperator {
 	 * 
 	 * @return 
 	 */
-	public void notifyFault(String status);
-	public void notifyLocation(String location);
-	public void notifyMissionProgress(String progress);
+	public void notifyFault(Rover rover, String status);
+	public void notifyLocation(Rover rover, Point location);
+	public void notifyMissionProgress(Rover rover, Integer progress);
 };

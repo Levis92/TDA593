@@ -132,6 +132,14 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 	public IAccessManager getAccessManager() {
 		return accessManager;
 	}
+	
+	/**
+	 * 
+	 * @return 
+	 */
+	public List<INotifyOperator> getOperators() {
+		return operatorsToNotify;
+	}
 
 	/**
 	 * 
@@ -158,6 +166,10 @@ public class Rover extends AbstractRobotSimulator implements IRoverManager, IRov
 		}
 		else {
 			sleeping = true;
+		}
+		for (Iterator<INotifyOperator> iter = this.getOperators().iterator(); iter.hasNext(); ) {
+			INotifyOperator operator = iter.next();
+			operator.notifyMissionProgress(this, getMission().getProgress());
 		}
 	}
 

@@ -71,11 +71,18 @@ public class Mission {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * 
-	 * @param pointsToReach 
+	 * @return 
 	 */
-	public void Mission(List<Point> pointsToReach) {
+	public Integer getProgress() {
+		int nb1 = pointsToReach.size();
+		int nb2 = pointsReached.size();
+//		System.out.println(nb1);
+//		System.out.println(nb2);
+		return nb2/(nb1+nb2)*100;
 	}
+
+	
 };

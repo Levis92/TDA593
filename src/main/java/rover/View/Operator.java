@@ -122,25 +122,20 @@ public class Operator implements rover.Controller.INotifyOperator {
 
 
 	@Override
-	public void notifyFault(String status) {
-		// TODO Auto-generated method stub
-		
+	public void notifyFault(Rover rover, String status) {
+		System.out.println("Status of " + rover.getName() + ": " + status);
 	}
 
 
 	@Override
-	public void notifyLocation(String location) {
-		// TODO Auto-generated method stub
-		
+	public void notifyLocation(Rover rover, Point location) {
+		System.out.println("Location of " + rover.getName() + ": " + location);
 	}
 
 
 	@Override
-	public void notifyMissionProgress(String progress) {
-		// TODO Auto-generated method stub
-		
+	public void notifyMissionProgress(Rover rover, Integer progress) {
+		System.out.println("Progress of " + rover.getName() + ": " + progress + "%");
 	}
-
-
 
 };
