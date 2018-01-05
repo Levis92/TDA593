@@ -114,6 +114,7 @@ public class Operator implements rover.Controller.INotifyOperator {
 	 * @return 
 	 */
 	public void notifyRewardPoints(int[] rewardPoints) {
+		iOperatorRewardPointsView.notifyRewardPoints(rewardPoints);
 	}
 
 

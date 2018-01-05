@@ -40,7 +40,6 @@ public class ProcedureA implements IVisitorProcedure {
 		else return;
 		
 		rewardPoints.put(rover, rewardPoints.get(rover) + newPoint);
-		System.out.println(rover.getName() + " new value: " + rewardPoints.get(rover));
 	}
 
 	/**

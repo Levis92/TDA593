@@ -49,7 +49,6 @@ public class ProcedureB implements IVisitorProcedure {
 		else return;
 		
 		rewardPoints.put(rover, rewardPoints.get(rover) + newPoint);
-		System.out.println("New value" + rewardPoints.get(rover));
 	}
 
 };

@@ -135,7 +135,7 @@ public static void main(String[] args) throws InterruptedException {
         proc[1] = new ProcedureB(map);
         
         //Start the rewardpoints thread
-        RewardPointsManager rpm = new RewardPointsManager(proc, map);
+        RewardPointsManager rpm = new RewardPointsManager(proc, map, technicalOperator);
         new Thread(rpm).start();
         
 	}
