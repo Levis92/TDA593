@@ -902,11 +902,6 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_BfiVkNBeEeeybtOC6kw8lg" name="getRewardPoints">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BfiVkdBeEeeybtOC6kw8lg" direction="return">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
-            </ownedParameter>
-          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_KXIoYNBeEeeybtOC6kw8lg" name="resetRewardPoints">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_KXIoYdBeEeeybtOC6kw8lg" name="rewardPoints">
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
@@ -949,6 +944,12 @@
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sD2vxdBgEeeybtOC6kw8lg" value="1"/>
             </ownedParameter>
           </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_me10QPFrEeesqJ62OxCfgQ" name="getRewardPoints">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_me6swPFrEeesqJ62OxCfgQ" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_me7T0PFrEeesqJ62OxCfgQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_me7T0fFrEeesqJ62OxCfgQ" value="1"/>
+            </ownedParameter>
+          </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_Vv4pUNBeEeeybtOC6kw8lg" name="NTOperatorRewardPointsView">
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_YsMpcNBeEeeybtOC6kw8lg" client="_Vv4pUNBeEeeybtOC6kw8lg" supplier="_tNJP4NBcEeeybtOC6kw8lg" contract="_tNJP4NBcEeeybtOC6kw8lg"/>
@@ -981,6 +982,12 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8I6RgBydEduyofBvg4RL2w"/>
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sEIclNBgEeeybtOC6kw8lg" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sEJDoNBgEeeybtOC6kw8lg" value="1"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_mfIIIPFrEeesqJ62OxCfgQ" name="getRewardPoints">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mfIIIfFrEeesqJ62OxCfgQ" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mfIvMPFrEeesqJ62OxCfgQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mfIvMfFrEeesqJ62OxCfgQ" value="1"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>

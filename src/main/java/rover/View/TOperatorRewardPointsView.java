@@ -21,13 +21,6 @@ public class TOperatorRewardPointsView implements IOperatorRewardPointsView {
 
 	/**
 	 * 
-	 * @return 
-	 */
-	public int getRewardPoints() {
-	}
-
-	/**
-	 * 
 	 * @param rewardPoints 
 	 * @return 
 	 */

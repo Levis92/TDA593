@@ -18,12 +18,6 @@ public interface IOperatorRewardPointsView {
 
 	/**
 	 * 
-	 * @return 
-	 */
-	public int getRewardPoints();
-
-	/**
-	 * 
 	 * @param rewardPoints 
 	 * @return 
 	 */
