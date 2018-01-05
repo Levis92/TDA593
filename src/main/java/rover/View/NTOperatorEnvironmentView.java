@@ -15,13 +15,23 @@ public class NTOperatorEnvironmentView implements IOperatorEnvironmentView {
 	 * 
 	 * @return 
 	 */
-	public void updateLocation() {
+	public String getRoverLocation() {
+		return "Location of the Rovers";
 	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public void updateMissionProgress() {
+	public String getMissionProgress() {
+		return "progress of the Rovers";
+	}
+	
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getFault() {
+		return "Faults of the rover";
 	}
 };

@@ -11,17 +11,29 @@ import rover.View.IOperatorEnvironmentView;
  * 
  */
 public class TOperatorEnvironmentView implements IOperatorEnvironmentView {
+
 	/**
 	 * 
 	 * @return 
 	 */
-	public void updateLocation() {
+	public String getRoverLocation() {
+		return "Location of the Rovers";
 	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public void updateMissionProgress() {
+	public String getMissionProgress() {
+		return "progress of the Rovers";
 	}
+	
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getFault() {
+		return "Retourn an error because the NTOperator cannot have this information";
+	}
+	
 };

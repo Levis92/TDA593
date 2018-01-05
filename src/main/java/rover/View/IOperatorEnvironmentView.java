@@ -9,15 +9,23 @@ package rover.View;
  * 
  */
 public interface IOperatorEnvironmentView {
+	
 	/**
 	 * 
 	 * @return 
 	 */
-	public void updateLocation();
+	public String getRoverLocation();
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public void updateMissionProgress();
+	public String getMissionProgress();
+	
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getFault();
+	
 };
