@@ -45,15 +45,6 @@ public class PhysicalArea extends AbstractArea {
 		nestedPhysicalAreasList.add(nestedPhysicalArea);
 		nestedLogicalAreasList.add(nestedLogicalArea);
 	}
-	//TODO implement contains, do we need contains though?
-	/**
-	 * 
-	 * @param point 
-	 * @return 
-	 */
-	public boolean contains(Point point) {
-		return true;
-	}
 
 	/**
 	 * 

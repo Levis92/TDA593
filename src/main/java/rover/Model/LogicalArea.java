@@ -25,16 +25,6 @@ public class LogicalArea extends AbstractArea {
 		super(position,width,height,areaType);
 	}
 
-	//TODO implement contains, not sure if it's needed
-	/**
-	 * 
-	 * @param point 
-	 * @return 
-	 */
-	public boolean contains(Point point) {
-		return true;
-	}
-
 	/**
 	 * 
 	 * @return 
