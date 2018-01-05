@@ -14,12 +14,12 @@ public interface IOperatorRewardPointsView {
 	 * @param rewardPoints 
 	 * @return 
 	 */
-	public void notifyRewardPoints(int rewardPoints);
+	public void notifyRewardPoints(int[] rewardPoints);
 
 	/**
 	 * 
 	 * @param rewardPoints 
 	 * @return 
 	 */
-	public void resetRewardPoints(int rewardPoints);
+	public void resetRewardPoints(int[] rewardPoints);
 };

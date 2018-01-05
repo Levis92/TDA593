@@ -16,7 +16,10 @@ public class NTOperatorRewardPointsView implements IOperatorRewardPointsView {
 	 * @param rewardPoints 
 	 * @return 
 	 */
-	public void notifyRewardPoints(int rewardPoints) {
+	public void notifyRewardPoints(int[] rewardPoints) {
+		for (int i = 0; i < rewardPoints.length; i++) {
+			System.out.println("Rover " + (i+1) + " has currently " + rewardPoints[i] + " rewardpoints");
+		}
 	}
 
 	/**
@@ -24,6 +27,6 @@ public class NTOperatorRewardPointsView implements IOperatorRewardPointsView {
 	 * @param rewardPoints 
 	 * @return 
 	 */
-	public void resetRewardPoints(int rewardPoints) {
+	public void resetRewardPoints(int[] rewardPoints) {
 	}
 };

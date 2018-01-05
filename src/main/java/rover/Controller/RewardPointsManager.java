@@ -12,7 +12,7 @@ import rover.Controller.IRewardPointsManagar;
 import rover.Controller.IVisitorProcedure;
 import rover.Model.IRoverLocator;
 import rover.Model.IVisitableArea;
-import rover.View.IOperatorRewardPointsView;
+import rover.View.Operator;
 
 import java.util.List;
 import java.lang.Runnable;
@@ -32,9 +32,12 @@ public class RewardPointsManager implements IRewardPointsManagar, Runnable
 				 */
 				private Map<IRoverLocator, Integer> rewardPoints;
 				
-				public RewardPointsManager(IVisitorProcedure[] procList, Map<IRoverLocator, Integer> points) {
+				private Operator operator;
+				
+				public RewardPointsManager(IVisitorProcedure[] procList, Map<IRoverLocator, Integer> points, Operator operator) {
 					procedureList = procList;
 					rewardPoints = points;
+					this.operator = operator;
 				}
 				
 				/**
@@ -45,6 +48,7 @@ public class RewardPointsManager implements IRewardPointsManagar, Runnable
 				public void run() {
 					while (true) {
 						updateRewardPoints();
+						printRewardpoints();
 						try {
 							Thread.sleep(20000);
 						} catch (InterruptedException e) {
@@ -69,6 +73,17 @@ public class RewardPointsManager implements IRewardPointsManagar, Runnable
 							}//End proc
 						}//End area
 					} //End rover
+				}
+				
+				private void printRewardpoints() {
+					int[] points = new int[rewardPoints.size()];
+					int index = 0;
+					
+					for (Integer i : rewardPoints.values()) {
+						points[index++] = i;
+					}
+					
+					operator.notifyRewardPoints(points);
 					
 				}
 };
