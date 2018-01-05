@@ -43,10 +43,6 @@ public class Operator implements rover.Controller.INotifyOperator {
 	/**
 	 * 
 	 */
-	private IMissionManager missionManager;
-	/**
-	 * 
-	 */
 
 	private IOperatorMissionManagerView iOperatorMissionManagerView;
 	
@@ -57,13 +53,12 @@ public class Operator implements rover.Controller.INotifyOperator {
 	 */
 	public Operator(String type, IMissionManager missionManager) {
 		if (type.equals("technical")) {
-			iOperatorMissionManagerView = new TOperatorMissionManagerView();
+			iOperatorMissionManagerView = new TOperatorMissionManagerView(missionManager);
 			iOperatorEnvironmentView = new TOperatorEnvironmentView();
 			iOperatorFaultView = new IOperatorFaultView();
 			iOperatorRewardPointsView = new TOperatorRewardPointsView();
 			strategyFactory = new StrategyFactory();
-			this.missionManager = missionManager;
-		
+			
 		} else if (type.equals("non-technical")) {
 			iOperatorMissionManagerView = null;
 			iOperatorEnvironmentView = new NTOperatorEnvironmentView();
@@ -110,15 +105,6 @@ public class Operator implements rover.Controller.INotifyOperator {
 	 * @param rover 
 	 * @param missionManager 
 	 */
-	public void createMission(List<Point> points, Rover rover, int strategyNumber) {
-		if (iOperatorMissionManagerView != null) {
-			IStrategy strategy = strategyFactory.createStrategy(strategyNumber);
-			this.iOperatorMissionManagerView.createMission(points, rover, this.missionManager, strategy);
-		} else {
-			System.out.println("Access to create mission denied");
-		}
-		
-	}
 
 
 	@Override
@@ -140,7 +126,9 @@ public class Operator implements rover.Controller.INotifyOperator {
 		// TODO Auto-generated method stub
 		
 	}
-
+	public IOperatorMissionManagerView getMissionManagerView() {
+		return iOperatorMissionManagerView;
+	}
 
 
 };

@@ -114,10 +114,10 @@ public class Main {
 		
 		//Beginning of the mission 
 		
-		technicalOperator.createMission(point1, robot1, 1);
-		technicalOperator.createMission(point2, robot2, 1);
-		technicalOperator.createMission(point3, robot3, 1);
-		technicalOperator.createMission(point4, robot4, 1);
+		technicalOperator.getMissionManagerView().createMission(point1, robot1, 1);
+		technicalOperator.getMissionManagerView().createMission(point2, robot2, 1);
+		technicalOperator.getMissionManagerView().createMission(point3, robot3, 1);
+		technicalOperator.getMissionManagerView().createMission(point4, robot4, 1);
 		
 		
 		//Simulator Initialization
