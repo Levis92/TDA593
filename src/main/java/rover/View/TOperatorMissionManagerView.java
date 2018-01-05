@@ -9,6 +9,7 @@ import rover.Controller.IMissionManager;
 import rover.Model.Rover;
 import rover.View.IOperatorMissionManagerView;
 import rover.Controller.IStrategy;
+import rover.Controller.StrategyFactory;
 import project.Point;
 
 /************************************************************/
@@ -17,7 +18,15 @@ import project.Point;
  */
 public class TOperatorMissionManagerView implements IOperatorMissionManagerView {
 
+	IMissionManager missionManager;
 
+	StrategyFactory strategyFactory;
+	
+	public TOperatorMissionManagerView(IMissionManager missionManager) {
+		this.missionManager = missionManager;
+		strategyFactory = new StrategyFactory();
+	}
+	
 	/**
 	 * 
 	 * @param rover 
@@ -81,11 +90,13 @@ public class TOperatorMissionManagerView implements IOperatorMissionManagerView 
 	 * @param rover 
 	 * @param strategy 
 	 */
-	public void changeStrategy(Rover rover, IStrategy strategy) {
+	public void changeStrategy(Rover rover, Integer strategy) {
 	}
 
 	@Override
-	public boolean createMission(List<Point> points, Rover rover, IMissionManager missionManager, IStrategy strategy) {
+	public boolean createMission(List<Point> points, Rover rover, Integer strategy) {
+		
 		return missionManager.createMission(points, rover, strategy);
 	}
+
 };

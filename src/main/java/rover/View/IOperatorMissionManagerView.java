@@ -60,7 +60,7 @@ public interface IOperatorMissionManagerView {
 	 * @param rover 
 	 * @param strategy 
 	 */
-	public void changeStrategy(Rover rover, IStrategy strategy);
+	public void changeStrategy(Rover rover, Integer strategy);
 
 	/**
 	 * 
@@ -70,5 +70,5 @@ public interface IOperatorMissionManagerView {
 	 * @param missionManager 
 	 * @param strategy 
 	 */
-	public boolean createMission(List<Point> points, Rover rover, IMissionManager missionManager, IStrategy strategy);
+	public boolean createMission(List<Point> points, Rover rover, Integer strategy);
 };

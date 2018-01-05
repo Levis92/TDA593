@@ -18,6 +18,8 @@ import rover.Model.Rover;
  * 
  */
 public class MissionManager implements IMissionManager {
+	
+	StrategyFactory strategyFactory;
 	/**
 	 * 
 	 */
@@ -120,7 +122,8 @@ public class MissionManager implements IMissionManager {
 	 * @return 
 	 * @param rover 
 	 */
-	public boolean createMission(List<Point> points, Rover rover, IStrategy strategy) {
+	public boolean createMission(List<Point> points, Rover rover, Integer strategyNumber) {
+		IStrategy strategy = strategyFactory.createStrategy(strategyNumber);
 		Mission mission = new Mission(points);
 		rover.provideMission(mission, strategy);
 		boolean isAdded = missionList.add(mission);
@@ -135,5 +138,6 @@ public class MissionManager implements IMissionManager {
 		List<Rover> temp = new LinkedList<Rover>();
 		temp.addAll(rovers);
 		roverList = temp;
+		strategyFactory = new StrategyFactory();
 	}
 };
